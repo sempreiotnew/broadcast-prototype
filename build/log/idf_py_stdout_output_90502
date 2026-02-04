@@ -1,0 +1,221 @@
+Command: /Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3 /Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf_monitor.py -p /dev/cu.wchusbserial5A580551381 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/broadcast-prototype.elf /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/bootloader/bootloader.elf -m '/Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3' '/Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf.py'
+Q*��=]� ESP-NOW READY
+[0;32mI (697) main_task: Ret�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  1 2026 17:26:11[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1875ch (100188) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=00028784 vaddr=3ffb0000 size=03f24h ( 16164) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0002c6b0 vaddr=40080000 size=03968h ( 14696) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7ed84h (519556) map[0m
+[0;32mI (311) esp_image: segment 4: paddr=000aedac vaddr=40083968 size=145d8h ( 83416) load[0m
+[0;32mI (344) esp_image: segment 5: paddr=000c338c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (355) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (356) boot: Disabling RNG early entropy source...[0m
+[0;32mI (366) cpu_start: Multicore app[0m
+[0;32mI (374) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (375) cpu_start: Pro cpu start user code[0m
+[0;32mI (375) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (376) app_init: Application information:[0m
+[0;32mI (380) app_init: Project name:     broadcast-prototype[0m
+[0;32mI (385) app_init: App version:      1[0m
+[0;32mI (389) app_init: Compile time:     Feb  1 2026 17:26:06[0m
+[0;32mI (394) app_init: ELF file SHA256:  d3ea94278...[0m
+[0;32mI (398) app_init: ESP-IDF:          v5.5.2-dirty[0m
+[0;32mI (402) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (406) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (410) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (414) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (420) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (425) heap_init: At 3FFB8328 len 00027CD8 (159 KiB): DRAM[0m
+[0;32mI (431) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (436) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (441) heap_init: At 40097F40 len 000080C0 (32 KiB): IRAM[0m
+[0;32mI (448) spi_flash: detected chip: generic[0m
+[0;32mI (450) spi_flash: flash io: dio[0m
+[0;33mW (453) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (507) wifi:wifi driver task: 3ffc034c, prio:23, stack:6656, core=0[0m
+[0;32mI (517) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (517) wifi:wifi certification version: v7.0[0m
+[0;32mI (517) wifi:config NVS flash: enabled[0m
+[0;32mI (517) wifi:config nano formatting: disabled[0m
+[0;32mI (517) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (527) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (527) wifi:Init management short buffer num: 32[0m
+[0;32mI (537) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (547) wifi:Init static rx buffer num: 10[0m
+[0;32mI (547) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (547) wifi_init: rx ba win: 6[0m
+[0;32mI (557) wifi_init: accept mbox: 6[0m
+[0;32mI (557) wifi_init: tcpip mbox: 32[0m
+[0;32mI (557) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp tx win: 5760[0m
+[0;32mI (567) wifi_init: tcp rx win: 5760[0m
+[0;32mI (567) wifi_init: tcp mss: 1440[0m
+[0;32mI (577) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (577) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (587) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (657) wifi:mode : sta (38:18:2b:8c:13:d0)[0m
+[0;32mI (657) wifi:enable tsf[0m
+[0;32mI (667) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (667) ESP_NOW: ESP-NOW READY[0m
+[0;32mI (667) main_task: Returned from app_main()[0m
+[0;32mI (987) ESP_NOW: PEER CONNECTED 00:4B:12:2D:F7:8C[0m
+[0;32mI (2187) ESP_NOW: PEER CONNECTED 40:22:D8:7B:98:04[0m
+[0;32mI (450837) ESP_NOW: BUTTON → sent msg_id=1[0m
+[0;32mI (451117) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (451277) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (452357) ESP_NOW: BUTTON → sent msg_id=3[0m
+[0;32mI (452637) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (452797) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (454177) ESP_NOW: BUTTON → sent msg_id=5[0m
+[0;32mI (454447) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (454607) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (455447) ESP_NOW: BUTTON → sent msg_id=7[0m
+[0;32mI (455717) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (455877) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (456617) ESP_NOW: BUTTON → sent msg_id=9[0m
+[0;32mI (456887) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (457047) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (457787) ESP_NOW: BUTTON → sent msg_id=11[0m
+[0;32mI (458067) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (458227) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (462007) ESP_NOW: BUTTON → sent msg_id=13[0m
+[0;32mI (462287) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (463377) ESP_NOW: BUTTON → sent msg_id=15[0m
+[0;32mI (463647) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (463807) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (464997) ESP_NOW: BUTTON → sent msg_id=17[0m
+[0;32mI (465277) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (465437) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (524767) ESP_NOW: BUTTON → sent msg_id=19[0m
+[0;32mI (525047) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (525207) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (525937) ESP_NOW: BUTTON → sent msg_id=21[0m
+[0;32mI (526217) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (526377) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (526907) ESP_NOW: BUTTON → sent msg_id=23[0m
+[0;32mI (527177) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (527337) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (527927) ESP_NOW: BUTTON → sent msg_id=25[0m
+[0;32mI (528207) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (528367) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (529047) ESP_NOW: BUTTON → sent msg_id=27[0m
+[0;32mI (529317) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (529477) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (530167) ESP_NOW: BUTTON → sent msg_id=29[0m
+[0;32mI (530447) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (530607) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (531387) ESP_NOW: BUTTON → sent msg_id=31[0m
+[0;32mI (531667) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (531827) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (532557) ESP_NOW: BUTTON → sent msg_id=33[0m
+[0;32mI (532827) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (532987) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (533577) ESP_NOW: BUTTON → sent msg_id=35[0m
+[0;32mI (533847) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (534007) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (535047) ESP_NOW: BUTTON → sent msg_id=37[0m
+[0;32mI (535317) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (535477) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (536167) ESP_NOW: BUTTON → sent msg_id=39[0m
+[0;32mI (536437) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (536597) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (537737) ESP_NOW: BUTTON → sent msg_id=41[0m
+[0;32mI (538017) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (538177) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (596707) ESP_NOW: BUTTON → sent msg_id=43[0m
+[0;32mI (596977) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (597137) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (597977) ESP_NOW: BUTTON → sent msg_id=45[0m
+[0;32mI (598257) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (598417) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (599147) ESP_NOW: BUTTON → sent msg_id=47[0m
+[0;32mI (599417) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (599577) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (600117) ESP_NOW: BUTTON → sent msg_id=49[0m
+[0;32mI (600387) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (600547) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (601437) ESP_NOW: BUTTON → sent msg_id=51[0m
+[0;32mI (601717) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (601877) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (602507) ESP_NOW: BUTTON → sent msg_id=53[0m
+[0;32mI (602777) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (602937) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (603777) ESP_NOW: BUTTON → sent msg_id=55[0m
+[0;32mI (604057) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (604217) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (605047) ESP_NOW: BUTTON → sent msg_id=57[0m
+[0;32mI (605317) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (605477) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (606117) ESP_NOW: BUTTON → sent msg_id=59[0m
+[0;32mI (606397) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (606557) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (608037) ESP_NOW: BUTTON → sent msg_id=61[0m
+[0;32mI (608307) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (608467) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (609007) ESP_NOW: BUTTON → sent msg_id=63[0m
+[0;32mI (609277) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (609437) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (609927) ESP_NOW: BUTTON → sent msg_id=65[0m
+[0;32mI (610207) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (610367) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (611097) ESP_NOW: BUTTON → sent msg_id=67[0m
+[0;32mI (611367) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (611527) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (614777) ESP_NOW: RX msg_id=44 from 00:4B:12:2D:F7:8C rssi=-16[0m
+[0;32mI (616877) ESP_NOW: RX msg_id=46 from 00:4B:12:2D:F7:8C rssi=-17[0m
+[0;32mI (617637) ESP_NOW: RX msg_id=48 from 00:4B:12:2D:F7:8C rssi=-17[0m
+[0;32mI (618187) ESP_NOW: RX msg_id=50 from 00:4B:12:2D:F7:8C rssi=-17[0m
+[0;32mI (660567) ESP_NOW: BUTTON → sent msg_id=69[0m
+[0;32mI (660847) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (661007) ESP_NOW: ACK from 40:22:D8:7B:98:04[0m
+[0;32mI (692927) ESP_NOW: RX msg_id=52 from 00:4B:12:2D:F7:8C rssi=-19[0m
+[0;32mI (695587) ESP_NOW: RX msg_id=54 from 00:4B:12:2D:F7:8C rssi=-18[0m
+[0;32mI (698537) ESP_NOW: BUTTON → sent msg_id=71[0m
+[0;32mI (698817) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (699807) ESP_NOW: BUTTON → sent msg_id=73[0m
+[0;32mI (700087) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (700827) ESP_NOW: BUTTON → sent msg_id=75[0m
+[0;32mI (701107) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (702197) ESP_NOW: BUTTON → sent msg_id=77[0m
+[0;32mI (702467) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (702967) ESP_NOW: BUTTON → sent msg_id=79[0m
+[0;32mI (703247) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (704037) ESP_NOW: BUTTON → sent msg_id=81[0m
+[0;32mI (704317) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (704807) ESP_NOW: BUTTON → sent msg_id=83[0m
+[0;32mI (705077) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (705527) ESP_NOW: BUTTON → sent msg_id=85[0m
+[0;32mI (705807) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (706297) ESP_NOW: BUTTON → sent msg_id=87[0m
+[0;32mI (706567) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (707017) ESP_NOW: BUTTON → sent msg_id=89[0m
+[0;32mI (707287) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (707887) ESP_NOW: BUTTON → sent msg_id=91[0m
+[0;32mI (708167) ESP_NOW: ACK from 00:4B:12:2D:F7:8C[0m
+[0;32mI (710637) ESP_NOW: RX msg_id=56 from 00:4B:12:2D:F7:8C rssi=-16[0m

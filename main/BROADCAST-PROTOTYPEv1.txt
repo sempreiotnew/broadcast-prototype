@@ -1,0 +1,298 @@
+#include <stdio.h>
+#include <string.h>
+
+#include "freertos/FreeRTOS.h"
+#include "freertos/queue.h"
+#include "freertos/task.h"
+
+#include "esp_event.h"
+#include "esp_log.h"
+#include "esp_now.h"
+#include "esp_system.h"
+#include "esp_wifi.h"
+
+#include "driver/gpio.h"
+#include "nvs_flash.h"
+
+/* ===================== CONFIG ===================== */
+
+#define TAG "ESP_NOW"
+
+#define LED_GPIO GPIO_NUM_2
+#define BUTTON_GPIO GPIO_NUM_0
+
+#define ESPNOW_CHANNEL 6
+#define CACHE_SIZE 32
+#define MAX_NEARBY 10
+#define MAX_PEERS 10
+
+#define MSG_DISCOVERY 0xFFFFFFFF
+#define MSG_ACK 0xFFFFFFFE
+
+static const uint8_t ESPNOW_BROADCAST_MAC[6] = {0xFF, 0xFF, 0xFF,
+                                                0xFF, 0xFF, 0xFF};
+
+/* ===================== MESSAGE ===================== */
+
+typedef struct {
+  uint8_t src_mac[6];
+  uint8_t dst_mac[6];
+  int8_t rssi;
+  uint8_t origin_mac[6];
+  uint32_t msg_id;
+  uint8_t ttl;
+} __attribute__((packed)) espnow_msg_t;
+
+/* ===================== GLOBALS ===================== */
+
+static QueueHandle_t rx_queue;
+static QueueHandle_t tx_queue;
+static uint32_t local_msg_counter;
+
+/* ===================== DEVICE TABLES ===================== */
+
+typedef struct {
+  uint8_t mac[6];
+  int8_t rssi;
+  uint32_t last_seen;
+} nearby_device_t;
+
+typedef struct {
+  uint8_t mac[6];
+  bool active;
+} peer_device_t;
+
+static nearby_device_t nearby[MAX_NEARBY];
+static peer_device_t peers[MAX_PEERS];
+
+/* ===================== UTIL ===================== */
+
+static bool mac_equal(const uint8_t *a, const uint8_t *b) {
+  return memcmp(a, b, 6) == 0;
+}
+
+static void blink_led(bool fixed) {
+  if (fixed) {
+    for (int i = 0; i < 4; i++) {
+      gpio_set_level(LED_GPIO, 1);
+      vTaskDelay(pdMS_TO_TICKS(150));
+      gpio_set_level(LED_GPIO, 0);
+    }
+
+    return;
+  }
+
+  for (int i = 0; i < 2; i++) {
+    gpio_set_level(LED_GPIO, 1);
+    vTaskDelay(pdMS_TO_TICKS(50));
+    gpio_set_level(LED_GPIO, 0);
+  }
+}
+
+/* ===================== PEER MANAGEMENT ===================== */
+
+static void add_peer(const uint8_t *mac) {
+  if (esp_now_is_peer_exist(mac))
+    return;
+
+  for (int i = 0; i < MAX_PEERS; i++) {
+    if (!peers[i].active) {
+      memcpy(peers[i].mac, mac, 6);
+      peers[i].active = true;
+
+      esp_now_peer_info_t p = {0};
+      memcpy(p.peer_addr, mac, 6);
+      p.ifidx = WIFI_IF_STA;
+      p.channel = 0;
+      p.encrypt = false;
+
+      if (esp_now_add_peer(&p) == ESP_OK) {
+        ESP_LOGI(TAG, "PEER CONNECTED %02X:%02X:%02X:%02X:%02X:%02X", mac[0],
+                 mac[1], mac[2], mac[3], mac[4], mac[5]);
+        blink_led(true);
+      }
+      return;
+    }
+  }
+}
+
+/* ===================== ESPNOW RX CALLBACK ===================== */
+
+static void espnow_recv_cb(const esp_now_recv_info_t *info, const uint8_t *data,
+                           int len) {
+  if (len != sizeof(espnow_msg_t))
+    return;
+
+  espnow_msg_t msg;
+  memcpy(&msg, data, sizeof(msg));
+
+  memcpy(msg.src_mac, info->src_addr, 6);
+  memcpy(msg.dst_mac, info->des_addr, 6);
+  msg.rssi = info->rx_ctrl->rssi;
+
+  xQueueSendFromISR(rx_queue, &msg, NULL);
+}
+
+/* ===================== RX TASK ===================== */
+
+static void espnow_rx_task(void *arg) {
+  espnow_msg_t msg;
+
+  while (1) {
+    if (xQueueReceive(rx_queue, &msg, portMAX_DELAY)) {
+
+      /* ---- DISCOVERY ---- */
+      if (msg.msg_id == MSG_DISCOVERY) {
+
+        for (int i = 0; i < MAX_NEARBY; i++) {
+          if (mac_equal(nearby[i].mac, msg.src_mac) ||
+              nearby[i].last_seen == 0) {
+            memcpy(nearby[i].mac, msg.src_mac, 6);
+            nearby[i].rssi = msg.rssi;
+            nearby[i].last_seen = xTaskGetTickCount();
+            break;
+          }
+        }
+
+        add_peer(msg.src_mac);
+        continue;
+      }
+
+      /* ---- ACK ---- */
+      if (msg.msg_id == MSG_ACK) {
+        ESP_LOGI(TAG, "ACK from %02X:%02X:%02X:%02X:%02X:%02X", msg.src_mac[0],
+                 msg.src_mac[1], msg.src_mac[2], msg.src_mac[3], msg.src_mac[4],
+                 msg.src_mac[5]);
+        continue;
+      }
+
+      /* ---- DATA ---- */
+      ESP_LOGI(TAG, "RX msg_id=%lu from %02X:%02X:%02X:%02X:%02X:%02X rssi=%d",
+               msg.msg_id, msg.src_mac[0], msg.src_mac[1], msg.src_mac[2],
+               msg.src_mac[3], msg.src_mac[4], msg.src_mac[5], msg.rssi);
+
+      espnow_msg_t ack = {0};
+      memcpy(ack.origin_mac, msg.origin_mac, 6);
+      ack.msg_id = MSG_ACK;
+
+      blink_led(false);
+      esp_now_send(msg.src_mac, (uint8_t *)&ack, sizeof(ack));
+    }
+  }
+}
+
+/* ===================== TX TASK ===================== */
+
+static void espnow_tx_task(void *arg) {
+  espnow_msg_t msg;
+
+  while (1) {
+    if (xQueueReceive(tx_queue, &msg, portMAX_DELAY)) {
+      esp_now_send(msg.dst_mac, (uint8_t *)&msg, sizeof(msg));
+    }
+  }
+}
+
+/* ===================== DISCOVERY TASK ===================== */
+
+static void discovery_task(void *arg) {
+  uint8_t mac[6];
+  esp_wifi_get_mac(WIFI_IF_STA, mac);
+
+  while (1) {
+    espnow_msg_t msg = {0};
+    memcpy(msg.origin_mac, mac, 6);
+    msg.msg_id = MSG_DISCOVERY;
+
+    esp_now_send(ESPNOW_BROADCAST_MAC, (uint8_t *)&msg, sizeof(msg));
+
+    vTaskDelay(pdMS_TO_TICKS(2000));
+  }
+}
+
+/* ===================== BUTTON TASK ===================== */
+
+static void button_task(void *arg) {
+  uint8_t mac[6];
+  esp_wifi_get_mac(WIFI_IF_STA, mac);
+
+  int last = 1;
+
+  while (1) {
+    int cur = gpio_get_level(BUTTON_GPIO);
+
+    if (last == 1 && cur == 0) {
+      for (int i = 0; i < MAX_PEERS; i++) {
+        if (!peers[i].active)
+          continue;
+
+        espnow_msg_t msg = {0};
+        memcpy(msg.origin_mac, mac, 6);
+        memcpy(msg.dst_mac, peers[i].mac, 6);
+        msg.msg_id = local_msg_counter++;
+
+        xQueueSend(tx_queue, &msg, portMAX_DELAY);
+        blink_led(false);
+      }
+
+      ESP_LOGI(TAG, "BUTTON → sent msg_id=%lu", local_msg_counter - 1);
+    }
+
+    last = cur;
+    vTaskDelay(pdMS_TO_TICKS(50));
+  }
+}
+
+/* ===================== INIT ===================== */
+
+static void wifi_init(void) {
+  esp_netif_init();
+  esp_event_loop_create_default();
+
+  wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+  esp_wifi_init(&cfg);
+  esp_wifi_set_mode(WIFI_MODE_STA);
+  esp_wifi_start();
+  esp_wifi_set_channel(ESPNOW_CHANNEL, WIFI_SECOND_CHAN_NONE);
+}
+
+static void espnow_init(void) {
+  esp_now_init();
+  esp_now_register_recv_cb(espnow_recv_cb);
+
+  esp_now_peer_info_t bcast = {0};
+  memcpy(bcast.peer_addr, ESPNOW_BROADCAST_MAC, 6);
+  bcast.ifidx = WIFI_IF_STA;
+  esp_now_add_peer(&bcast);
+}
+
+static void gpio_init_all(void) {
+  gpio_config_t led = {.pin_bit_mask = 1ULL << LED_GPIO,
+                       .mode = GPIO_MODE_OUTPUT};
+  gpio_config(&led);
+
+  gpio_config_t btn = {.pin_bit_mask = 1ULL << BUTTON_GPIO,
+                       .mode = GPIO_MODE_INPUT,
+                       .pull_up_en = 1};
+  gpio_config(&btn);
+}
+
+/* ===================== MAIN ===================== */
+
+void app_main(void) {
+  nvs_flash_init();
+
+  rx_queue = xQueueCreate(10, sizeof(espnow_msg_t));
+  tx_queue = xQueueCreate(10, sizeof(espnow_msg_t));
+
+  gpio_init_all();
+  wifi_init();
+  espnow_init();
+
+  xTaskCreate(espnow_rx_task, "rx", 4096, NULL, 5, NULL);
+  xTaskCreate(espnow_tx_task, "tx", 4096, NULL, 5, NULL);
+  xTaskCreate(button_task, "button", 2048, NULL, 4, NULL);
+  xTaskCreate(discovery_task, "discovery", 2048, NULL, 3, NULL);
+
+  ESP_LOGI(TAG, "ESP-NOW READY");
+}

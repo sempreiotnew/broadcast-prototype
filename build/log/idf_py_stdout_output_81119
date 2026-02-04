@@ -1,0 +1,270 @@
+Command: /Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3 /Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf_monitor.py -p /dev/cu.wchusbserial5A580551381 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/broadcast-prototype.elf /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/bootloader/bootloader.elf -m '/Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3' '/Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf.py'
+power save buffer number: 16
+I (6�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  1 2026 17:26:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=18a48h (100936) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=00028a70 vaddr=3ffb0000 size=03f24h ( 16164) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0002c99c vaddr=40080000 size=0367ch ( 13948) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7eefch (519932) map[0m
+[0;32mI (311) esp_image: segment 4: paddr=000aef24 vaddr=4008367c size=148c4h ( 84164) load[0m
+[0;32mI (344) esp_image: segment 5: paddr=000c37f0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (356) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (356) boot: Disabling RNG early entropy source...[0m
+[0;32mI (366) cpu_start: Multicore app[0m
+[0;32mI (375) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (375) cpu_start: Pro cpu start user code[0m
+[0;32mI (375) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (377) app_init: Application information:[0m
+[0;32mI (381) app_init: Project name:     broadcast-prototype[0m
+[0;32mI (386) app_init: App version:      1[0m
+[0;32mI (389) app_init: Compile time:     Feb  1 2026 17:26:06[0m
+[0;32mI (394) app_init: ELF file SHA256:  9cd815845...[0m
+[0;32mI (398) app_init: ESP-IDF:          v5.5.2-dirty[0m
+[0;32mI (403) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (407) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (411) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (415) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (421) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (426) heap_init: At 3FFB83F0 len 00027C10 (159 KiB): DRAM[0m
+[0;32mI (431) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (436) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (442) heap_init: At 40097F40 len 000080C0 (32 KiB): IRAM[0m
+[0;32mI (449) spi_flash: detected chip: generic[0m
+[0;32mI (451) spi_flash: flash io: dio[0m
+[0;33mW (454) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (507) wifi:wifi driver task: 3ffc0414, prio:23, stack:6656, core=0[0m
+[0;32mI (517) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (517) wifi:wifi certification version: v7.0[0m
+[0;32mI (517) wifi:config NVS flash: enabled[0m
+[0;32mI (517) wifi:config nano formatting: disabled[0m
+[0;32mI (517) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (527) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (527) wifi:Init management short buffer num: 32[0m
+[0;32mI (537) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (547) wifi:Init static rx buffer num: 10[0m
+[0;32mI (547) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (547) wifi_init: rx ba win: 6[0m
+[0;32mI (557) wifi_init: accept mbox: 6[0m
+[0;32mI (557) wifi_init: tcpip mbox: 32[0m
+[0;32mI (557) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp tx win: 5760[0m
+[0;32mI (567) wifi_init: tcp rx win: 5760[0m
+[0;32mI (567) wifi_init: tcp mss: 1440[0m
+[0;32mI (577) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (577) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (587) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (657) wifi:mode : sta (38:18:2b:8c:13:d0) + softAP (38:18:2b:8c:13:d1)[0m
+[0;32mI (667) wifi:enable tsf[0m
+[0;32mI (667) wifi:Total power save buffer number: 16[0m
+[0;32mI (667) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (667) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (677) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (677) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (677) ESP_NOW_BROADCAST: ESP-NOW broadcast mesh ready[0m
+[0;32mI (687) main_task: Returned from app_main()[0m
+[0;32mI (697) ESP_NOW_BROADCAST: RX src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=397 ttl=4 rssi=-36[0m
+[0;32mI (1297) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (1297) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=398 ttl=5 rssi=-57[0m
+[0;32mI (1907) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (1907) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (1907) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (1917) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=399 ttl=5 rssi=-56[0m
+[0;32mI (2587) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (2687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (2697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (2797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=400 ttl=5 rssi=-56[0m
+[0;32mI (3487) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (3687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (3697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (3797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=401 ttl=5 rssi=-57[0m
+[0;32mI (4397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (4687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (4697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (4797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=402 ttl=5 rssi=-57[0m
+[0;32mI (5397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (5687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (5697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (5797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=403 ttl=5 rssi=-57[0m
+[0;32mI (6397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (6697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (6697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (6797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=404 ttl=5 rssi=-57[0m
+[0;32mI (7397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (7697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (7697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (7797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=405 ttl=5 rssi=-56[0m
+[0;32mI (8407) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (8697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (8697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (8797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=406 ttl=5 rssi=-58[0m
+[0;32mI (9397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (9687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (9697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (9797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=407 ttl=5 rssi=-52[0m
+[0;32mI (10397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (10697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (10697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (10797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=408 ttl=5 rssi=-53[0m
+[0;32mI (11397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (11687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (11697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (11797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=409 ttl=5 rssi=-53[0m
+[0;32mI (12397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (12687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (12697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (12797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=410 ttl=5 rssi=-55[0m
+[0;32mI (13397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (13687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (13697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (13797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=411 ttl=5 rssi=-54[0m
+[0;32mI (14397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (14697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (14697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (14797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=412 ttl=5 rssi=-52[0m
+[0;32mI (15397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (15687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (15697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (15797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=413 ttl=5 rssi=-53[0m
+[0;32mI (16397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (16697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (16697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (16797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=414 ttl=5 rssi=-52[0m
+[0;32mI (17397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (17687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (17697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (17797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=415 ttl=5 rssi=-51[0m
+[0;32mI (18397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (18687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (18697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (18797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=416 ttl=5 rssi=-53[0m
+[0;32mI (19397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (19687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (19697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (19797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=417 ttl=5 rssi=-53[0m
+[0;32mI (20397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (20687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (20697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (20807) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=418 ttl=5 rssi=-53[0m
+[0;32mI (21407) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (21697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (21697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (21797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=419 ttl=5 rssi=-53[0m
+[0;32mI (22397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (22687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (22697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (22797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=420 ttl=5 rssi=-53[0m
+[0;32mI (23397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (23697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (23707) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (23797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=421 ttl=5 rssi=-53[0m
+[0;32mI (24397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (24697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (24697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (24797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=422 ttl=5 rssi=-53[0m
+[0;32mI (25397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (25697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (25697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (25797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=423 ttl=5 rssi=-54[0m
+[0;32mI (26397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (26687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (26697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (26797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=424 ttl=5 rssi=-53[0m
+[0;32mI (27397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (27697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (27697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (27797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=425 ttl=5 rssi=-53[0m
+[0;32mI (28397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (28687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (28697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (28797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=426 ttl=5 rssi=-54[0m
+[0;32mI (29397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (29687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (29697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (29797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=427 ttl=5 rssi=-54[0m
+[0;32mI (30397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (30697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (30697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (30797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=428 ttl=5 rssi=-53[0m
+[0;32mI (31397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (31697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (31697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (31797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=429 ttl=5 rssi=-53[0m
+[0;32mI (32397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (32687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (32697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (32797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=430 ttl=5 rssi=-54[0m
+[0;32mI (33397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (33687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (33697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (33797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=431 ttl=5 rssi=-54[0m
+[0;32mI (34397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (34687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (34697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (34797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=432 ttl=5 rssi=-53[0m
+[0;32mI (35397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (35687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (35697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (35797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=433 ttl=5 rssi=-52[0m
+[0;32mI (36397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (36687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (36697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (36797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=434 ttl=5 rssi=-53[0m
+[0;32mI (37397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (37687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (37697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (37797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=435 ttl=5 rssi=-53[0m
+[0;32mI (38397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (38687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (38697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (38797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=436 ttl=5 rssi=-53[0m
+[0;32mI (39397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (39697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (39697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (39797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=437 ttl=5 rssi=-52[0m
+[0;32mI (40397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (40687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (40697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (40797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=438 ttl=5 rssi=-52[0m
+[0;32mI (41397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (41697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (41697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (41797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=439 ttl=5 rssi=-52[0m
+[0;32mI (42397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (42687) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (42697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (42797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=440 ttl=5 rssi=-53[0m
+[0;32mI (43397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (43697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (43697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (43797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=441 ttl=5 rssi=-53[0m
+[0;32mI (44397) ESP_NOW_BROADCAST: Message seen -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (44697) ESP_NOW_BROADCAST: Message seen -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (44697) ESP_NOW_BROADCAST: Message seen -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (44797) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=442 ttl=5 rssi=-54[0m

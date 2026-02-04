@@ -1,0 +1,1412 @@
+Command: /Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3 /Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-0001 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/broadcast-prototype.elf /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/bootloader/bootloader.elf -m '/Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3' '/Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf.py'
+boot.esp32: SPI Speed      : 40MHz
+[0;32mI (35) boot.esp32: SPI Mode       Y�ͅ���         Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+I (�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (26) boot: ESP-IDF v5.5.2-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Feb  1 2026 17:26:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.0[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=187ech (100332) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=00028814 vaddr=3ffb0000 size=03f24h ( 16164) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0002c740 vaddr=40080000 size=038d8h ( 14552) load[0m
+[0;32mI (132) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7eefch (519932) map[0m
+[0;32mI (310) esp_image: segment 4: paddr=000aef24 vaddr=400838d8 size=14668h ( 83560) load[0m
+[0;32mI (343) esp_image: segment 5: paddr=000c3594 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (355) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (355) boot: Disabling RNG early entropy source...[0m
+[0;32mI (365) cpu_start: Multicore app[0m
+[0;32mI (373) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (374) cpu_start: Pro cpu start user code[0m
+[0;32mI (374) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (376) app_init: Application information:[0m
+[0;32mI (379) app_init: Project name:     broadcast-prototype[0m
+[0;32mI (384) app_init: App version:      1[0m
+[0;32mI (388) app_init: Compile time:     Feb  1 2026 17:26:06[0m
+[0;32mI (393) app_init: ELF file SHA256:  15f2cf9c6...[0m
+[0;32mI (397) app_init: ESP-IDF:          v5.5.2-dirty[0m
+[0;32mI (401) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (405) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (409) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (413) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (420) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (424) heap_init: At 3FFB86B8 len 00027948 (158 KiB): DRAM[0m
+[0;32mI (430) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (435) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (441) heap_init: At 40097F40 len 000080C0 (32 KiB): IRAM[0m
+[0;32mI (447) spi_flash: detected chip: gd[0m
+[0;32mI (449) spi_flash: flash io: dio[0m
+[0;33mW (452) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (465) main_task: Started on CPU0[0m
+[0;32mI (475) main_task: Calling app_main()[0m
+[0;32mI (515) wifi:wifi driver task: 3ffc0564, prio:23, stack:6656, core=0[0m
+[0;32mI (525) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (525) wifi:wifi certification version: v7.0[0m
+[0;32mI (525) wifi:config NVS flash: enabled[0m
+[0;32mI (535) wifi:config nano formatting: disabled[0m
+[0;32mI (535) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (535) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (545) wifi:Init management short buffer num: 32[0m
+[0;32mI (545) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (555) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (555) wifi:Init static rx buffer num: 10[0m
+[0;32mI (555) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (565) wifi_init: rx ba win: 6[0m
+[0;32mI (565) wifi_init: accept mbox: 6[0m
+[0;32mI (565) wifi_init: tcpip mbox: 32[0m
+[0;32mI (575) wifi_init: udp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp tx win: 5760[0m
+[0;32mI (585) wifi_init: tcp rx win: 5760[0m
+[0;32mI (585) wifi_init: tcp mss: 1440[0m
+[0;32mI (585) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (595) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (595) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (675) wifi:mode : sta (b4:e6:2d:96:a2:85)[0m
+[0;32mI (675) wifi:enable tsf[0m
+[0;32mI (675) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (685) ESP_NOW_MESH: ESP-NOW MESH READY[0m
+[0;32mI (685) main_task: Returned from app_main()[0m
+[0;32mI (1675) ESP_NOW_MESH: BUTTON → DATA id=2[0m
+[0;32mI (2995) ESP_NOW_MESH: BUTTON → DATA id=3[0m
+[0;32mI (4315) ESP_NOW_MESH: BUTTON → DATA id=5[0m
+[0;32mI (5635) ESP_NOW_MESH: BUTTON → DATA id=6[0m
+[0;32mI (6475) ESP_NOW_MESH: PEER ADD 00:4B:12:2D:F7:8C[0m
+[0;32mI (6955) ESP_NOW_MESH: BUTTON → DATA id=8[0m
+[0;32mI (7025) ESP_NOW_MESH: RX type=3 id=8 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (7025) ESP_NOW_MESH: ACK RX id=8 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (7105) ESP_NOW_MESH: RX type=3 id=8 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (7105) ESP_NOW_MESH: IGNORED SELF msg_id=8 type=2[0m
+[0;32mI (7135) ESP_NOW_MESH: RX type=3 id=8 ttl=0 rssi=165 src=38:18:2B:8C:13:D0 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (7135) ESP_NOW_MESH: IGNORED SELF msg_id=8 type=2[0m
+[0;32mI (8275) ESP_NOW_MESH: BUTTON → DATA id=9[0m
+[0;32mI (8355) ESP_NOW_MESH: RX type=3 id=9 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (8355) ESP_NOW_MESH: ACK RX id=9 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (8435) ESP_NOW_MESH: RX type=3 id=9 ttl=0 rssi=164 src=38:18:2B:8C:13:D0 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (8445) ESP_NOW_MESH: IGNORED SELF msg_id=9 type=2[0m
+[0;32mI (8445) ESP_NOW_MESH: RX type=3 id=9 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (8465) ESP_NOW_MESH: IGNORED SELF msg_id=9 type=2[0m
+[0;32mI (8715) ESP_NOW_MESH: PEER ADD 40:22:D8:7B:98:04[0m
+[0;32mI (9595) ESP_NOW_MESH: BUTTON → DATA id=10[0m
+[0;32mI (9665) ESP_NOW_MESH: RX type=3 id=10 ttl=0 rssi=166 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (9665) ESP_NOW_MESH: ACK RX id=10 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (9675) ESP_NOW_MESH: RX type=3 id=10 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (9745) ESP_NOW_MESH: RX type=3 id=10 ttl=0 rssi=166 src=38:18:2B:8C:13:D0 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (9745) ESP_NOW_MESH: IGNORED SELF msg_id=10 type=2[0m
+[0;32mI (10915) ESP_NOW_MESH: BUTTON → DATA id=12[0m
+[0;32mI (10985) ESP_NOW_MESH: RX type=3 id=12 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (10985) ESP_NOW_MESH: ACK RX id=12 from 40:22:D8:7B:98:04[0m
+[0;32mI (11005) ESP_NOW_MESH: RX type=3 id=12 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (11075) ESP_NOW_MESH: RX type=3 id=12 ttl=0 rssi=169 src=38:18:2B:8C:13:D0 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (11075) ESP_NOW_MESH: IGNORED SELF msg_id=12 type=2[0m
+[0;32mI (12235) ESP_NOW_MESH: BUTTON → DATA id=13[0m
+[0;32mI (12315) ESP_NOW_MESH: RX type=3 id=13 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (12315) ESP_NOW_MESH: ACK RX id=13 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (12325) ESP_NOW_MESH: RX type=3 id=13 ttl=0 rssi=170 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (12395) ESP_NOW_MESH: RX type=3 id=13 ttl=0 rssi=168 src=38:18:2B:8C:13:D0 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (12395) ESP_NOW_MESH: IGNORED SELF msg_id=13 type=2[0m
+[0;32mI (12635) ESP_NOW_MESH: PEER ADD 38:18:2B:8C:13:D0[0m
+[0;32mI (13555) ESP_NOW_MESH: BUTTON → DATA id=15[0m
+[0;32mI (13645) ESP_NOW_MESH: RX type=3 id=15 ttl=0 rssi=168 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (13645) ESP_NOW_MESH: ACK RX id=15 from 40:22:D8:7B:98:04[0m
+[0;32mI (13645) ESP_NOW_MESH: RX type=3 id=15 ttl=0 rssi=166 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (13655) ESP_NOW_MESH: RX type=3 id=15 ttl=0 rssi=165 src=38:18:2B:8C:13:D0 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (14875) ESP_NOW_MESH: BUTTON → DATA id=16[0m
+[0;32mI (14945) ESP_NOW_MESH: RX type=3 id=16 ttl=0 rssi=167 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (14945) ESP_NOW_MESH: ACK RX id=16 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (14955) ESP_NOW_MESH: RX type=3 id=16 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (14955) ESP_NOW_MESH: RX type=3 id=16 ttl=0 rssi=165 src=38:18:2B:8C:13:D0 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (16195) ESP_NOW_MESH: BUTTON → DATA id=18[0m
+[0;32mI (16265) ESP_NOW_MESH: RX type=3 id=18 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (16265) ESP_NOW_MESH: ACK RX id=18 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (16275) ESP_NOW_MESH: RX type=3 id=18 ttl=0 rssi=164 src=38:18:2B:8C:13:D0 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (16285) ESP_NOW_MESH: RX type=3 id=18 ttl=0 rssi=168 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (17515) ESP_NOW_MESH: BUTTON → DATA id=19[0m
+[0;32mI (17585) ESP_NOW_MESH: RX type=3 id=19 ttl=0 rssi=168 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (17585) ESP_NOW_MESH: ACK RX id=19 from 40:22:D8:7B:98:04[0m
+[0;32mI (17645) ESP_NOW_MESH: RX type=3 id=19 ttl=0 rssi=166 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (18835) ESP_NOW_MESH: BUTTON → DATA id=21[0m
+[0;32mI (18925) ESP_NOW_MESH: RX type=3 id=21 ttl=0 rssi=164 src=38:18:2B:8C:13:D0 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (18925) ESP_NOW_MESH: ACK RX id=21 from 38:18:2B:8C:13:D0[0m
+[0;32mI (18925) ESP_NOW_MESH: RX type=3 id=21 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (20155) ESP_NOW_MESH: BUTTON → DATA id=22[0m
+[0;32mI (20265) ESP_NOW_MESH: RX type=3 id=22 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (20265) ESP_NOW_MESH: ACK RX id=22 from 40:22:D8:7B:98:04[0m
+[0;32mI (21475) ESP_NOW_MESH: BUTTON → DATA id=23[0m
+[0;32mI (21565) ESP_NOW_MESH: RX type=3 id=23 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (21565) ESP_NOW_MESH: ACK RX id=23 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (21595) ESP_NOW_MESH: RX type=3 id=23 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (22795) ESP_NOW_MESH: BUTTON → DATA id=25[0m
+[0;32mI (22995) ESP_NOW_MESH: RX type=3 id=25 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (22995) ESP_NOW_MESH: ACK RX id=25 from 40:22:D8:7B:98:04[0m
+[0;32mI (22995) ESP_NOW_MESH: IGNORED SELF msg_id=25 type=2[0m
+[0;32mI (24115) ESP_NOW_MESH: BUTTON → DATA id=26[0m
+[0;32mI (24235) ESP_NOW_MESH: RX type=3 id=26 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (24235) ESP_NOW_MESH: ACK RX id=26 from 40:22:D8:7B:98:04[0m
+[0;32mI (25435) ESP_NOW_MESH: BUTTON → DATA id=28[0m
+[0;32mI (25565) ESP_NOW_MESH: RX type=3 id=28 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (25565) ESP_NOW_MESH: ACK RX id=28 from 40:22:D8:7B:98:04[0m
+[0;32mI (26755) ESP_NOW_MESH: BUTTON → DATA id=29[0m
+[0;32mI (26865) ESP_NOW_MESH: RX type=3 id=29 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (26865) ESP_NOW_MESH: ACK RX id=29 from 40:22:D8:7B:98:04[0m
+[0;32mI (28075) ESP_NOW_MESH: BUTTON → DATA id=31[0m
+[0;32mI (28185) ESP_NOW_MESH: RX type=3 id=31 ttl=0 rssi=161 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (28185) ESP_NOW_MESH: ACK RX id=31 from 40:22:D8:7B:98:04[0m
+[0;32mI (29395) ESP_NOW_MESH: BUTTON → DATA id=32[0m
+[0;32mI (29505) ESP_NOW_MESH: RX type=3 id=32 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (29505) ESP_NOW_MESH: ACK RX id=32 from 40:22:D8:7B:98:04[0m
+[0;32mI (30715) ESP_NOW_MESH: BUTTON → DATA id=34[0m
+[0;32mI (30785) ESP_NOW_MESH: RX type=3 id=34 ttl=0 rssi=167 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (30785) ESP_NOW_MESH: ACK RX id=34 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (32035) ESP_NOW_MESH: BUTTON → DATA id=35[0m
+[0;32mI (32145) ESP_NOW_MESH: RX type=3 id=35 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (32145) ESP_NOW_MESH: ACK RX id=35 from 40:22:D8:7B:98:04[0m
+[0;32mI (33355) ESP_NOW_MESH: BUTTON → DATA id=36[0m
+[0;32mI (33465) ESP_NOW_MESH: RX type=3 id=36 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (33465) ESP_NOW_MESH: ACK RX id=36 from 40:22:D8:7B:98:04[0m
+[0;32mI (34675) ESP_NOW_MESH: BUTTON → DATA id=38[0m
+[0;32mI (34785) ESP_NOW_MESH: RX type=3 id=38 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (34785) ESP_NOW_MESH: ACK RX id=38 from 40:22:D8:7B:98:04[0m
+[0;32mI (35995) ESP_NOW_MESH: BUTTON → DATA id=39[0m
+[0;32mI (36085) ESP_NOW_MESH: RX type=3 id=39 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (36085) ESP_NOW_MESH: ACK RX id=39 from 40:22:D8:7B:98:04[0m
+[0;32mI (37315) ESP_NOW_MESH: BUTTON → DATA id=41[0m
+[0;32mI (37395) ESP_NOW_MESH: RX type=3 id=41 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (37395) ESP_NOW_MESH: ACK RX id=41 from 40:22:D8:7B:98:04[0m
+[0;32mI (38635) ESP_NOW_MESH: BUTTON → DATA id=42[0m
+[0;32mI (38715) ESP_NOW_MESH: RX type=3 id=42 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (38715) ESP_NOW_MESH: ACK RX id=42 from 40:22:D8:7B:98:04[0m
+[0;32mI (39955) ESP_NOW_MESH: BUTTON → DATA id=44[0m
+[0;32mI (40045) ESP_NOW_MESH: RX type=3 id=44 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (40045) ESP_NOW_MESH: ACK RX id=44 from 40:22:D8:7B:98:04[0m
+[0;32mI (41275) ESP_NOW_MESH: BUTTON → DATA id=45[0m
+[0;32mI (41385) ESP_NOW_MESH: RX type=3 id=45 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (41385) ESP_NOW_MESH: ACK RX id=45 from 40:22:D8:7B:98:04[0m
+[0;32mI (42595) ESP_NOW_MESH: BUTTON → DATA id=46[0m
+[0;32mI (42705) ESP_NOW_MESH: RX type=3 id=46 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (42705) ESP_NOW_MESH: ACK RX id=46 from 40:22:D8:7B:98:04[0m
+[0;32mI (43915) ESP_NOW_MESH: BUTTON → DATA id=48[0m
+[0;32mI (44025) ESP_NOW_MESH: RX type=3 id=48 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (44025) ESP_NOW_MESH: ACK RX id=48 from 40:22:D8:7B:98:04[0m
+[0;32mI (45235) ESP_NOW_MESH: BUTTON → DATA id=49[0m
+[0;32mI (45345) ESP_NOW_MESH: RX type=3 id=49 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (45345) ESP_NOW_MESH: ACK RX id=49 from 40:22:D8:7B:98:04[0m
+[0;32mI (46555) ESP_NOW_MESH: BUTTON → DATA id=51[0m
+[0;32mI (46665) ESP_NOW_MESH: RX type=3 id=51 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (46665) ESP_NOW_MESH: ACK RX id=51 from 40:22:D8:7B:98:04[0m
+[0;32mI (47875) ESP_NOW_MESH: BUTTON → DATA id=52[0m
+[0;32mI (47985) ESP_NOW_MESH: RX type=3 id=52 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (47985) ESP_NOW_MESH: ACK RX id=52 from 40:22:D8:7B:98:04[0m
+[0;32mI (49195) ESP_NOW_MESH: BUTTON → DATA id=54[0m
+[0;32mI (49305) ESP_NOW_MESH: RX type=3 id=54 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (49305) ESP_NOW_MESH: ACK RX id=54 from 40:22:D8:7B:98:04[0m
+[0;32mI (50515) ESP_NOW_MESH: BUTTON → DATA id=55[0m
+[0;32mI (50615) ESP_NOW_MESH: RX type=3 id=55 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (50615) ESP_NOW_MESH: ACK RX id=55 from 40:22:D8:7B:98:04[0m
+[0;32mI (51835) ESP_NOW_MESH: BUTTON → DATA id=57[0m
+[0;32mI (51945) ESP_NOW_MESH: RX type=3 id=57 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (51945) ESP_NOW_MESH: ACK RX id=57 from 40:22:D8:7B:98:04[0m
+[0;32mI (53155) ESP_NOW_MESH: BUTTON → DATA id=58[0m
+[0;32mI (53265) ESP_NOW_MESH: RX type=3 id=58 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (53265) ESP_NOW_MESH: ACK RX id=58 from 40:22:D8:7B:98:04[0m
+[0;32mI (54475) ESP_NOW_MESH: BUTTON → DATA id=59[0m
+[0;32mI (54575) ESP_NOW_MESH: RX type=3 id=59 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (54575) ESP_NOW_MESH: ACK RX id=59 from 40:22:D8:7B:98:04[0m
+[0;32mI (55795) ESP_NOW_MESH: BUTTON → DATA id=61[0m
+[0;32mI (55905) ESP_NOW_MESH: RX type=3 id=61 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (55905) ESP_NOW_MESH: ACK RX id=61 from 40:22:D8:7B:98:04[0m
+[0;32mI (57115) ESP_NOW_MESH: BUTTON → DATA id=62[0m
+[0;32mI (57225) ESP_NOW_MESH: RX type=3 id=62 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (57225) ESP_NOW_MESH: ACK RX id=62 from 40:22:D8:7B:98:04[0m
+[0;32mI (58435) ESP_NOW_MESH: BUTTON → DATA id=64[0m
+[0;32mI (58555) ESP_NOW_MESH: RX type=3 id=64 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (58555) ESP_NOW_MESH: ACK RX id=64 from 40:22:D8:7B:98:04[0m
+[0;32mI (59755) ESP_NOW_MESH: BUTTON → DATA id=65[0m
+[0;32mI (59845) ESP_NOW_MESH: RX type=3 id=65 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (59845) ESP_NOW_MESH: ACK RX id=65 from 40:22:D8:7B:98:04[0m
+[0;32mI (61075) ESP_NOW_MESH: BUTTON → DATA id=67[0m
+[0;32mI (61185) ESP_NOW_MESH: RX type=3 id=67 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (61185) ESP_NOW_MESH: ACK RX id=67 from 40:22:D8:7B:98:04[0m
+[0;32mI (62395) ESP_NOW_MESH: BUTTON → DATA id=68[0m
+[0;32mI (62495) ESP_NOW_MESH: RX type=3 id=68 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (62495) ESP_NOW_MESH: ACK RX id=68 from 40:22:D8:7B:98:04[0m
+[0;32mI (63715) ESP_NOW_MESH: BUTTON → DATA id=70[0m
+[0;32mI (63815) ESP_NOW_MESH: RX type=3 id=70 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (63815) ESP_NOW_MESH: ACK RX id=70 from 40:22:D8:7B:98:04[0m
+[0;32mI (65035) ESP_NOW_MESH: BUTTON → DATA id=71[0m
+[0;32mI (65145) ESP_NOW_MESH: RX type=3 id=71 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (65145) ESP_NOW_MESH: ACK RX id=71 from 40:22:D8:7B:98:04[0m
+[0;32mI (66355) ESP_NOW_MESH: BUTTON → DATA id=72[0m
+[0;32mI (66465) ESP_NOW_MESH: RX type=3 id=72 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (66465) ESP_NOW_MESH: ACK RX id=72 from 40:22:D8:7B:98:04[0m
+[0;32mI (67675) ESP_NOW_MESH: BUTTON → DATA id=74[0m
+[0;32mI (67755) ESP_NOW_MESH: RX type=3 id=74 ttl=0 rssi=161 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (67755) ESP_NOW_MESH: ACK RX id=74 from 40:22:D8:7B:98:04[0m
+[0;32mI (68995) ESP_NOW_MESH: BUTTON → DATA id=75[0m
+[0;32mI (69075) ESP_NOW_MESH: RX type=3 id=75 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (69075) ESP_NOW_MESH: ACK RX id=75 from 40:22:D8:7B:98:04[0m
+[0;32mI (70315) ESP_NOW_MESH: BUTTON → DATA id=77[0m
+[0;32mI (70425) ESP_NOW_MESH: RX type=3 id=77 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (70425) ESP_NOW_MESH: ACK RX id=77 from 40:22:D8:7B:98:04[0m
+[0;32mI (71635) ESP_NOW_MESH: BUTTON → DATA id=78[0m
+[0;32mI (71745) ESP_NOW_MESH: RX type=3 id=78 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (71745) ESP_NOW_MESH: ACK RX id=78 from 40:22:D8:7B:98:04[0m
+[0;32mI (72955) ESP_NOW_MESH: BUTTON → DATA id=80[0m
+[0;32mI (73085) ESP_NOW_MESH: RX type=3 id=80 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (73085) ESP_NOW_MESH: ACK RX id=80 from 40:22:D8:7B:98:04[0m
+[0;32mI (74275) ESP_NOW_MESH: BUTTON → DATA id=81[0m
+[0;32mI (74345) ESP_NOW_MESH: RX type=3 id=81 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (74345) ESP_NOW_MESH: ACK RX id=81 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (74365) ESP_NOW_MESH: RX type=3 id=81 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (75595) ESP_NOW_MESH: BUTTON → DATA id=82[0m
+[0;32mI (75695) ESP_NOW_MESH: RX type=3 id=82 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (75695) ESP_NOW_MESH: ACK RX id=82 from 40:22:D8:7B:98:04[0m
+[0;32mI (76915) ESP_NOW_MESH: BUTTON → DATA id=84[0m
+[0;32mI (77005) ESP_NOW_MESH: RX type=3 id=84 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (77005) ESP_NOW_MESH: ACK RX id=84 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (77005) ESP_NOW_MESH: RX type=3 id=84 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (78235) ESP_NOW_MESH: BUTTON → DATA id=85[0m
+[0;32mI (78325) ESP_NOW_MESH: RX type=3 id=85 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (78325) ESP_NOW_MESH: ACK RX id=85 from 40:22:D8:7B:98:04[0m
+[0;32mI (79555) ESP_NOW_MESH: BUTTON → DATA id=87[0m
+[0;32mI (79665) ESP_NOW_MESH: RX type=3 id=87 ttl=0 rssi=161 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (79665) ESP_NOW_MESH: ACK RX id=87 from 40:22:D8:7B:98:04[0m
+[0;32mI (80875) ESP_NOW_MESH: BUTTON → DATA id=88[0m
+[0;32mI (80975) ESP_NOW_MESH: RX type=3 id=88 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (80975) ESP_NOW_MESH: ACK RX id=88 from 40:22:D8:7B:98:04[0m
+[0;32mI (82195) ESP_NOW_MESH: BUTTON → DATA id=90[0m
+[0;32mI (82305) ESP_NOW_MESH: RX type=3 id=90 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (82315) ESP_NOW_MESH: ACK RX id=90 from 40:22:D8:7B:98:04[0m
+[0;32mI (83515) ESP_NOW_MESH: BUTTON → DATA id=91[0m
+[0;32mI (83625) ESP_NOW_MESH: RX type=3 id=91 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (83625) ESP_NOW_MESH: ACK RX id=91 from 40:22:D8:7B:98:04[0m
+[0;32mI (84835) ESP_NOW_MESH: BUTTON → DATA id=93[0m
+[0;32mI (84925) ESP_NOW_MESH: RX type=3 id=93 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (84925) ESP_NOW_MESH: ACK RX id=93 from 40:22:D8:7B:98:04[0m
+[0;32mI (86155) ESP_NOW_MESH: BUTTON → DATA id=94[0m
+[0;32mI (86265) ESP_NOW_MESH: RX type=3 id=94 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (86265) ESP_NOW_MESH: ACK RX id=94 from 40:22:D8:7B:98:04[0m
+[0;32mI (87475) ESP_NOW_MESH: BUTTON → DATA id=95[0m
+[0;32mI (87585) ESP_NOW_MESH: RX type=3 id=95 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (87585) ESP_NOW_MESH: ACK RX id=95 from 40:22:D8:7B:98:04[0m
+[0;32mI (88795) ESP_NOW_MESH: BUTTON → DATA id=97[0m
+[0;32mI (88875) ESP_NOW_MESH: RX type=3 id=97 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (88875) ESP_NOW_MESH: ACK RX id=97 from 40:22:D8:7B:98:04[0m
+[0;32mI (90115) ESP_NOW_MESH: BUTTON → DATA id=98[0m
+[0;32mI (90195) ESP_NOW_MESH: RX type=3 id=98 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (90195) ESP_NOW_MESH: ACK RX id=98 from 40:22:D8:7B:98:04[0m
+[0;32mI (91435) ESP_NOW_MESH: BUTTON → DATA id=100[0m
+[0;32mI (91525) ESP_NOW_MESH: RX type=3 id=100 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (91525) ESP_NOW_MESH: ACK RX id=100 from 40:22:D8:7B:98:04[0m
+[0;32mI (92755) ESP_NOW_MESH: BUTTON → DATA id=101[0m
+[0;32mI (92855) ESP_NOW_MESH: RX type=3 id=101 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (92855) ESP_NOW_MESH: ACK RX id=101 from 40:22:D8:7B:98:04[0m
+[0;32mI (94075) ESP_NOW_MESH: BUTTON → DATA id=103[0m
+[0;32mI (94155) ESP_NOW_MESH: RX type=3 id=103 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (94155) ESP_NOW_MESH: ACK RX id=103 from 40:22:D8:7B:98:04[0m
+[0;32mI (95395) ESP_NOW_MESH: BUTTON → DATA id=104[0m
+[0;32mI (95515) ESP_NOW_MESH: RX type=3 id=104 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (95515) ESP_NOW_MESH: ACK RX id=104 from 40:22:D8:7B:98:04[0m
+[0;32mI (96715) ESP_NOW_MESH: BUTTON → DATA id=106[0m
+[0;32mI (96805) ESP_NOW_MESH: RX type=3 id=106 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (96805) ESP_NOW_MESH: ACK RX id=106 from 40:22:D8:7B:98:04[0m
+[0;32mI (98035) ESP_NOW_MESH: BUTTON → DATA id=107[0m
+[0;32mI (98115) ESP_NOW_MESH: RX type=3 id=107 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (98115) ESP_NOW_MESH: ACK RX id=107 from 40:22:D8:7B:98:04[0m
+[0;32mI (99355) ESP_NOW_MESH: BUTTON → DATA id=108[0m
+[0;32mI (99445) ESP_NOW_MESH: RX type=3 id=108 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (99445) ESP_NOW_MESH: ACK RX id=108 from 40:22:D8:7B:98:04[0m
+[0;32mI (100675) ESP_NOW_MESH: BUTTON → DATA id=110[0m
+[0;32mI (100765) ESP_NOW_MESH: RX type=3 id=110 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (100765) ESP_NOW_MESH: ACK RX id=110 from 40:22:D8:7B:98:04[0m
+[0;32mI (101995) ESP_NOW_MESH: BUTTON → DATA id=111[0m
+[0;32mI (102075) ESP_NOW_MESH: RX type=3 id=111 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (102075) ESP_NOW_MESH: ACK RX id=111 from 40:22:D8:7B:98:04[0m
+[0;32mI (103315) ESP_NOW_MESH: BUTTON → DATA id=113[0m
+[0;32mI (103415) ESP_NOW_MESH: RX type=3 id=113 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (103415) ESP_NOW_MESH: ACK RX id=113 from 40:22:D8:7B:98:04[0m
+[0;32mI (104635) ESP_NOW_MESH: BUTTON → DATA id=114[0m
+[0;32mI (104715) ESP_NOW_MESH: RX type=3 id=114 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (104715) ESP_NOW_MESH: ACK RX id=114 from 40:22:D8:7B:98:04[0m
+[0;32mI (105955) ESP_NOW_MESH: BUTTON → DATA id=116[0m
+[0;32mI (106055) ESP_NOW_MESH: RX type=3 id=116 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (106055) ESP_NOW_MESH: ACK RX id=116 from 40:22:D8:7B:98:04[0m
+[0;32mI (107275) ESP_NOW_MESH: BUTTON → DATA id=117[0m
+[0;32mI (107385) ESP_NOW_MESH: RX type=3 id=117 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (107385) ESP_NOW_MESH: ACK RX id=117 from 40:22:D8:7B:98:04[0m
+[0;32mI (108595) ESP_NOW_MESH: BUTTON → DATA id=118[0m
+[0;32mI (108695) ESP_NOW_MESH: RX type=3 id=118 ttl=0 rssi=168 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (108695) ESP_NOW_MESH: ACK RX id=118 from 40:22:D8:7B:98:04[0m
+[0;32mI (109915) ESP_NOW_MESH: BUTTON → DATA id=120[0m
+[0;32mI (109995) ESP_NOW_MESH: RX type=3 id=120 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (109995) ESP_NOW_MESH: ACK RX id=120 from 40:22:D8:7B:98:04[0m
+[0;32mI (111235) ESP_NOW_MESH: BUTTON → DATA id=121[0m
+[0;32mI (111315) ESP_NOW_MESH: RX type=3 id=121 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (111315) ESP_NOW_MESH: ACK RX id=121 from 40:22:D8:7B:98:04[0m
+[0;32mI (112555) ESP_NOW_MESH: BUTTON → DATA id=123[0m
+[0;32mI (112665) ESP_NOW_MESH: RX type=3 id=123 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (112665) ESP_NOW_MESH: ACK RX id=123 from 40:22:D8:7B:98:04[0m
+[0;32mI (113875) ESP_NOW_MESH: BUTTON → DATA id=124[0m
+[0;32mI (113965) ESP_NOW_MESH: RX type=3 id=124 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (113965) ESP_NOW_MESH: ACK RX id=124 from 40:22:D8:7B:98:04[0m
+[0;32mI (115195) ESP_NOW_MESH: BUTTON → DATA id=126[0m
+[0;32mI (115295) ESP_NOW_MESH: RX type=3 id=126 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (115295) ESP_NOW_MESH: ACK RX id=126 from 40:22:D8:7B:98:04[0m
+[0;32mI (116515) ESP_NOW_MESH: BUTTON → DATA id=127[0m
+[0;32mI (116655) ESP_NOW_MESH: RX type=3 id=127 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (116655) ESP_NOW_MESH: ACK RX id=127 from 40:22:D8:7B:98:04[0m
+[0;32mI (117835) ESP_NOW_MESH: BUTTON → DATA id=129[0m
+[0;32mI (117925) ESP_NOW_MESH: RX type=3 id=129 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (117925) ESP_NOW_MESH: ACK RX id=129 from 40:22:D8:7B:98:04[0m
+[0;32mI (119155) ESP_NOW_MESH: BUTTON → DATA id=130[0m
+[0;32mI (119255) ESP_NOW_MESH: RX type=3 id=130 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (119255) ESP_NOW_MESH: ACK RX id=130 from 40:22:D8:7B:98:04[0m
+[0;32mI (120475) ESP_NOW_MESH: BUTTON → DATA id=131[0m
+[0;32mI (120565) ESP_NOW_MESH: RX type=3 id=131 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (120565) ESP_NOW_MESH: ACK RX id=131 from 40:22:D8:7B:98:04[0m
+[0;32mI (121795) ESP_NOW_MESH: BUTTON → DATA id=133[0m
+[0;32mI (121905) ESP_NOW_MESH: RX type=3 id=133 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (121905) ESP_NOW_MESH: ACK RX id=133 from 40:22:D8:7B:98:04[0m
+[0;32mI (123115) ESP_NOW_MESH: BUTTON → DATA id=134[0m
+[0;32mI (123225) ESP_NOW_MESH: RX type=3 id=134 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (123225) ESP_NOW_MESH: ACK RX id=134 from 40:22:D8:7B:98:04[0m
+[0;32mI (124435) ESP_NOW_MESH: BUTTON → DATA id=136[0m
+[0;32mI (124535) ESP_NOW_MESH: RX type=3 id=136 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (124535) ESP_NOW_MESH: ACK RX id=136 from 40:22:D8:7B:98:04[0m
+[0;32mI (125755) ESP_NOW_MESH: BUTTON → DATA id=137[0m
+[0;32mI (125845) ESP_NOW_MESH: RX type=3 id=137 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (125845) ESP_NOW_MESH: ACK RX id=137 from 40:22:D8:7B:98:04[0m
+[0;32mI (125845) ESP_NOW_MESH: RX type=3 id=137 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (125855) ESP_NOW_MESH: RX type=3 id=137 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (127075) ESP_NOW_MESH: BUTTON → DATA id=139[0m
+[0;32mI (127165) ESP_NOW_MESH: RX type=3 id=139 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (127165) ESP_NOW_MESH: ACK RX id=139 from 40:22:D8:7B:98:04[0m
+[0;32mI (128395) ESP_NOW_MESH: BUTTON → DATA id=140[0m
+[0;32mI (128495) ESP_NOW_MESH: RX type=3 id=140 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (128495) ESP_NOW_MESH: ACK RX id=140 from 40:22:D8:7B:98:04[0m
+[0;32mI (129715) ESP_NOW_MESH: BUTTON → DATA id=142[0m
+[0;32mI (129795) ESP_NOW_MESH: RX type=3 id=142 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (129795) ESP_NOW_MESH: ACK RX id=142 from 40:22:D8:7B:98:04[0m
+[0;32mI (131035) ESP_NOW_MESH: BUTTON → DATA id=143[0m
+[0;32mI (131135) ESP_NOW_MESH: RX type=3 id=143 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (131135) ESP_NOW_MESH: ACK RX id=143 from 40:22:D8:7B:98:04[0m
+[0;32mI (132355) ESP_NOW_MESH: BUTTON → DATA id=144[0m
+[0;32mI (132445) ESP_NOW_MESH: RX type=3 id=144 ttl=0 rssi=168 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (132445) ESP_NOW_MESH: ACK RX id=144 from 40:22:D8:7B:98:04[0m
+[0;32mI (133675) ESP_NOW_MESH: BUTTON → DATA id=146[0m
+[0;32mI (133765) ESP_NOW_MESH: RX type=3 id=146 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (133765) ESP_NOW_MESH: ACK RX id=146 from 40:22:D8:7B:98:04[0m
+[0;32mI (134995) ESP_NOW_MESH: BUTTON → DATA id=147[0m
+[0;32mI (135075) ESP_NOW_MESH: RX type=3 id=147 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (135075) ESP_NOW_MESH: ACK RX id=147 from 40:22:D8:7B:98:04[0m
+[0;32mI (136315) ESP_NOW_MESH: BUTTON → DATA id=149[0m
+[0;32mI (136395) ESP_NOW_MESH: RX type=3 id=149 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (136395) ESP_NOW_MESH: ACK RX id=149 from 40:22:D8:7B:98:04[0m
+[0;32mI (137635) ESP_NOW_MESH: BUTTON → DATA id=150[0m
+[0;32mI (137725) ESP_NOW_MESH: RX type=3 id=150 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (137725) ESP_NOW_MESH: ACK RX id=150 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (137725) ESP_NOW_MESH: RX type=3 id=150 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (138955) ESP_NOW_MESH: BUTTON → DATA id=152[0m
+[0;32mI (139045) ESP_NOW_MESH: RX type=3 id=152 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (139045) ESP_NOW_MESH: ACK RX id=152 from 40:22:D8:7B:98:04[0m
+[0;32mI (140275) ESP_NOW_MESH: BUTTON → DATA id=153[0m
+[0;32mI (140375) ESP_NOW_MESH: RX type=3 id=153 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (140375) ESP_NOW_MESH: ACK RX id=153 from 40:22:D8:7B:98:04[0m
+[0;32mI (141595) ESP_NOW_MESH: BUTTON → DATA id=154[0m
+[0;32mI (141675) ESP_NOW_MESH: RX type=3 id=154 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (141675) ESP_NOW_MESH: ACK RX id=154 from 40:22:D8:7B:98:04[0m
+[0;32mI (141705) ESP_NOW_MESH: RX type=3 id=154 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (142915) ESP_NOW_MESH: BUTTON → DATA id=156[0m
+[0;32mI (142995) ESP_NOW_MESH: RX type=3 id=156 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (142995) ESP_NOW_MESH: ACK RX id=156 from 40:22:D8:7B:98:04[0m
+[0;32mI (144235) ESP_NOW_MESH: BUTTON → DATA id=157[0m
+[0;32mI (144325) ESP_NOW_MESH: RX type=3 id=157 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (144325) ESP_NOW_MESH: ACK RX id=157 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (144325) ESP_NOW_MESH: RX type=3 id=157 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (145555) ESP_NOW_MESH: BUTTON → DATA id=159[0m
+[0;32mI (145635) ESP_NOW_MESH: RX type=3 id=159 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (145635) ESP_NOW_MESH: ACK RX id=159 from 40:22:D8:7B:98:04[0m
+[0;32mI (145715) ESP_NOW_MESH: RX type=3 id=159 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (146875) ESP_NOW_MESH: BUTTON → DATA id=160[0m
+[0;32mI (146965) ESP_NOW_MESH: RX type=3 id=160 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (146965) ESP_NOW_MESH: ACK RX id=160 from 40:22:D8:7B:98:04[0m
+[0;32mI (148195) ESP_NOW_MESH: BUTTON → DATA id=162[0m
+[0;32mI (148285) ESP_NOW_MESH: RX type=3 id=162 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (148285) ESP_NOW_MESH: ACK RX id=162 from 40:22:D8:7B:98:04[0m
+[0;32mI (149515) ESP_NOW_MESH: BUTTON → DATA id=163[0m
+[0;32mI (149605) ESP_NOW_MESH: RX type=3 id=163 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (149605) ESP_NOW_MESH: ACK RX id=163 from 40:22:D8:7B:98:04[0m
+[0;32mI (150835) ESP_NOW_MESH: BUTTON → DATA id=165[0m
+[0;32mI (150935) ESP_NOW_MESH: RX type=3 id=165 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (150935) ESP_NOW_MESH: ACK RX id=165 from 40:22:D8:7B:98:04[0m
+[0;32mI (152155) ESP_NOW_MESH: BUTTON → DATA id=166[0m
+[0;32mI (152265) ESP_NOW_MESH: RX type=3 id=166 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (152265) ESP_NOW_MESH: ACK RX id=166 from 40:22:D8:7B:98:04[0m
+[0;32mI (153475) ESP_NOW_MESH: BUTTON → DATA id=167[0m
+[0;32mI (153555) ESP_NOW_MESH: RX type=3 id=167 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (153555) ESP_NOW_MESH: ACK RX id=167 from 40:22:D8:7B:98:04[0m
+[0;32mI (154795) ESP_NOW_MESH: BUTTON → DATA id=169[0m
+[0;32mI (154905) ESP_NOW_MESH: RX type=3 id=169 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (154905) ESP_NOW_MESH: ACK RX id=169 from 40:22:D8:7B:98:04[0m
+[0;32mI (156115) ESP_NOW_MESH: BUTTON → DATA id=170[0m
+[0;32mI (156195) ESP_NOW_MESH: RX type=3 id=170 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (156195) ESP_NOW_MESH: ACK RX id=170 from 40:22:D8:7B:98:04[0m
+[0;32mI (157435) ESP_NOW_MESH: BUTTON → DATA id=172[0m
+[0;32mI (157545) ESP_NOW_MESH: RX type=3 id=172 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (157545) ESP_NOW_MESH: ACK RX id=172 from 40:22:D8:7B:98:04[0m
+[0;32mI (158755) ESP_NOW_MESH: BUTTON → DATA id=173[0m
+[0;32mI (158865) ESP_NOW_MESH: RX type=3 id=173 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (158865) ESP_NOW_MESH: ACK RX id=173 from 40:22:D8:7B:98:04[0m
+[0;32mI (160075) ESP_NOW_MESH: BUTTON → DATA id=175[0m
+[0;32mI (160175) ESP_NOW_MESH: RX type=3 id=175 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (160175) ESP_NOW_MESH: ACK RX id=175 from 40:22:D8:7B:98:04[0m
+[0;32mI (161395) ESP_NOW_MESH: BUTTON → DATA id=176[0m
+[0;32mI (161515) ESP_NOW_MESH: RX type=3 id=176 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (161515) ESP_NOW_MESH: ACK RX id=176 from 40:22:D8:7B:98:04[0m
+[0;32mI (162715) ESP_NOW_MESH: BUTTON → DATA id=178[0m
+[0;32mI (162795) ESP_NOW_MESH: RX type=3 id=178 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (162795) ESP_NOW_MESH: ACK RX id=178 from 40:22:D8:7B:98:04[0m
+[0;32mI (164035) ESP_NOW_MESH: BUTTON → DATA id=179[0m
+[0;32mI (164135) ESP_NOW_MESH: RX type=3 id=179 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (164135) ESP_NOW_MESH: ACK RX id=179 from 40:22:D8:7B:98:04[0m
+[0;32mI (165355) ESP_NOW_MESH: BUTTON → DATA id=180[0m
+[0;32mI (165455) ESP_NOW_MESH: RX type=3 id=180 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (165455) ESP_NOW_MESH: ACK RX id=180 from 40:22:D8:7B:98:04[0m
+[0;32mI (166675) ESP_NOW_MESH: BUTTON → DATA id=182[0m
+[0;32mI (166765) ESP_NOW_MESH: RX type=3 id=182 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (166765) ESP_NOW_MESH: ACK RX id=182 from 40:22:D8:7B:98:04[0m
+[0;32mI (167995) ESP_NOW_MESH: BUTTON → DATA id=183[0m
+[0;32mI (168085) ESP_NOW_MESH: RX type=3 id=183 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (168085) ESP_NOW_MESH: ACK RX id=183 from 40:22:D8:7B:98:04[0m
+[0;32mI (169315) ESP_NOW_MESH: BUTTON → DATA id=185[0m
+[0;32mI (169395) ESP_NOW_MESH: RX type=3 id=185 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (169395) ESP_NOW_MESH: ACK RX id=185 from 40:22:D8:7B:98:04[0m
+[0;32mI (170635) ESP_NOW_MESH: BUTTON → DATA id=186[0m
+[0;32mI (170715) ESP_NOW_MESH: RX type=3 id=186 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (170715) ESP_NOW_MESH: ACK RX id=186 from 40:22:D8:7B:98:04[0m
+[0;32mI (171955) ESP_NOW_MESH: BUTTON → DATA id=188[0m
+[0;32mI (172065) ESP_NOW_MESH: RX type=3 id=188 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (172065) ESP_NOW_MESH: ACK RX id=188 from 40:22:D8:7B:98:04[0m
+[0;32mI (173275) ESP_NOW_MESH: BUTTON → DATA id=189[0m
+[0;32mI (173375) ESP_NOW_MESH: RX type=3 id=189 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (173375) ESP_NOW_MESH: ACK RX id=189 from 40:22:D8:7B:98:04[0m
+[0;32mI (174595) ESP_NOW_MESH: BUTTON → DATA id=190[0m
+[0;32mI (174675) ESP_NOW_MESH: RX type=3 id=190 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (174675) ESP_NOW_MESH: ACK RX id=190 from 40:22:D8:7B:98:04[0m
+[0;32mI (175915) ESP_NOW_MESH: BUTTON → DATA id=192[0m
+[0;32mI (176035) ESP_NOW_MESH: RX type=3 id=192 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (176035) ESP_NOW_MESH: ACK RX id=192 from 40:22:D8:7B:98:04[0m
+[0;32mI (177235) ESP_NOW_MESH: BUTTON → DATA id=193[0m
+[0;32mI (177345) ESP_NOW_MESH: RX type=3 id=193 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (177345) ESP_NOW_MESH: ACK RX id=193 from 40:22:D8:7B:98:04[0m
+[0;32mI (178555) ESP_NOW_MESH: BUTTON → DATA id=195[0m
+[0;32mI (178645) ESP_NOW_MESH: RX type=3 id=195 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (178645) ESP_NOW_MESH: ACK RX id=195 from 40:22:D8:7B:98:04[0m
+[0;32mI (179875) ESP_NOW_MESH: BUTTON → DATA id=196[0m
+[0;32mI (179995) ESP_NOW_MESH: RX type=3 id=196 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (179995) ESP_NOW_MESH: ACK RX id=196 from 40:22:D8:7B:98:04[0m
+[0;32mI (181195) ESP_NOW_MESH: BUTTON → DATA id=198[0m
+[0;32mI (181275) ESP_NOW_MESH: RX type=3 id=198 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (181275) ESP_NOW_MESH: ACK RX id=198 from 40:22:D8:7B:98:04[0m
+[0;32mI (182515) ESP_NOW_MESH: BUTTON → DATA id=199[0m
+[0;32mI (182625) ESP_NOW_MESH: RX type=3 id=199 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (182625) ESP_NOW_MESH: ACK RX id=199 from 40:22:D8:7B:98:04[0m
+[0;32mI (183835) ESP_NOW_MESH: BUTTON → DATA id=201[0m
+[0;32mI (183945) ESP_NOW_MESH: RX type=3 id=201 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (183945) ESP_NOW_MESH: ACK RX id=201 from 40:22:D8:7B:98:04[0m
+[0;32mI (185155) ESP_NOW_MESH: BUTTON → DATA id=202[0m
+[0;32mI (185255) ESP_NOW_MESH: RX type=3 id=202 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (185255) ESP_NOW_MESH: ACK RX id=202 from 40:22:D8:7B:98:04[0m
+[0;32mI (186475) ESP_NOW_MESH: BUTTON → DATA id=203[0m
+[0;32mI (186565) ESP_NOW_MESH: RX type=3 id=203 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (186565) ESP_NOW_MESH: ACK RX id=203 from 40:22:D8:7B:98:04[0m
+[0;32mI (187795) ESP_NOW_MESH: BUTTON → DATA id=205[0m
+[0;32mI (187895) ESP_NOW_MESH: RX type=3 id=205 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (187895) ESP_NOW_MESH: ACK RX id=205 from 40:22:D8:7B:98:04[0m
+[0;32mI (189115) ESP_NOW_MESH: BUTTON → DATA id=206[0m
+[0;32mI (189225) ESP_NOW_MESH: RX type=3 id=206 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (189225) ESP_NOW_MESH: ACK RX id=206 from 40:22:D8:7B:98:04[0m
+[0;32mI (190435) ESP_NOW_MESH: BUTTON → DATA id=208[0m
+[0;32mI (190555) ESP_NOW_MESH: RX type=3 id=208 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (190555) ESP_NOW_MESH: ACK RX id=208 from 40:22:D8:7B:98:04[0m
+[0;32mI (191755) ESP_NOW_MESH: BUTTON → DATA id=209[0m
+[0;32mI (191865) ESP_NOW_MESH: RX type=3 id=209 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (191865) ESP_NOW_MESH: ACK RX id=209 from 40:22:D8:7B:98:04[0m
+[0;32mI (193075) ESP_NOW_MESH: BUTTON → DATA id=211[0m
+[0;32mI (193175) ESP_NOW_MESH: RX type=3 id=211 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (193175) ESP_NOW_MESH: ACK RX id=211 from 40:22:D8:7B:98:04[0m
+[0;32mI (194395) ESP_NOW_MESH: BUTTON → DATA id=212[0m
+[0;32mI (194505) ESP_NOW_MESH: RX type=3 id=212 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (194505) ESP_NOW_MESH: ACK RX id=212 from 40:22:D8:7B:98:04[0m
+[0;32mI (195715) ESP_NOW_MESH: BUTTON → DATA id=214[0m
+[0;32mI (195825) ESP_NOW_MESH: RX type=3 id=214 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (195825) ESP_NOW_MESH: ACK RX id=214 from 40:22:D8:7B:98:04[0m
+[0;32mI (197035) ESP_NOW_MESH: BUTTON → DATA id=215[0m
+[0;32mI (197145) ESP_NOW_MESH: RX type=3 id=215 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (197145) ESP_NOW_MESH: ACK RX id=215 from 40:22:D8:7B:98:04[0m
+[0;32mI (198355) ESP_NOW_MESH: BUTTON → DATA id=216[0m
+[0;32mI (198445) ESP_NOW_MESH: RX type=3 id=216 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (198445) ESP_NOW_MESH: ACK RX id=216 from 40:22:D8:7B:98:04[0m
+[0;32mI (199675) ESP_NOW_MESH: BUTTON → DATA id=218[0m
+[0;32mI (199785) ESP_NOW_MESH: RX type=3 id=218 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (199785) ESP_NOW_MESH: ACK RX id=218 from 40:22:D8:7B:98:04[0m
+[0;32mI (200995) ESP_NOW_MESH: BUTTON → DATA id=219[0m
+[0;32mI (201075) ESP_NOW_MESH: RX type=3 id=219 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (201075) ESP_NOW_MESH: ACK RX id=219 from 40:22:D8:7B:98:04[0m
+[0;32mI (202315) ESP_NOW_MESH: BUTTON → DATA id=221[0m
+[0;32mI (202435) ESP_NOW_MESH: RX type=3 id=221 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (202435) ESP_NOW_MESH: ACK RX id=221 from 40:22:D8:7B:98:04[0m
+[0;32mI (203635) ESP_NOW_MESH: BUTTON → DATA id=222[0m
+[0;32mI (203755) ESP_NOW_MESH: RX type=3 id=222 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (203755) ESP_NOW_MESH: ACK RX id=222 from 40:22:D8:7B:98:04[0m
+[0;32mI (204955) ESP_NOW_MESH: BUTTON → DATA id=224[0m
+[0;32mI (205065) ESP_NOW_MESH: RX type=3 id=224 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (205065) ESP_NOW_MESH: ACK RX id=224 from 40:22:D8:7B:98:04[0m
+[0;32mI (206275) ESP_NOW_MESH: BUTTON → DATA id=225[0m
+[0;32mI (206375) ESP_NOW_MESH: RX type=3 id=225 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (206375) ESP_NOW_MESH: ACK RX id=225 from 40:22:D8:7B:98:04[0m
+[0;32mI (207595) ESP_NOW_MESH: BUTTON → DATA id=226[0m
+[0;32mI (207715) ESP_NOW_MESH: RX type=3 id=226 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (207715) ESP_NOW_MESH: ACK RX id=226 from 40:22:D8:7B:98:04[0m
+[0;32mI (208915) ESP_NOW_MESH: BUTTON → DATA id=228[0m
+[0;32mI (209035) ESP_NOW_MESH: RX type=3 id=228 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (209035) ESP_NOW_MESH: ACK RX id=228 from 40:22:D8:7B:98:04[0m
+[0;32mI (210235) ESP_NOW_MESH: BUTTON → DATA id=229[0m
+[0;32mI (210365) ESP_NOW_MESH: RX type=3 id=229 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (210365) ESP_NOW_MESH: ACK RX id=229 from 40:22:D8:7B:98:04[0m
+[0;32mI (211555) ESP_NOW_MESH: BUTTON → DATA id=231[0m
+[0;32mI (211645) ESP_NOW_MESH: RX type=3 id=231 ttl=0 rssi=170 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (211645) ESP_NOW_MESH: ACK RX id=231 from 40:22:D8:7B:98:04[0m
+[0;32mI (212875) ESP_NOW_MESH: BUTTON → DATA id=232[0m
+[0;32mI (212955) ESP_NOW_MESH: RX type=3 id=232 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (212955) ESP_NOW_MESH: ACK RX id=232 from 40:22:D8:7B:98:04[0m
+[0;32mI (212975) ESP_NOW_MESH: RX type=3 id=232 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (214195) ESP_NOW_MESH: BUTTON → DATA id=234[0m
+[0;32mI (214375) ESP_NOW_MESH: RX type=3 id=234 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (214375) ESP_NOW_MESH: ACK RX id=234 from 40:22:D8:7B:98:04[0m
+[0;32mI (215515) ESP_NOW_MESH: BUTTON → DATA id=235[0m
+[0;32mI (215595) ESP_NOW_MESH: RX type=3 id=235 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (215595) ESP_NOW_MESH: ACK RX id=235 from 40:22:D8:7B:98:04[0m
+[0;32mI (215595) ESP_NOW_MESH: RX type=3 id=235 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (216835) ESP_NOW_MESH: BUTTON → DATA id=237[0m
+[0;32mI (216945) ESP_NOW_MESH: RX type=3 id=237 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (216945) ESP_NOW_MESH: ACK RX id=237 from 40:22:D8:7B:98:04[0m
+[0;32mI (218155) ESP_NOW_MESH: BUTTON → DATA id=238[0m
+[0;32mI (218235) ESP_NOW_MESH: RX type=3 id=238 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (218235) ESP_NOW_MESH: ACK RX id=238 from 40:22:D8:7B:98:04[0m
+[0;32mI (218235) ESP_NOW_MESH: RX type=3 id=238 ttl=0 rssi=166 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (219475) ESP_NOW_MESH: BUTTON → DATA id=239[0m
+[0;32mI (219555) ESP_NOW_MESH: RX type=3 id=239 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (219555) ESP_NOW_MESH: ACK RX id=239 from 40:22:D8:7B:98:04[0m
+[0;32mI (219625) ESP_NOW_MESH: RX type=3 id=239 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (220795) ESP_NOW_MESH: BUTTON → DATA id=241[0m
+[0;32mI (220885) ESP_NOW_MESH: RX type=3 id=241 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (220885) ESP_NOW_MESH: ACK RX id=241 from 40:22:D8:7B:98:04[0m
+[0;32mI (222115) ESP_NOW_MESH: BUTTON → DATA id=242[0m
+[0;32mI (222205) ESP_NOW_MESH: RX type=3 id=242 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (222205) ESP_NOW_MESH: ACK RX id=242 from 40:22:D8:7B:98:04[0m
+[0;32mI (223435) ESP_NOW_MESH: BUTTON → DATA id=244[0m
+[0;32mI (223525) ESP_NOW_MESH: RX type=3 id=244 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (223525) ESP_NOW_MESH: ACK RX id=244 from 40:22:D8:7B:98:04[0m
+[0;32mI (223535) ESP_NOW_MESH: RX type=3 id=244 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (223545) ESP_NOW_MESH: RX type=3 id=244 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (224755) ESP_NOW_MESH: BUTTON → DATA id=245[0m
+[0;32mI (224835) ESP_NOW_MESH: RX type=3 id=245 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (224835) ESP_NOW_MESH: ACK RX id=245 from 40:22:D8:7B:98:04[0m
+[0;32mI (224845) ESP_NOW_MESH: RX type=3 id=245 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (226075) ESP_NOW_MESH: BUTTON → DATA id=247[0m
+[0;32mI (226155) ESP_NOW_MESH: RX type=3 id=247 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (226155) ESP_NOW_MESH: ACK RX id=247 from 40:22:D8:7B:98:04[0m
+[0;32mI (226155) ESP_NOW_MESH: RX type=3 id=247 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (227395) ESP_NOW_MESH: BUTTON → DATA id=248[0m
+[0;32mI (227505) ESP_NOW_MESH: RX type=3 id=248 ttl=0 rssi=161 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (227505) ESP_NOW_MESH: ACK RX id=248 from 40:22:D8:7B:98:04[0m
+[0;32mI (228715) ESP_NOW_MESH: BUTTON → DATA id=250[0m
+[0;32mI (228795) ESP_NOW_MESH: RX type=3 id=250 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (228795) ESP_NOW_MESH: ACK RX id=250 from 40:22:D8:7B:98:04[0m
+[0;32mI (228805) ESP_NOW_MESH: RX type=3 id=250 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (230035) ESP_NOW_MESH: BUTTON → DATA id=251[0m
+[0;32mI (230145) ESP_NOW_MESH: RX type=3 id=251 ttl=0 rssi=161 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (230145) ESP_NOW_MESH: ACK RX id=251 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (230175) ESP_NOW_MESH: RX type=3 id=251 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (231355) ESP_NOW_MESH: BUTTON → DATA id=252[0m
+[0;32mI (231435) ESP_NOW_MESH: RX type=3 id=252 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (231435) ESP_NOW_MESH: ACK RX id=252 from 40:22:D8:7B:98:04[0m
+[0;32mI (231445) ESP_NOW_MESH: RX type=3 id=252 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (232675) ESP_NOW_MESH: BUTTON → DATA id=254[0m
+[0;32mI (232765) ESP_NOW_MESH: RX type=3 id=254 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (232765) ESP_NOW_MESH: ACK RX id=254 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (232775) ESP_NOW_MESH: RX type=3 id=254 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (233995) ESP_NOW_MESH: BUTTON → DATA id=255[0m
+[0;32mI (234075) ESP_NOW_MESH: RX type=3 id=255 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (234075) ESP_NOW_MESH: ACK RX id=255 from 40:22:D8:7B:98:04[0m
+[0;32mI (235315) ESP_NOW_MESH: BUTTON → DATA id=257[0m
+[0;32mI (235395) ESP_NOW_MESH: RX type=3 id=257 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (235395) ESP_NOW_MESH: ACK RX id=257 from 40:22:D8:7B:98:04[0m
+[0;32mI (236635) ESP_NOW_MESH: BUTTON → DATA id=258[0m
+[0;32mI (236715) ESP_NOW_MESH: RX type=3 id=258 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (236715) ESP_NOW_MESH: ACK RX id=258 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (236725) ESP_NOW_MESH: RX type=3 id=258 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (237955) ESP_NOW_MESH: BUTTON → DATA id=260[0m
+[0;32mI (238035) ESP_NOW_MESH: RX type=3 id=260 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (238035) ESP_NOW_MESH: ACK RX id=260 from 40:22:D8:7B:98:04[0m
+[0;32mI (238045) ESP_NOW_MESH: RX type=3 id=260 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (239275) ESP_NOW_MESH: BUTTON → DATA id=261[0m
+[0;32mI (239355) ESP_NOW_MESH: RX type=3 id=261 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (239355) ESP_NOW_MESH: ACK RX id=261 from 40:22:D8:7B:98:04[0m
+[0;32mI (239365) ESP_NOW_MESH: RX type=3 id=261 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (240595) ESP_NOW_MESH: BUTTON → DATA id=262[0m
+[0;32mI (240725) ESP_NOW_MESH: RX type=3 id=262 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (240725) ESP_NOW_MESH: ACK RX id=262 from 40:22:D8:7B:98:04[0m
+[0;32mI (241915) ESP_NOW_MESH: BUTTON → DATA id=264[0m
+[0;32mI (242005) ESP_NOW_MESH: RX type=3 id=264 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (242005) ESP_NOW_MESH: ACK RX id=264 from 40:22:D8:7B:98:04[0m
+[0;32mI (243235) ESP_NOW_MESH: BUTTON → DATA id=265[0m
+[0;32mI (243315) ESP_NOW_MESH: RX type=3 id=265 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (243315) ESP_NOW_MESH: ACK RX id=265 from 40:22:D8:7B:98:04[0m
+[0;32mI (244555) ESP_NOW_MESH: BUTTON → DATA id=267[0m
+[0;32mI (244655) ESP_NOW_MESH: RX type=3 id=267 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (244655) ESP_NOW_MESH: ACK RX id=267 from 40:22:D8:7B:98:04[0m
+[0;32mI (245875) ESP_NOW_MESH: BUTTON → DATA id=268[0m
+[0;32mI (245955) ESP_NOW_MESH: RX type=3 id=268 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (245955) ESP_NOW_MESH: ACK RX id=268 from 40:22:D8:7B:98:04[0m
+[0;32mI (245965) ESP_NOW_MESH: RX type=3 id=268 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (247195) ESP_NOW_MESH: BUTTON → DATA id=270[0m
+[0;32mI (247275) ESP_NOW_MESH: RX type=3 id=270 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (247275) ESP_NOW_MESH: ACK RX id=270 from 40:22:D8:7B:98:04[0m
+[0;32mI (248515) ESP_NOW_MESH: BUTTON → DATA id=271[0m
+[0;32mI (248595) ESP_NOW_MESH: RX type=3 id=271 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (248595) ESP_NOW_MESH: ACK RX id=271 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (248595) ESP_NOW_MESH: RX type=3 id=271 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (249835) ESP_NOW_MESH: BUTTON → DATA id=273[0m
+[0;32mI (249915) ESP_NOW_MESH: RX type=3 id=273 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (249915) ESP_NOW_MESH: ACK RX id=273 from 40:22:D8:7B:98:04[0m
+[0;32mI (249915) ESP_NOW_MESH: RX type=3 id=273 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (251155) ESP_NOW_MESH: BUTTON → DATA id=274[0m
+[0;32mI (251245) ESP_NOW_MESH: RX type=3 id=274 ttl=0 rssi=160 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (251245) ESP_NOW_MESH: ACK RX id=274 from 40:22:D8:7B:98:04[0m
+[0;32mI (252475) ESP_NOW_MESH: BUTTON → DATA id=275[0m
+[0;32mI (252565) ESP_NOW_MESH: RX type=3 id=275 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (252565) ESP_NOW_MESH: ACK RX id=275 from 40:22:D8:7B:98:04[0m
+[0;32mI (252575) ESP_NOW_MESH: RX type=3 id=275 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (253795) ESP_NOW_MESH: BUTTON → DATA id=277[0m
+[0;32mI (253905) ESP_NOW_MESH: RX type=3 id=277 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (253905) ESP_NOW_MESH: ACK RX id=277 from 40:22:D8:7B:98:04[0m
+[0;32mI (253915) ESP_NOW_MESH: RX type=3 id=277 ttl=0 rssi=167 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (255115) ESP_NOW_MESH: BUTTON → DATA id=278[0m
+[0;32mI (255195) ESP_NOW_MESH: RX type=3 id=278 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (255195) ESP_NOW_MESH: ACK RX id=278 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (255205) ESP_NOW_MESH: RX type=3 id=278 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (256435) ESP_NOW_MESH: BUTTON → DATA id=280[0m
+[0;32mI (256515) ESP_NOW_MESH: RX type=3 id=280 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (256515) ESP_NOW_MESH: ACK RX id=280 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (257755) ESP_NOW_MESH: BUTTON → DATA id=281[0m
+[0;32mI (257855) ESP_NOW_MESH: RX type=3 id=281 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (257855) ESP_NOW_MESH: ACK RX id=281 from 40:22:D8:7B:98:04[0m
+[0;32mI (259075) ESP_NOW_MESH: BUTTON → DATA id=283[0m
+[0;32mI (259155) ESP_NOW_MESH: RX type=3 id=283 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (259155) ESP_NOW_MESH: ACK RX id=283 from 40:22:D8:7B:98:04[0m
+[0;32mI (260395) ESP_NOW_MESH: BUTTON → DATA id=284[0m
+[0;32mI (260485) ESP_NOW_MESH: RX type=3 id=284 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (260485) ESP_NOW_MESH: ACK RX id=284 from 40:22:D8:7B:98:04[0m
+[0;32mI (261715) ESP_NOW_MESH: BUTTON → DATA id=286[0m
+[0;32mI (261805) ESP_NOW_MESH: RX type=3 id=286 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (261805) ESP_NOW_MESH: ACK RX id=286 from 40:22:D8:7B:98:04[0m
+[0;32mI (263035) ESP_NOW_MESH: BUTTON → DATA id=287[0m
+[0;32mI (263135) ESP_NOW_MESH: RX type=3 id=287 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (263135) ESP_NOW_MESH: ACK RX id=287 from 40:22:D8:7B:98:04[0m
+[0;32mI (264355) ESP_NOW_MESH: BUTTON → DATA id=288[0m
+[0;32mI (264445) ESP_NOW_MESH: RX type=3 id=288 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (264445) ESP_NOW_MESH: ACK RX id=288 from 40:22:D8:7B:98:04[0m
+[0;32mI (265675) ESP_NOW_MESH: BUTTON → DATA id=290[0m
+[0;32mI (265765) ESP_NOW_MESH: RX type=3 id=290 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (265765) ESP_NOW_MESH: ACK RX id=290 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (265765) ESP_NOW_MESH: RX type=3 id=290 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (266995) ESP_NOW_MESH: BUTTON → DATA id=291[0m
+[0;32mI (267085) ESP_NOW_MESH: RX type=3 id=291 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (267085) ESP_NOW_MESH: ACK RX id=291 from 40:22:D8:7B:98:04[0m
+[0;32mI (267095) ESP_NOW_MESH: RX type=3 id=291 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (268315) ESP_NOW_MESH: BUTTON → DATA id=293[0m
+[0;32mI (268395) ESP_NOW_MESH: RX type=3 id=293 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (268395) ESP_NOW_MESH: ACK RX id=293 from 40:22:D8:7B:98:04[0m
+[0;32mI (269635) ESP_NOW_MESH: BUTTON → DATA id=294[0m
+[0;32mI (269715) ESP_NOW_MESH: RX type=3 id=294 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (269715) ESP_NOW_MESH: ACK RX id=294 from 40:22:D8:7B:98:04[0m
+[0;32mI (269725) ESP_NOW_MESH: RX type=3 id=294 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (270955) ESP_NOW_MESH: BUTTON → DATA id=296[0m
+[0;32mI (271035) ESP_NOW_MESH: RX type=3 id=296 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (271035) ESP_NOW_MESH: ACK RX id=296 from 40:22:D8:7B:98:04[0m
+[0;32mI (272275) ESP_NOW_MESH: BUTTON → DATA id=297[0m
+[0;32mI (272385) ESP_NOW_MESH: RX type=3 id=297 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (272385) ESP_NOW_MESH: ACK RX id=297 from 40:22:D8:7B:98:04[0m
+[0;32mI (273595) ESP_NOW_MESH: BUTTON → DATA id=298[0m
+[0;32mI (273675) ESP_NOW_MESH: RX type=3 id=298 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (273675) ESP_NOW_MESH: ACK RX id=298 from 40:22:D8:7B:98:04[0m
+[0;32mI (273685) ESP_NOW_MESH: RX type=3 id=298 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (274915) ESP_NOW_MESH: BUTTON → DATA id=300[0m
+[0;32mI (275025) ESP_NOW_MESH: RX type=3 id=300 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (275025) ESP_NOW_MESH: ACK RX id=300 from 40:22:D8:7B:98:04[0m
+[0;32mI (276235) ESP_NOW_MESH: BUTTON → DATA id=301[0m
+[0;32mI (276335) ESP_NOW_MESH: RX type=3 id=301 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (276335) ESP_NOW_MESH: ACK RX id=301 from 40:22:D8:7B:98:04[0m
+[0;32mI (277555) ESP_NOW_MESH: BUTTON → DATA id=303[0m
+[0;32mI (277665) ESP_NOW_MESH: RX type=3 id=303 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (277665) ESP_NOW_MESH: ACK RX id=303 from 40:22:D8:7B:98:04[0m
+[0;32mI (278875) ESP_NOW_MESH: BUTTON → DATA id=304[0m
+[0;32mI (278985) ESP_NOW_MESH: RX type=3 id=304 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (278985) ESP_NOW_MESH: ACK RX id=304 from 40:22:D8:7B:98:04[0m
+[0;32mI (280195) ESP_NOW_MESH: BUTTON → DATA id=306[0m
+[0;32mI (280285) ESP_NOW_MESH: RX type=3 id=306 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (280285) ESP_NOW_MESH: ACK RX id=306 from 40:22:D8:7B:98:04[0m
+[0;32mI (281515) ESP_NOW_MESH: BUTTON → DATA id=307[0m
+[0;32mI (281615) ESP_NOW_MESH: RX type=3 id=307 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (281615) ESP_NOW_MESH: ACK RX id=307 from 40:22:D8:7B:98:04[0m
+[0;32mI (282835) ESP_NOW_MESH: BUTTON → DATA id=309[0m
+[0;32mI (282945) ESP_NOW_MESH: RX type=3 id=309 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (282945) ESP_NOW_MESH: ACK RX id=309 from 40:22:D8:7B:98:04[0m
+[0;32mI (284155) ESP_NOW_MESH: BUTTON → DATA id=310[0m
+[0;32mI (284275) ESP_NOW_MESH: RX type=3 id=310 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (284275) ESP_NOW_MESH: ACK RX id=310 from 40:22:D8:7B:98:04[0m
+[0;32mI (285475) ESP_NOW_MESH: BUTTON → DATA id=311[0m
+[0;32mI (285585) ESP_NOW_MESH: RX type=3 id=311 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (285585) ESP_NOW_MESH: ACK RX id=311 from 40:22:D8:7B:98:04[0m
+[0;32mI (286795) ESP_NOW_MESH: BUTTON → DATA id=313[0m
+[0;32mI (286885) ESP_NOW_MESH: RX type=3 id=313 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (286885) ESP_NOW_MESH: ACK RX id=313 from 40:22:D8:7B:98:04[0m
+[0;32mI (288115) ESP_NOW_MESH: BUTTON → DATA id=314[0m
+[0;32mI (288235) ESP_NOW_MESH: RX type=3 id=314 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (288235) ESP_NOW_MESH: ACK RX id=314 from 40:22:D8:7B:98:04[0m
+[0;32mI (289435) ESP_NOW_MESH: BUTTON → DATA id=316[0m
+[0;32mI (289515) ESP_NOW_MESH: RX type=3 id=316 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (289515) ESP_NOW_MESH: ACK RX id=316 from 40:22:D8:7B:98:04[0m
+[0;32mI (290755) ESP_NOW_MESH: BUTTON → DATA id=317[0m
+[0;32mI (290835) ESP_NOW_MESH: RX type=3 id=317 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (290835) ESP_NOW_MESH: ACK RX id=317 from 40:22:D8:7B:98:04[0m
+[0;32mI (290835) ESP_NOW_MESH: RX type=3 id=317 ttl=0 rssi=167 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (290845) ESP_NOW_MESH: RX type=3 id=317 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (292075) ESP_NOW_MESH: BUTTON → DATA id=319[0m
+[0;32mI (292155) ESP_NOW_MESH: RX type=3 id=319 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (292155) ESP_NOW_MESH: ACK RX id=319 from 40:22:D8:7B:98:04[0m
+[0;32mI (293395) ESP_NOW_MESH: BUTTON → DATA id=320[0m
+[0;32mI (293495) ESP_NOW_MESH: RX type=3 id=320 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (293495) ESP_NOW_MESH: ACK RX id=320 from 40:22:D8:7B:98:04[0m
+[0;32mI (294715) ESP_NOW_MESH: BUTTON → DATA id=322[0m
+[0;32mI (294795) ESP_NOW_MESH: RX type=3 id=322 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (294795) ESP_NOW_MESH: ACK RX id=322 from 40:22:D8:7B:98:04[0m
+[0;32mI (296035) ESP_NOW_MESH: BUTTON → DATA id=323[0m
+[0;32mI (296145) ESP_NOW_MESH: RX type=3 id=323 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (296145) ESP_NOW_MESH: ACK RX id=323 from 40:22:D8:7B:98:04[0m
+[0;32mI (297355) ESP_NOW_MESH: BUTTON → DATA id=324[0m
+[0;32mI (297435) ESP_NOW_MESH: RX type=3 id=324 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (297435) ESP_NOW_MESH: ACK RX id=324 from 40:22:D8:7B:98:04[0m
+[0;32mI (298675) ESP_NOW_MESH: BUTTON → DATA id=326[0m
+[0;32mI (298775) ESP_NOW_MESH: RX type=3 id=326 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (298775) ESP_NOW_MESH: ACK RX id=326 from 40:22:D8:7B:98:04[0m
+[0;32mI (299995) ESP_NOW_MESH: BUTTON → DATA id=327[0m
+[0;32mI (300095) ESP_NOW_MESH: RX type=3 id=327 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (300095) ESP_NOW_MESH: ACK RX id=327 from 40:22:D8:7B:98:04[0m
+[0;32mI (301315) ESP_NOW_MESH: BUTTON → DATA id=329[0m
+[0;32mI (301395) ESP_NOW_MESH: RX type=3 id=329 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (301395) ESP_NOW_MESH: ACK RX id=329 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (301405) ESP_NOW_MESH: RX type=3 id=329 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (302635) ESP_NOW_MESH: BUTTON → DATA id=330[0m
+[0;32mI (302735) ESP_NOW_MESH: RX type=3 id=330 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (302735) ESP_NOW_MESH: ACK RX id=330 from 40:22:D8:7B:98:04[0m
+[0;32mI (303955) ESP_NOW_MESH: BUTTON → DATA id=332[0m
+[0;32mI (304035) ESP_NOW_MESH: RX type=3 id=332 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (304035) ESP_NOW_MESH: ACK RX id=332 from 40:22:D8:7B:98:04[0m
+[0;32mI (305275) ESP_NOW_MESH: BUTTON → DATA id=333[0m
+[0;32mI (305395) ESP_NOW_MESH: RX type=3 id=333 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (305395) ESP_NOW_MESH: ACK RX id=333 from 40:22:D8:7B:98:04[0m
+[0;32mI (306595) ESP_NOW_MESH: BUTTON → DATA id=334[0m
+[0;32mI (306715) ESP_NOW_MESH: RX type=3 id=334 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (306715) ESP_NOW_MESH: ACK RX id=334 from 40:22:D8:7B:98:04[0m
+[0;32mI (307915) ESP_NOW_MESH: BUTTON → DATA id=336[0m
+[0;32mI (308045) ESP_NOW_MESH: RX type=3 id=336 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (308045) ESP_NOW_MESH: ACK RX id=336 from 40:22:D8:7B:98:04[0m
+[0;32mI (309235) ESP_NOW_MESH: BUTTON → DATA id=337[0m
+[0;32mI (309345) ESP_NOW_MESH: RX type=3 id=337 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (309345) ESP_NOW_MESH: ACK RX id=337 from 40:22:D8:7B:98:04[0m
+[0;32mI (310555) ESP_NOW_MESH: BUTTON → DATA id=339[0m
+[0;32mI (310675) ESP_NOW_MESH: RX type=3 id=339 ttl=0 rssi=168 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (310675) ESP_NOW_MESH: ACK RX id=339 from 40:22:D8:7B:98:04[0m
+[0;32mI (311875) ESP_NOW_MESH: BUTTON → DATA id=340[0m
+[0;32mI (311985) ESP_NOW_MESH: RX type=3 id=340 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (311985) ESP_NOW_MESH: ACK RX id=340 from 40:22:D8:7B:98:04[0m
+[0;32mI (313195) ESP_NOW_MESH: BUTTON → DATA id=342[0m
+[0;32mI (313275) ESP_NOW_MESH: RX type=3 id=342 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (313275) ESP_NOW_MESH: ACK RX id=342 from 40:22:D8:7B:98:04[0m
+[0;32mI (313285) ESP_NOW_MESH: RX type=3 id=342 ttl=0 rssi=166 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (314515) ESP_NOW_MESH: BUTTON → DATA id=343[0m
+[0;32mI (314605) ESP_NOW_MESH: RX type=3 id=343 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (314605) ESP_NOW_MESH: ACK RX id=343 from 40:22:D8:7B:98:04[0m
+[0;32mI (315835) ESP_NOW_MESH: BUTTON → DATA id=345[0m
+[0;32mI (315935) ESP_NOW_MESH: RX type=3 id=345 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (315935) ESP_NOW_MESH: ACK RX id=345 from 40:22:D8:7B:98:04[0m
+[0;32mI (317155) ESP_NOW_MESH: BUTTON → DATA id=346[0m
+[0;32mI (317245) ESP_NOW_MESH: RX type=3 id=346 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (317245) ESP_NOW_MESH: ACK RX id=346 from 40:22:D8:7B:98:04[0m
+[0;32mI (318475) ESP_NOW_MESH: BUTTON → DATA id=347[0m
+[0;32mI (318555) ESP_NOW_MESH: RX type=3 id=347 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (318555) ESP_NOW_MESH: ACK RX id=347 from 40:22:D8:7B:98:04[0m
+[0;32mI (319795) ESP_NOW_MESH: BUTTON → DATA id=349[0m
+[0;32mI (319875) ESP_NOW_MESH: RX type=3 id=349 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (319875) ESP_NOW_MESH: ACK RX id=349 from 40:22:D8:7B:98:04[0m
+[0;32mI (321115) ESP_NOW_MESH: BUTTON → DATA id=350[0m
+[0;32mI (321195) ESP_NOW_MESH: RX type=3 id=350 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (321195) ESP_NOW_MESH: ACK RX id=350 from 40:22:D8:7B:98:04[0m
+[0;32mI (321195) ESP_NOW_MESH: RX type=3 id=350 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (322435) ESP_NOW_MESH: BUTTON → DATA id=352[0m
+[0;32mI (322525) ESP_NOW_MESH: RX type=3 id=352 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (322525) ESP_NOW_MESH: ACK RX id=352 from 40:22:D8:7B:98:04[0m
+[0;32mI (322545) ESP_NOW_MESH: RX type=3 id=352 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (323755) ESP_NOW_MESH: BUTTON → DATA id=353[0m
+[0;32mI (323835) ESP_NOW_MESH: RX type=3 id=353 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (323835) ESP_NOW_MESH: ACK RX id=353 from 40:22:D8:7B:98:04[0m
+[0;32mI (325075) ESP_NOW_MESH: BUTTON → DATA id=355[0m
+[0;32mI (325155) ESP_NOW_MESH: RX type=3 id=355 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (325155) ESP_NOW_MESH: ACK RX id=355 from 40:22:D8:7B:98:04[0m
+[0;32mI (326395) ESP_NOW_MESH: BUTTON → DATA id=356[0m
+[0;32mI (326505) ESP_NOW_MESH: RX type=3 id=356 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (326505) ESP_NOW_MESH: ACK RX id=356 from 40:22:D8:7B:98:04[0m
+[0;32mI (327715) ESP_NOW_MESH: BUTTON → DATA id=358[0m
+[0;32mI (327795) ESP_NOW_MESH: RX type=3 id=358 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (327795) ESP_NOW_MESH: ACK RX id=358 from 40:22:D8:7B:98:04[0m
+[0;32mI (329035) ESP_NOW_MESH: BUTTON → DATA id=359[0m
+[0;32mI (329115) ESP_NOW_MESH: RX type=3 id=359 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (329115) ESP_NOW_MESH: ACK RX id=359 from 40:22:D8:7B:98:04[0m
+[0;32mI (329115) ESP_NOW_MESH: RX type=3 id=359 ttl=0 rssi=166 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (330355) ESP_NOW_MESH: BUTTON → DATA id=360[0m
+[0;32mI (330475) ESP_NOW_MESH: RX type=3 id=360 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (330475) ESP_NOW_MESH: ACK RX id=360 from 40:22:D8:7B:98:04[0m
+[0;32mI (331675) ESP_NOW_MESH: BUTTON → DATA id=362[0m
+[0;32mI (331755) ESP_NOW_MESH: RX type=3 id=362 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (331755) ESP_NOW_MESH: ACK RX id=362 from 40:22:D8:7B:98:04[0m
+[0;32mI (332995) ESP_NOW_MESH: BUTTON → DATA id=363[0m
+[0;32mI (333075) ESP_NOW_MESH: RX type=3 id=363 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (333075) ESP_NOW_MESH: ACK RX id=363 from 40:22:D8:7B:98:04[0m
+[0;32mI (333105) ESP_NOW_MESH: RX type=3 id=363 ttl=0 rssi=161 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (334315) ESP_NOW_MESH: BUTTON → DATA id=365[0m
+[0;32mI (334395) ESP_NOW_MESH: RX type=3 id=365 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (334395) ESP_NOW_MESH: ACK RX id=365 from 40:22:D8:7B:98:04[0m
+[0;32mI (334395) ESP_NOW_MESH: RX type=3 id=365 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (335635) ESP_NOW_MESH: BUTTON → DATA id=366[0m
+[0;32mI (335715) ESP_NOW_MESH: RX type=3 id=366 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (335715) ESP_NOW_MESH: ACK RX id=366 from 40:22:D8:7B:98:04[0m
+[0;32mI (335735) ESP_NOW_MESH: RX type=3 id=366 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (336955) ESP_NOW_MESH: BUTTON → DATA id=368[0m
+[0;32mI (337035) ESP_NOW_MESH: RX type=3 id=368 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (337035) ESP_NOW_MESH: ACK RX id=368 from 40:22:D8:7B:98:04[0m
+[0;32mI (337035) ESP_NOW_MESH: RX type=3 id=368 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (338275) ESP_NOW_MESH: BUTTON → DATA id=369[0m
+[0;32mI (338355) ESP_NOW_MESH: RX type=3 id=369 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (338355) ESP_NOW_MESH: ACK RX id=369 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (338355) ESP_NOW_MESH: RX type=3 id=369 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (339595) ESP_NOW_MESH: BUTTON → DATA id=370[0m
+[0;32mI (339685) ESP_NOW_MESH: RX type=3 id=370 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (339685) ESP_NOW_MESH: ACK RX id=370 from 40:22:D8:7B:98:04[0m
+[0;32mI (339745) ESP_NOW_MESH: RX type=3 id=370 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (340915) ESP_NOW_MESH: BUTTON → DATA id=372[0m
+[0;32mI (340995) ESP_NOW_MESH: RX type=3 id=372 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (340995) ESP_NOW_MESH: ACK RX id=372 from 40:22:D8:7B:98:04[0m
+[0;32mI (341005) ESP_NOW_MESH: RX type=3 id=372 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (342235) ESP_NOW_MESH: BUTTON → DATA id=373[0m
+[0;32mI (342315) ESP_NOW_MESH: RX type=3 id=373 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (342315) ESP_NOW_MESH: ACK RX id=373 from 40:22:D8:7B:98:04[0m
+[0;32mI (342385) ESP_NOW_MESH: RX type=3 id=373 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (343555) ESP_NOW_MESH: BUTTON → DATA id=375[0m
+[0;32mI (343645) ESP_NOW_MESH: RX type=3 id=375 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (343645) ESP_NOW_MESH: ACK RX id=375 from 40:22:D8:7B:98:04[0m
+[0;32mI (344875) ESP_NOW_MESH: BUTTON → DATA id=376[0m
+[0;32mI (344955) ESP_NOW_MESH: RX type=3 id=376 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (344955) ESP_NOW_MESH: ACK RX id=376 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (344955) ESP_NOW_MESH: RX type=3 id=376 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (346195) ESP_NOW_MESH: BUTTON → DATA id=378[0m
+[0;32mI (346275) ESP_NOW_MESH: RX type=3 id=378 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (346275) ESP_NOW_MESH: ACK RX id=378 from 40:22:D8:7B:98:04[0m
+[0;32mI (346335) ESP_NOW_MESH: RX type=3 id=378 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (347515) ESP_NOW_MESH: BUTTON → DATA id=379[0m
+[0;32mI (347595) ESP_NOW_MESH: RX type=3 id=379 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (347595) ESP_NOW_MESH: ACK RX id=379 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (347615) ESP_NOW_MESH: RX type=3 id=379 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (348835) ESP_NOW_MESH: BUTTON → DATA id=381[0m
+[0;32mI (348915) ESP_NOW_MESH: RX type=3 id=381 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (348915) ESP_NOW_MESH: ACK RX id=381 from 40:22:D8:7B:98:04[0m
+[0;32mI (348975) ESP_NOW_MESH: RX type=3 id=381 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (350155) ESP_NOW_MESH: BUTTON → DATA id=382[0m
+[0;32mI (350235) ESP_NOW_MESH: RX type=3 id=382 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (350235) ESP_NOW_MESH: ACK RX id=382 from 40:22:D8:7B:98:04[0m
+[0;32mI (350315) ESP_NOW_MESH: RX type=3 id=382 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (351475) ESP_NOW_MESH: BUTTON → DATA id=383[0m
+[0;32mI (351555) ESP_NOW_MESH: RX type=3 id=383 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (351565) ESP_NOW_MESH: ACK RX id=383 from 40:22:D8:7B:98:04[0m
+[0;32mI (351625) ESP_NOW_MESH: RX type=3 id=383 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (352795) ESP_NOW_MESH: BUTTON → DATA id=385[0m
+[0;32mI (352875) ESP_NOW_MESH: RX type=3 id=385 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (352875) ESP_NOW_MESH: ACK RX id=385 from 40:22:D8:7B:98:04[0m
+[0;32mI (352875) ESP_NOW_MESH: RX type=3 id=385 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (354115) ESP_NOW_MESH: BUTTON → DATA id=386[0m
+[0;32mI (354195) ESP_NOW_MESH: RX type=3 id=386 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (354195) ESP_NOW_MESH: ACK RX id=386 from 40:22:D8:7B:98:04[0m
+[0;32mI (354255) ESP_NOW_MESH: RX type=3 id=386 ttl=0 rssi=166 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (355435) ESP_NOW_MESH: BUTTON → DATA id=388[0m
+[0;32mI (355515) ESP_NOW_MESH: RX type=3 id=388 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (355515) ESP_NOW_MESH: ACK RX id=388 from 40:22:D8:7B:98:04[0m
+[0;32mI (356755) ESP_NOW_MESH: BUTTON → DATA id=389[0m
+[0;32mI (356835) ESP_NOW_MESH: RX type=3 id=389 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (356835) ESP_NOW_MESH: ACK RX id=389 from 40:22:D8:7B:98:04[0m
+[0;32mI (356835) ESP_NOW_MESH: RX type=3 id=389 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (358075) ESP_NOW_MESH: BUTTON → DATA id=391[0m
+[0;32mI (358155) ESP_NOW_MESH: RX type=3 id=391 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (358155) ESP_NOW_MESH: ACK RX id=391 from 40:22:D8:7B:98:04[0m
+[0;32mI (359395) ESP_NOW_MESH: BUTTON → DATA id=392[0m
+[0;32mI (359505) ESP_NOW_MESH: RX type=3 id=392 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (359505) ESP_NOW_MESH: ACK RX id=392 from 40:22:D8:7B:98:04[0m
+[0;32mI (360715) ESP_NOW_MESH: BUTTON → DATA id=394[0m
+[0;32mI (360795) ESP_NOW_MESH: RX type=3 id=394 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (360795) ESP_NOW_MESH: ACK RX id=394 from 40:22:D8:7B:98:04[0m
+[0;32mI (362035) ESP_NOW_MESH: BUTTON → DATA id=395[0m
+[0;32mI (362125) ESP_NOW_MESH: RX type=3 id=395 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (362125) ESP_NOW_MESH: ACK RX id=395 from 40:22:D8:7B:98:04[0m
+[0;32mI (363355) ESP_NOW_MESH: BUTTON → DATA id=396[0m
+[0;32mI (363475) ESP_NOW_MESH: RX type=3 id=396 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (363475) ESP_NOW_MESH: ACK RX id=396 from 40:22:D8:7B:98:04[0m
+[0;32mI (364675) ESP_NOW_MESH: BUTTON → DATA id=398[0m
+[0;32mI (364755) ESP_NOW_MESH: RX type=3 id=398 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (364755) ESP_NOW_MESH: ACK RX id=398 from 40:22:D8:7B:98:04[0m
+[0;32mI (365995) ESP_NOW_MESH: BUTTON → DATA id=399[0m
+[0;32mI (366085) ESP_NOW_MESH: RX type=3 id=399 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (366085) ESP_NOW_MESH: ACK RX id=399 from 40:22:D8:7B:98:04[0m
+[0;32mI (367315) ESP_NOW_MESH: BUTTON → DATA id=401[0m
+[0;32mI (367405) ESP_NOW_MESH: RX type=3 id=401 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (367405) ESP_NOW_MESH: ACK RX id=401 from 40:22:D8:7B:98:04[0m
+[0;32mI (368635) ESP_NOW_MESH: BUTTON → DATA id=402[0m
+[0;32mI (368715) ESP_NOW_MESH: RX type=3 id=402 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (368715) ESP_NOW_MESH: ACK RX id=402 from 40:22:D8:7B:98:04[0m
+[0;32mI (368785) ESP_NOW_MESH: RX type=3 id=402 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (369955) ESP_NOW_MESH: BUTTON → DATA id=404[0m
+[0;32mI (370045) ESP_NOW_MESH: RX type=3 id=404 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (370045) ESP_NOW_MESH: ACK RX id=404 from 40:22:D8:7B:98:04[0m
+[0;32mI (371275) ESP_NOW_MESH: BUTTON → DATA id=405[0m
+[0;32mI (371365) ESP_NOW_MESH: RX type=3 id=405 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (371365) ESP_NOW_MESH: ACK RX id=405 from 40:22:D8:7B:98:04[0m
+[0;32mI (372595) ESP_NOW_MESH: BUTTON → DATA id=406[0m
+[0;32mI (372675) ESP_NOW_MESH: RX type=3 id=406 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (372675) ESP_NOW_MESH: ACK RX id=406 from 40:22:D8:7B:98:04[0m
+[0;32mI (373915) ESP_NOW_MESH: BUTTON → DATA id=408[0m
+[0;32mI (374005) ESP_NOW_MESH: RX type=3 id=408 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (374005) ESP_NOW_MESH: ACK RX id=408 from 40:22:D8:7B:98:04[0m
+[0;32mI (374005) ESP_NOW_MESH: RX type=3 id=408 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (375235) ESP_NOW_MESH: BUTTON → DATA id=409[0m
+[0;32mI (375315) ESP_NOW_MESH: RX type=3 id=409 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (375315) ESP_NOW_MESH: ACK RX id=409 from 40:22:D8:7B:98:04[0m
+[0;32mI (376555) ESP_NOW_MESH: BUTTON → DATA id=411[0m
+[0;32mI (376665) ESP_NOW_MESH: RX type=3 id=411 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (376665) ESP_NOW_MESH: ACK RX id=411 from 40:22:D8:7B:98:04[0m
+[0;32mI (377875) ESP_NOW_MESH: BUTTON → DATA id=412[0m
+[0;32mI (378005) ESP_NOW_MESH: RX type=3 id=412 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (378005) ESP_NOW_MESH: ACK RX id=412 from 40:22:D8:7B:98:04[0m
+[0;32mI (379195) ESP_NOW_MESH: BUTTON → DATA id=414[0m
+[0;32mI (379275) ESP_NOW_MESH: RX type=3 id=414 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (379275) ESP_NOW_MESH: ACK RX id=414 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (379305) ESP_NOW_MESH: RX type=3 id=414 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (380515) ESP_NOW_MESH: BUTTON → DATA id=415[0m
+[0;32mI (380605) ESP_NOW_MESH: RX type=3 id=415 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (380605) ESP_NOW_MESH: ACK RX id=415 from 40:22:D8:7B:98:04[0m
+[0;32mI (381835) ESP_NOW_MESH: BUTTON → DATA id=417[0m
+[0;32mI (381925) ESP_NOW_MESH: RX type=3 id=417 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (381925) ESP_NOW_MESH: ACK RX id=417 from 40:22:D8:7B:98:04[0m
+[0;32mI (381995) ESP_NOW_MESH: RX type=3 id=417 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (383155) ESP_NOW_MESH: BUTTON → DATA id=418[0m
+[0;32mI (383245) ESP_NOW_MESH: RX type=3 id=418 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (383245) ESP_NOW_MESH: ACK RX id=418 from 40:22:D8:7B:98:04[0m
+[0;32mI (384475) ESP_NOW_MESH: BUTTON → DATA id=419[0m
+[0;32mI (384555) ESP_NOW_MESH: RX type=3 id=419 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (384555) ESP_NOW_MESH: ACK RX id=419 from 40:22:D8:7B:98:04[0m
+[0;32mI (384635) ESP_NOW_MESH: RX type=3 id=419 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (385795) ESP_NOW_MESH: BUTTON → DATA id=421[0m
+[0;32mI (385885) ESP_NOW_MESH: RX type=3 id=421 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (385885) ESP_NOW_MESH: ACK RX id=421 from 40:22:D8:7B:98:04[0m
+[0;32mI (387115) ESP_NOW_MESH: BUTTON → DATA id=422[0m
+[0;32mI (387195) ESP_NOW_MESH: RX type=3 id=422 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (387195) ESP_NOW_MESH: ACK RX id=422 from 40:22:D8:7B:98:04[0m
+[0;32mI (387275) ESP_NOW_MESH: RX type=3 id=422 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (388435) ESP_NOW_MESH: BUTTON → DATA id=424[0m
+[0;32mI (388525) ESP_NOW_MESH: RX type=3 id=424 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (388525) ESP_NOW_MESH: ACK RX id=424 from 40:22:D8:7B:98:04[0m
+[0;32mI (389755) ESP_NOW_MESH: BUTTON → DATA id=425[0m
+[0;32mI (389845) ESP_NOW_MESH: RX type=3 id=425 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (389845) ESP_NOW_MESH: ACK RX id=425 from 40:22:D8:7B:98:04[0m
+[0;32mI (391075) ESP_NOW_MESH: BUTTON → DATA id=427[0m
+[0;32mI (391155) ESP_NOW_MESH: RX type=3 id=427 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (391155) ESP_NOW_MESH: ACK RX id=427 from 40:22:D8:7B:98:04[0m
+[0;32mI (391155) ESP_NOW_MESH: RX type=3 id=427 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (392395) ESP_NOW_MESH: BUTTON → DATA id=428[0m
+[0;32mI (392475) ESP_NOW_MESH: RX type=3 id=428 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (392475) ESP_NOW_MESH: ACK RX id=428 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (392475) ESP_NOW_MESH: RX type=3 id=428 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (393715) ESP_NOW_MESH: BUTTON → DATA id=430[0m
+[0;32mI (393795) ESP_NOW_MESH: RX type=3 id=430 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (393795) ESP_NOW_MESH: ACK RX id=430 from 40:22:D8:7B:98:04[0m
+[0;32mI (395035) ESP_NOW_MESH: BUTTON → DATA id=431[0m
+[0;32mI (395115) ESP_NOW_MESH: RX type=3 id=431 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (395115) ESP_NOW_MESH: ACK RX id=431 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (395125) ESP_NOW_MESH: RX type=3 id=431 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (396355) ESP_NOW_MESH: BUTTON → DATA id=432[0m
+[0;32mI (396465) ESP_NOW_MESH: RX type=3 id=432 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (396465) ESP_NOW_MESH: ACK RX id=432 from 40:22:D8:7B:98:04[0m
+[0;32mI (397675) ESP_NOW_MESH: BUTTON → DATA id=434[0m
+[0;32mI (397775) ESP_NOW_MESH: RX type=3 id=434 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (397775) ESP_NOW_MESH: ACK RX id=434 from 40:22:D8:7B:98:04[0m
+[0;32mI (398995) ESP_NOW_MESH: BUTTON → DATA id=435[0m
+[0;32mI (399095) ESP_NOW_MESH: RX type=3 id=435 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (399095) ESP_NOW_MESH: ACK RX id=435 from 40:22:D8:7B:98:04[0m
+[0;32mI (400315) ESP_NOW_MESH: BUTTON → DATA id=437[0m
+[0;32mI (400395) ESP_NOW_MESH: RX type=3 id=437 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (400395) ESP_NOW_MESH: ACK RX id=437 from 40:22:D8:7B:98:04[0m
+[0;32mI (400405) ESP_NOW_MESH: RX type=3 id=437 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (401635) ESP_NOW_MESH: BUTTON → DATA id=438[0m
+[0;32mI (401725) ESP_NOW_MESH: RX type=3 id=438 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (401725) ESP_NOW_MESH: ACK RX id=438 from 40:22:D8:7B:98:04[0m
+[0;32mI (402955) ESP_NOW_MESH: BUTTON → DATA id=440[0m
+[0;32mI (403035) ESP_NOW_MESH: RX type=3 id=440 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (403035) ESP_NOW_MESH: ACK RX id=440 from 40:22:D8:7B:98:04[0m
+[0;32mI (404275) ESP_NOW_MESH: BUTTON → DATA id=441[0m
+[0;32mI (404355) ESP_NOW_MESH: RX type=3 id=441 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (404355) ESP_NOW_MESH: ACK RX id=441 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (404365) ESP_NOW_MESH: RX type=3 id=441 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (405595) ESP_NOW_MESH: BUTTON → DATA id=442[0m
+[0;32mI (405675) ESP_NOW_MESH: RX type=3 id=442 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (405675) ESP_NOW_MESH: ACK RX id=442 from 40:22:D8:7B:98:04[0m
+[0;32mI (405675) ESP_NOW_MESH: RX type=3 id=442 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (406915) ESP_NOW_MESH: BUTTON → DATA id=444[0m
+[0;32mI (406995) ESP_NOW_MESH: RX type=3 id=444 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (406995) ESP_NOW_MESH: ACK RX id=444 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (407025) ESP_NOW_MESH: RX type=3 id=444 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (408235) ESP_NOW_MESH: BUTTON → DATA id=445[0m
+[0;32mI (408325) ESP_NOW_MESH: RX type=3 id=445 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (408325) ESP_NOW_MESH: ACK RX id=445 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (408335) ESP_NOW_MESH: RX type=3 id=445 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (409555) ESP_NOW_MESH: BUTTON → DATA id=447[0m
+[0;32mI (409635) ESP_NOW_MESH: RX type=3 id=447 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (409635) ESP_NOW_MESH: ACK RX id=447 from 40:22:D8:7B:98:04[0m
+[0;32mI (410875) ESP_NOW_MESH: BUTTON → DATA id=448[0m
+[0;32mI (410975) ESP_NOW_MESH: RX type=3 id=448 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (410975) ESP_NOW_MESH: ACK RX id=448 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (410975) ESP_NOW_MESH: RX type=3 id=448 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (412195) ESP_NOW_MESH: BUTTON → DATA id=450[0m
+[0;32mI (412275) ESP_NOW_MESH: RX type=3 id=450 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (412275) ESP_NOW_MESH: ACK RX id=450 from 40:22:D8:7B:98:04[0m
+[0;32mI (413515) ESP_NOW_MESH: BUTTON → DATA id=451[0m
+[0;32mI (413595) ESP_NOW_MESH: RX type=3 id=451 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (413595) ESP_NOW_MESH: ACK RX id=451 from 40:22:D8:7B:98:04[0m
+[0;32mI (414835) ESP_NOW_MESH: BUTTON → DATA id=453[0m
+[0;32mI (414915) ESP_NOW_MESH: RX type=3 id=453 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (414915) ESP_NOW_MESH: ACK RX id=453 from 40:22:D8:7B:98:04[0m
+[0;32mI (416155) ESP_NOW_MESH: BUTTON → DATA id=454[0m
+[0;32mI (416235) ESP_NOW_MESH: RX type=3 id=454 ttl=0 rssi=161 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (416235) ESP_NOW_MESH: ACK RX id=454 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (416245) ESP_NOW_MESH: RX type=3 id=454 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (417475) ESP_NOW_MESH: BUTTON → DATA id=455[0m
+[0;32mI (417575) ESP_NOW_MESH: RX type=3 id=455 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (417575) ESP_NOW_MESH: ACK RX id=455 from 40:22:D8:7B:98:04[0m
+[0;32mI (418795) ESP_NOW_MESH: BUTTON → DATA id=457[0m
+[0;32mI (418875) ESP_NOW_MESH: RX type=3 id=457 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (418875) ESP_NOW_MESH: ACK RX id=457 from 40:22:D8:7B:98:04[0m
+[0;32mI (420115) ESP_NOW_MESH: BUTTON → DATA id=458[0m
+[0;32mI (420195) ESP_NOW_MESH: RX type=3 id=458 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (420195) ESP_NOW_MESH: ACK RX id=458 from 40:22:D8:7B:98:04[0m
+[0;32mI (420265) ESP_NOW_MESH: RX type=3 id=458 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (421435) ESP_NOW_MESH: BUTTON → DATA id=460[0m
+[0;32mI (421515) ESP_NOW_MESH: RX type=3 id=460 ttl=0 rssi=161 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (421515) ESP_NOW_MESH: ACK RX id=460 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (421525) ESP_NOW_MESH: RX type=3 id=460 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (422755) ESP_NOW_MESH: BUTTON → DATA id=461[0m
+[0;32mI (422835) ESP_NOW_MESH: RX type=3 id=461 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (422835) ESP_NOW_MESH: ACK RX id=461 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (422865) ESP_NOW_MESH: RX type=3 id=461 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (424075) ESP_NOW_MESH: BUTTON → DATA id=463[0m
+[0;32mI (424185) ESP_NOW_MESH: RX type=3 id=463 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (424185) ESP_NOW_MESH: ACK RX id=463 from 40:22:D8:7B:98:04[0m
+[0;32mI (425395) ESP_NOW_MESH: BUTTON → DATA id=464[0m
+[0;32mI (425475) ESP_NOW_MESH: RX type=3 id=464 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (425475) ESP_NOW_MESH: ACK RX id=464 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (425475) ESP_NOW_MESH: RX type=3 id=464 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (426715) ESP_NOW_MESH: BUTTON → DATA id=466[0m
+[0;32mI (426795) ESP_NOW_MESH: RX type=3 id=466 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (426795) ESP_NOW_MESH: ACK RX id=466 from 40:22:D8:7B:98:04[0m
+[0;32mI (426795) ESP_NOW_MESH: RX type=3 id=466 ttl=0 rssi=161 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (426805) ESP_NOW_MESH: RX type=3 id=466 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (428035) ESP_NOW_MESH: BUTTON → DATA id=467[0m
+[0;32mI (428115) ESP_NOW_MESH: RX type=3 id=467 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (428115) ESP_NOW_MESH: ACK RX id=467 from 40:22:D8:7B:98:04[0m
+[0;32mI (428185) ESP_NOW_MESH: RX type=3 id=467 ttl=0 rssi=161 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (429355) ESP_NOW_MESH: BUTTON → DATA id=468[0m
+[0;32mI (429445) ESP_NOW_MESH: RX type=3 id=468 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (429445) ESP_NOW_MESH: ACK RX id=468 from 40:22:D8:7B:98:04[0m
+[0;32mI (429455) ESP_NOW_MESH: RX type=3 id=468 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (430675) ESP_NOW_MESH: BUTTON → DATA id=470[0m
+[0;32mI (430755) ESP_NOW_MESH: RX type=3 id=470 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (430755) ESP_NOW_MESH: ACK RX id=470 from 40:22:D8:7B:98:04[0m
+[0;32mI (430785) ESP_NOW_MESH: RX type=3 id=470 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (431995) ESP_NOW_MESH: BUTTON → DATA id=471[0m
+[0;32mI (432075) ESP_NOW_MESH: RX type=3 id=471 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (432075) ESP_NOW_MESH: ACK RX id=471 from 40:22:D8:7B:98:04[0m
+[0;32mI (432085) ESP_NOW_MESH: RX type=3 id=471 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (433315) ESP_NOW_MESH: BUTTON → DATA id=473[0m
+[0;32mI (433395) ESP_NOW_MESH: RX type=3 id=473 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (433395) ESP_NOW_MESH: ACK RX id=473 from 40:22:D8:7B:98:04[0m
+[0;32mI (433465) ESP_NOW_MESH: RX type=3 id=473 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (434635) ESP_NOW_MESH: BUTTON → DATA id=474[0m
+[0;32mI (434785) ESP_NOW_MESH: RX type=3 id=474 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (434785) ESP_NOW_MESH: ACK RX id=474 from 40:22:D8:7B:98:04[0m
+[0;32mI (435955) ESP_NOW_MESH: BUTTON → DATA id=476[0m
+[0;32mI (436045) ESP_NOW_MESH: RX type=3 id=476 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (436045) ESP_NOW_MESH: ACK RX id=476 from 40:22:D8:7B:98:04[0m
+[0;32mI (437275) ESP_NOW_MESH: BUTTON → DATA id=477[0m
+[0;32mI (437355) ESP_NOW_MESH: RX type=3 id=477 ttl=0 rssi=168 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (437355) ESP_NOW_MESH: ACK RX id=477 from 40:22:D8:7B:98:04[0m
+[0;32mI (437375) ESP_NOW_MESH: RX type=3 id=477 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (438595) ESP_NOW_MESH: BUTTON → DATA id=478[0m
+[0;32mI (438685) ESP_NOW_MESH: RX type=3 id=478 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (438685) ESP_NOW_MESH: ACK RX id=478 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (438695) ESP_NOW_MESH: RX type=3 id=478 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (439915) ESP_NOW_MESH: BUTTON → DATA id=480[0m
+[0;32mI (440015) ESP_NOW_MESH: RX type=3 id=480 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (440015) ESP_NOW_MESH: ACK RX id=480 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (440025) ESP_NOW_MESH: RX type=3 id=480 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (441235) ESP_NOW_MESH: BUTTON → DATA id=481[0m
+[0;32mI (441315) ESP_NOW_MESH: RX type=3 id=481 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (441315) ESP_NOW_MESH: ACK RX id=481 from 40:22:D8:7B:98:04[0m
+[0;32mI (442555) ESP_NOW_MESH: BUTTON → DATA id=483[0m
+[0;32mI (442635) ESP_NOW_MESH: RX type=3 id=483 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (442635) ESP_NOW_MESH: ACK RX id=483 from 40:22:D8:7B:98:04[0m
+[0;32mI (443875) ESP_NOW_MESH: BUTTON → DATA id=484[0m
+[0;32mI (443975) ESP_NOW_MESH: RX type=3 id=484 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (443975) ESP_NOW_MESH: ACK RX id=484 from 40:22:D8:7B:98:04[0m
+[0;32mI (445195) ESP_NOW_MESH: BUTTON → DATA id=486[0m
+[0;32mI (445275) ESP_NOW_MESH: RX type=3 id=486 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (445275) ESP_NOW_MESH: ACK RX id=486 from 40:22:D8:7B:98:04[0m
+[0;32mI (445315) ESP_NOW_MESH: RX type=3 id=486 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (446515) ESP_NOW_MESH: BUTTON → DATA id=487[0m
+[0;32mI (446605) ESP_NOW_MESH: RX type=3 id=487 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (446605) ESP_NOW_MESH: ACK RX id=487 from 40:22:D8:7B:98:04[0m
+[0;32mI (446625) ESP_NOW_MESH: RX type=3 id=487 ttl=0 rssi=161 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (447835) ESP_NOW_MESH: BUTTON → DATA id=489[0m
+[0;32mI (447935) ESP_NOW_MESH: RX type=3 id=489 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (447935) ESP_NOW_MESH: ACK RX id=489 from 40:22:D8:7B:98:04[0m
+[0;32mI (449155) ESP_NOW_MESH: BUTTON → DATA id=490[0m
+[0;32mI (449265) ESP_NOW_MESH: RX type=3 id=490 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (449265) ESP_NOW_MESH: ACK RX id=490 from 40:22:D8:7B:98:04[0m
+[0;32mI (450475) ESP_NOW_MESH: BUTTON → DATA id=491[0m
+[0;32mI (450555) ESP_NOW_MESH: RX type=3 id=491 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (450555) ESP_NOW_MESH: ACK RX id=491 from 40:22:D8:7B:98:04[0m
+[0;32mI (451795) ESP_NOW_MESH: BUTTON → DATA id=493[0m
+[0;32mI (451875) ESP_NOW_MESH: RX type=3 id=493 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (451875) ESP_NOW_MESH: ACK RX id=493 from 40:22:D8:7B:98:04[0m
+[0;32mI (453115) ESP_NOW_MESH: BUTTON → DATA id=494[0m
+[0;32mI (453195) ESP_NOW_MESH: RX type=3 id=494 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (453195) ESP_NOW_MESH: ACK RX id=494 from 40:22:D8:7B:98:04[0m
+[0;32mI (454435) ESP_NOW_MESH: BUTTON → DATA id=496[0m
+[0;32mI (454515) ESP_NOW_MESH: RX type=3 id=496 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (454515) ESP_NOW_MESH: ACK RX id=496 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (454525) ESP_NOW_MESH: RX type=3 id=496 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (455755) ESP_NOW_MESH: BUTTON → DATA id=497[0m
+[0;32mI (455835) ESP_NOW_MESH: RX type=3 id=497 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (455835) ESP_NOW_MESH: ACK RX id=497 from 40:22:D8:7B:98:04[0m
+[0;32mI (455905) ESP_NOW_MESH: RX type=3 id=497 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (457075) ESP_NOW_MESH: BUTTON → DATA id=499[0m
+[0;32mI (457155) ESP_NOW_MESH: RX type=3 id=499 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (457155) ESP_NOW_MESH: ACK RX id=499 from 40:22:D8:7B:98:04[0m
+[0;32mI (458395) ESP_NOW_MESH: BUTTON → DATA id=500[0m
+[0;32mI (458475) ESP_NOW_MESH: RX type=3 id=500 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (458475) ESP_NOW_MESH: ACK RX id=500 from 40:22:D8:7B:98:04[0m
+[0;32mI (459715) ESP_NOW_MESH: BUTTON → DATA id=502[0m
+[0;32mI (459815) ESP_NOW_MESH: RX type=3 id=502 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (459815) ESP_NOW_MESH: ACK RX id=502 from 40:22:D8:7B:98:04[0m
+[0;32mI (461035) ESP_NOW_MESH: BUTTON → DATA id=503[0m
+[0;32mI (461115) ESP_NOW_MESH: RX type=3 id=503 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (461115) ESP_NOW_MESH: ACK RX id=503 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (461115) ESP_NOW_MESH: RX type=3 id=503 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (462355) ESP_NOW_MESH: BUTTON → DATA id=504[0m
+[0;32mI (462475) ESP_NOW_MESH: RX type=3 id=504 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (462475) ESP_NOW_MESH: ACK RX id=504 from 40:22:D8:7B:98:04[0m
+[0;32mI (463675) ESP_NOW_MESH: BUTTON → DATA id=506[0m
+[0;32mI (463795) ESP_NOW_MESH: RX type=3 id=506 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (463795) ESP_NOW_MESH: ACK RX id=506 from 40:22:D8:7B:98:04[0m
+[0;32mI (464995) ESP_NOW_MESH: BUTTON → DATA id=507[0m
+[0;32mI (465105) ESP_NOW_MESH: RX type=3 id=507 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (465105) ESP_NOW_MESH: ACK RX id=507 from 40:22:D8:7B:98:04[0m
+[0;32mI (466315) ESP_NOW_MESH: BUTTON → DATA id=509[0m
+[0;32mI (466425) ESP_NOW_MESH: RX type=3 id=509 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (466425) ESP_NOW_MESH: ACK RX id=509 from 40:22:D8:7B:98:04[0m
+[0;32mI (467635) ESP_NOW_MESH: BUTTON → DATA id=510[0m
+[0;32mI (467715) ESP_NOW_MESH: RX type=3 id=510 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (467715) ESP_NOW_MESH: ACK RX id=510 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (467725) ESP_NOW_MESH: RX type=3 id=510 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (468955) ESP_NOW_MESH: BUTTON → DATA id=512[0m
+[0;32mI (469035) ESP_NOW_MESH: RX type=3 id=512 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (469035) ESP_NOW_MESH: ACK RX id=512 from 40:22:D8:7B:98:04[0m
+[0;32mI (469055) ESP_NOW_MESH: RX type=3 id=512 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (470275) ESP_NOW_MESH: BUTTON → DATA id=513[0m
+[0;32mI (470375) ESP_NOW_MESH: RX type=3 id=513 ttl=0 rssi=161 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (470375) ESP_NOW_MESH: ACK RX id=513 from 40:22:D8:7B:98:04[0m
+[0;32mI (470385) ESP_NOW_MESH: RX type=3 id=513 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (471595) ESP_NOW_MESH: BUTTON → DATA id=514[0m
+[0;32mI (471685) ESP_NOW_MESH: RX type=3 id=514 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (471685) ESP_NOW_MESH: ACK RX id=514 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (471695) ESP_NOW_MESH: RX type=3 id=514 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (472915) ESP_NOW_MESH: BUTTON → DATA id=516[0m
+[0;32mI (472995) ESP_NOW_MESH: RX type=3 id=516 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (472995) ESP_NOW_MESH: ACK RX id=516 from 40:22:D8:7B:98:04[0m
+[0;32mI (473015) ESP_NOW_MESH: RX type=3 id=516 ttl=0 rssi=166 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (474235) ESP_NOW_MESH: BUTTON → DATA id=517[0m
+[0;32mI (474315) ESP_NOW_MESH: RX type=3 id=517 ttl=0 rssi=166 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (474315) ESP_NOW_MESH: ACK RX id=517 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (474325) ESP_NOW_MESH: RX type=3 id=517 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (475555) ESP_NOW_MESH: BUTTON → DATA id=519[0m
+[0;32mI (475635) ESP_NOW_MESH: RX type=3 id=519 ttl=0 rssi=164 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (475635) ESP_NOW_MESH: ACK RX id=519 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (475645) ESP_NOW_MESH: RX type=3 id=519 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (476875) ESP_NOW_MESH: BUTTON → DATA id=520[0m
+[0;32mI (476955) ESP_NOW_MESH: RX type=3 id=520 ttl=0 rssi=168 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (476955) ESP_NOW_MESH: ACK RX id=520 from 40:22:D8:7B:98:04[0m
+[0;32mI (477015) ESP_NOW_MESH: RX type=3 id=520 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (478195) ESP_NOW_MESH: BUTTON → DATA id=522[0m
+[0;32mI (478275) ESP_NOW_MESH: RX type=3 id=522 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (478275) ESP_NOW_MESH: ACK RX id=522 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (479515) ESP_NOW_MESH: BUTTON → DATA id=523[0m
+[0;32mI (479595) ESP_NOW_MESH: RX type=3 id=523 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (479595) ESP_NOW_MESH: ACK RX id=523 from 40:22:D8:7B:98:04[0m
+[0;32mI (480835) ESP_NOW_MESH: BUTTON → DATA id=525[0m
+[0;32mI (480915) ESP_NOW_MESH: RX type=3 id=525 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (480915) ESP_NOW_MESH: ACK RX id=525 from 40:22:D8:7B:98:04[0m
+[0;32mI (482155) ESP_NOW_MESH: BUTTON → DATA id=526[0m
+[0;32mI (482265) ESP_NOW_MESH: RX type=3 id=526 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (482265) ESP_NOW_MESH: ACK RX id=526 from 40:22:D8:7B:98:04[0m
+[0;32mI (483475) ESP_NOW_MESH: BUTTON → DATA id=527[0m
+[0;32mI (483575) ESP_NOW_MESH: RX type=3 id=527 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (483575) ESP_NOW_MESH: ACK RX id=527 from 40:22:D8:7B:98:04[0m
+[0;32mI (484795) ESP_NOW_MESH: BUTTON → DATA id=529[0m
+[0;32mI (484895) ESP_NOW_MESH: RX type=3 id=529 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (484895) ESP_NOW_MESH: ACK RX id=529 from 40:22:D8:7B:98:04[0m
+[0;32mI (486115) ESP_NOW_MESH: BUTTON → DATA id=530[0m
+[0;32mI (486215) ESP_NOW_MESH: RX type=3 id=530 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (486215) ESP_NOW_MESH: ACK RX id=530 from 40:22:D8:7B:98:04[0m
+[0;32mI (487435) ESP_NOW_MESH: BUTTON → DATA id=532[0m
+[0;32mI (487515) ESP_NOW_MESH: RX type=3 id=532 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (487515) ESP_NOW_MESH: ACK RX id=532 from 40:22:D8:7B:98:04[0m
+[0;32mI (487595) ESP_NOW_MESH: RX type=3 id=532 ttl=0 rssi=161 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (488755) ESP_NOW_MESH: BUTTON → DATA id=533[0m
+[0;32mI (488835) ESP_NOW_MESH: RX type=3 id=533 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (488835) ESP_NOW_MESH: ACK RX id=533 from 40:22:D8:7B:98:04[0m
+[0;32mI (490075) ESP_NOW_MESH: BUTTON → DATA id=535[0m
+[0;32mI (490195) ESP_NOW_MESH: RX type=3 id=535 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (490195) ESP_NOW_MESH: ACK RX id=535 from 40:22:D8:7B:98:04[0m
+[0;32mI (491395) ESP_NOW_MESH: BUTTON → DATA id=536[0m
+[0;32mI (491485) ESP_NOW_MESH: RX type=3 id=536 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (491485) ESP_NOW_MESH: ACK RX id=536 from 40:22:D8:7B:98:04[0m
+[0;32mI (492715) ESP_NOW_MESH: BUTTON → DATA id=538[0m
+[0;32mI (492795) ESP_NOW_MESH: RX type=3 id=538 ttl=0 rssi=161 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (492795) ESP_NOW_MESH: ACK RX id=538 from 40:22:D8:7B:98:04[0m
+[0;32mI (494035) ESP_NOW_MESH: BUTTON → DATA id=539[0m
+[0;32mI (494145) ESP_NOW_MESH: RX type=3 id=539 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (494145) ESP_NOW_MESH: ACK RX id=539 from 40:22:D8:7B:98:04[0m
+[0;32mI (495355) ESP_NOW_MESH: BUTTON → DATA id=540[0m
+[0;32mI (495455) ESP_NOW_MESH: RX type=3 id=540 ttl=0 rssi=167 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (495455) ESP_NOW_MESH: ACK RX id=540 from 40:22:D8:7B:98:04[0m
+[0;32mI (496675) ESP_NOW_MESH: BUTTON → DATA id=542[0m
+[0;32mI (496785) ESP_NOW_MESH: RX type=3 id=542 ttl=0 rssi=164 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (496785) ESP_NOW_MESH: ACK RX id=542 from 40:22:D8:7B:98:04[0m
+[0;32mI (497995) ESP_NOW_MESH: BUTTON → DATA id=543[0m
+[0;32mI (498125) ESP_NOW_MESH: RX type=3 id=543 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (498125) ESP_NOW_MESH: ACK RX id=543 from 40:22:D8:7B:98:04[0m
+[0;32mI (499315) ESP_NOW_MESH: BUTTON → DATA id=545[0m
+[0;32mI (500635) ESP_NOW_MESH: BUTTON → DATA id=546[0m
+[0;32mI (500755) ESP_NOW_MESH: RX type=3 id=546 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (500755) ESP_NOW_MESH: ACK RX id=546 from 40:22:D8:7B:98:04[0m
+[0;32mI (501955) ESP_NOW_MESH: BUTTON → DATA id=548[0m
+[0;32mI (502035) ESP_NOW_MESH: RX type=3 id=548 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (502035) ESP_NOW_MESH: ACK RX id=548 from 40:22:D8:7B:98:04[0m
+[0;32mI (503275) ESP_NOW_MESH: BUTTON → DATA id=549[0m
+[0;32mI (504595) ESP_NOW_MESH: BUTTON → DATA id=550[0m
+[0;32mI (504705) ESP_NOW_MESH: RX type=3 id=550 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (504705) ESP_NOW_MESH: ACK RX id=550 from 40:22:D8:7B:98:04[0m
+[0;32mI (505915) ESP_NOW_MESH: BUTTON → DATA id=552[0m
+[0;32mI (505995) ESP_NOW_MESH: RX type=3 id=552 ttl=0 rssi=166 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (505995) ESP_NOW_MESH: ACK RX id=552 from 40:22:D8:7B:98:04[0m
+[0;32mI (507235) ESP_NOW_MESH: BUTTON → DATA id=553[0m
+[0;32mI (507315) ESP_NOW_MESH: RX type=3 id=553 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (507315) ESP_NOW_MESH: ACK RX id=553 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (507325) ESP_NOW_MESH: RX type=3 id=553 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (508555) ESP_NOW_MESH: BUTTON → DATA id=555[0m
+[0;32mI (508635) ESP_NOW_MESH: RX type=3 id=555 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (508635) ESP_NOW_MESH: ACK RX id=555 from 40:22:D8:7B:98:04[0m
+[0;32mI (508645) ESP_NOW_MESH: RX type=3 id=555 ttl=0 rssi=162 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (509875) ESP_NOW_MESH: BUTTON → DATA id=556[0m
+[0;32mI (509965) ESP_NOW_MESH: RX type=3 id=556 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (509965) ESP_NOW_MESH: ACK RX id=556 from 40:22:D8:7B:98:04[0m
+[0;32mI (511195) ESP_NOW_MESH: BUTTON → DATA id=558[0m
+[0;32mI (511285) ESP_NOW_MESH: RX type=3 id=558 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (511285) ESP_NOW_MESH: ACK RX id=558 from 40:22:D8:7B:98:04[0m
+[0;32mI (512515) ESP_NOW_MESH: BUTTON → DATA id=559[0m
+[0;32mI (512625) ESP_NOW_MESH: RX type=3 id=559 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (512625) ESP_NOW_MESH: ACK RX id=559 from 40:22:D8:7B:98:04[0m
+[0;32mI (513835) ESP_NOW_MESH: BUTTON → DATA id=561[0m
+[0;32mI (513925) ESP_NOW_MESH: RX type=3 id=561 ttl=0 rssi=163 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (513925) ESP_NOW_MESH: ACK RX id=561 from 00:4B:12:2D:F7:8C[0m
+[0;32mI (513935) ESP_NOW_MESH: RX type=3 id=561 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (515155) ESP_NOW_MESH: BUTTON → DATA id=562[0m
+[0;32mI (515285) ESP_NOW_MESH: RX type=3 id=562 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (515285) ESP_NOW_MESH: ACK RX id=562 from 40:22:D8:7B:98:04[0m
+[0;32mI (516475) ESP_NOW_MESH: BUTTON → DATA id=563[0m
+[0;32mI (516585) ESP_NOW_MESH: RX type=3 id=563 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (516585) ESP_NOW_MESH: ACK RX id=563 from 40:22:D8:7B:98:04[0m
+[0;32mI (517795) ESP_NOW_MESH: BUTTON → DATA id=565[0m
+[0;32mI (517905) ESP_NOW_MESH: RX type=3 id=565 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (517905) ESP_NOW_MESH: ACK RX id=565 from 40:22:D8:7B:98:04[0m
+[0;32mI (519115) ESP_NOW_MESH: BUTTON → DATA id=566[0m
+[0;32mI (519215) ESP_NOW_MESH: RX type=3 id=566 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (519215) ESP_NOW_MESH: ACK RX id=566 from 40:22:D8:7B:98:04[0m
+[0;32mI (519215) ESP_NOW_MESH: RX type=3 id=566 ttl=0 rssi=165 src=00:4B:12:2D:F7:8C origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (520435) ESP_NOW_MESH: BUTTON → DATA id=568[0m
+[0;32mI (520515) ESP_NOW_MESH: RX type=3 id=568 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (520515) ESP_NOW_MESH: ACK RX id=568 from 40:22:D8:7B:98:04[0m
+[0;32mI (521755) ESP_NOW_MESH: BUTTON → DATA id=569[0m
+[0;32mI (521865) ESP_NOW_MESH: RX type=3 id=569 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (521865) ESP_NOW_MESH: ACK RX id=569 from 40:22:D8:7B:98:04[0m
+[0;32mI (523075) ESP_NOW_MESH: BUTTON → DATA id=571[0m
+[0;32mI (523165) ESP_NOW_MESH: RX type=3 id=571 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (523165) ESP_NOW_MESH: ACK RX id=571 from 40:22:D8:7B:98:04[0m
+[0;32mI (524395) ESP_NOW_MESH: BUTTON → DATA id=572[0m
+[0;32mI (524485) ESP_NOW_MESH: RX type=3 id=572 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (524485) ESP_NOW_MESH: ACK RX id=572 from 40:22:D8:7B:98:04[0m
+[0;32mI (525715) ESP_NOW_MESH: BUTTON → DATA id=574[0m
+[0;32mI (525835) ESP_NOW_MESH: RX type=3 id=574 ttl=0 rssi=162 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (525835) ESP_NOW_MESH: ACK RX id=574 from 40:22:D8:7B:98:04[0m
+[0;32mI (527035) ESP_NOW_MESH: BUTTON → DATA id=575[0m
+[0;32mI (527145) ESP_NOW_MESH: RX type=3 id=575 ttl=0 rssi=163 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (527145) ESP_NOW_MESH: ACK RX id=575 from 40:22:D8:7B:98:04[0m
+[0;32mI (528355) ESP_NOW_MESH: BUTTON → DATA id=576[0m
+[0;32mI (528455) ESP_NOW_MESH: RX type=3 id=576 ttl=0 rssi=165 src=40:22:D8:7B:98:04 origin=B4:E6:2D:96:A2:85[0m
+[0;32mI (528455) ESP_NOW_MESH: ACK RX id=576 from 40:22:D8:7B:98:04[0m

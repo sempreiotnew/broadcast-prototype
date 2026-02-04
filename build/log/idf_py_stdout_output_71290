@@ -1,0 +1,232 @@
+Command: /Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3 /Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf_monitor.py -p /dev/cu.wchusbserial59450742091 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/broadcast-prototype.elf /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/bootloader/bootloader.elf -m '/Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3' '/Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf.py'
+f	I=MQ� ---- PEERS ----
+I (697ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  1 2026 17:26:11[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=18968h (100712) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=00028990 vaddr=3ffb0000 size=03f24h ( 16164) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0002c8bc vaddr=40080000 size=0375ch ( 14172) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7f11ch (520476) map[0m
+[0;32mI (311) esp_image: segment 4: paddr=000af144 vaddr=4008375c size=147e4h ( 83940) load[0m
+[0;32mI (344) esp_image: segment 5: paddr=000c3930 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (356) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (356) boot: Disabling RNG early entropy source...[0m
+[0;32mI (367) cpu_start: Multicore app[0m
+[0;32mI (375) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (375) cpu_start: Pro cpu start user code[0m
+[0;32mI (375) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (377) app_init: Application information:[0m
+[0;32mI (381) app_init: Project name:     broadcast-prototype[0m
+[0;32mI (386) app_init: App version:      1[0m
+[0;32mI (389) app_init: Compile time:     Feb  1 2026 17:26:06[0m
+[0;32mI (394) app_init: ELF file SHA256:  7d8408f8a...[0m
+[0;32mI (398) app_init: ESP-IDF:          v5.5.2-dirty[0m
+[0;32mI (403) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (407) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (411) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (415) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (421) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (426) heap_init: At 3FFB8538 len 00027AC8 (158 KiB): DRAM[0m
+[0;32mI (431) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (436) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (442) heap_init: At 40097F40 len 000080C0 (32 KiB): IRAM[0m
+[0;32mI (449) spi_flash: detected chip: generic[0m
+[0;32mI (451) spi_flash: flash io: dio[0m
+[0;33mW (454) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (517) wifi:wifi driver task: 3ffc046c, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (537) wifi:config NVS flash: enabled[0m
+[0;32mI (537) wifi:config nano formatting: disabled[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (557) wifi:Init static rx buffer num: 10[0m
+[0;32mI (557) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi_init: rx ba win: 6[0m
+[0;32mI (567) wifi_init: accept mbox: 6[0m
+[0;32mI (567) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp mbox: 6[0m
+[0;32mI (577) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (587) wifi_init: tcp mss: 1440[0m
+[0;32mI (587) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (597) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (677) wifi:mode : sta (00:4b:12:2d:f7:8c) + softAP (00:4b:12:2d:f7:8d)[0m
+[0;32mI (677) wifi:enable tsf[0m
+[0;32mI (677) wifi:Total power save buffer number: 16[0m
+[0;32mI (677) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (687) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (687) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (687) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (697) ESP_NOW_BROADCAST: ESP-NOW GPIO fanout ready[0m
+[0;32mI (707) main_task: Returned from app_main()[0m
+[0;32mI (2357) ESP_NOW_BROADCAST: Peer added: B4:E6:2D:96:A2:85[0m
+[0;32mI (2357) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (2697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (4697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (5357) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (6697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (8357) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (8697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (10697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (11357) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (12697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (14357) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (14697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (16697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (17357) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (18697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (20357) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (20697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (22697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (23357) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (24697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (26357) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (26697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (28697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (29357) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (30697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (32697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (34697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (36697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (38697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (40697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (42697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;33mW (42697) ESP_NOW_BROADCAST: Peer removed[0m
+[0;32mI (44697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (46697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (48697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (50697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (52697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (54697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (55827) ESP_NOW_BROADCAST: Peer added: B4:E6:2D:96:A2:85[0m
+[0;32mI (55827) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (56697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (58697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (58827) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (60697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (61817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (62697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (64697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (64817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (66697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (67817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (68697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (70697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (70817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (72697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (73397) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (73817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (74697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (75347) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (75947) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (76447) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (76697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (76817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (76997) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (77497) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (77947) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (78447) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (78697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (78997) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (79597) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (79817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (80147) ESP_NOW_BROADCAST: Button pressed → send to peers[0m
+[0;32mI (80697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (82697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (82817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (84697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (85817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (86697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (88697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (88817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (90697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (91827) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (92697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (94697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (94827) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (96697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (97817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (98697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (100697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (100817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (102697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (103817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (104697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (106697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (106817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (108697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (109817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (110697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (112697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (112817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (114697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (115817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (116697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (118697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (118817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (120697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (121827) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (122697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (124697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (124817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (126697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (127817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (128697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (130697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (130817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (132697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (133817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (134697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (136697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (136827) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (138697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (139817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (140697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (142697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (142817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (144697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (145827) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (146697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (148697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (148817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (150697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (151817) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (152697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (154697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (154827) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (156697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (157827) ESP_NOW_BROADCAST: RX from peer → blink[0m
+[0;32mI (158697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (160697) ESP_NOW_BROADCAST: ---- PEERS ----[0m
+[0;32mI (160817) ESP_NOW_BROADCAST: RX from peer → blink[0m

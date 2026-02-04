@@ -1,0 +1,761 @@
+Command: /Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3 /Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf_monitor.py -p /dev/cu.wchusbserial5A580551381 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/broadcast-prototype.elf /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/bootloader/bootloader.elf -m '/Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3' '/Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf.py'
+ס�of beacon: 752/752
+[0;32mI (677) wif�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  1 2026 17:26:11[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=18a48h (100936) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=00028a70 vaddr=3ffb0000 size=03f24h ( 16164) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0002c99c vaddr=40080000 size=0367ch ( 13948) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7ef1ch (519964) map[0m
+[0;32mI (311) esp_image: segment 4: paddr=000aef44 vaddr=4008367c size=148c4h ( 84164) load[0m
+[0;32mI (344) esp_image: segment 5: paddr=000c3810 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (356) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (356) boot: Disabling RNG early entropy source...[0m
+[0;32mI (367) cpu_start: Multicore app[0m
+[0;32mI (375) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (375) cpu_start: Pro cpu start user code[0m
+[0;32mI (375) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (377) app_init: Application information:[0m
+[0;32mI (381) app_init: Project name:     broadcast-prototype[0m
+[0;32mI (386) app_init: App version:      1[0m
+[0;32mI (389) app_init: Compile time:     Feb  1 2026 17:26:06[0m
+[0;32mI (394) app_init: ELF file SHA256:  36ef828ad...[0m
+[0;32mI (398) app_init: ESP-IDF:          v5.5.2-dirty[0m
+[0;32mI (403) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (407) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (411) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (415) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (421) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (426) heap_init: At 3FFB83F0 len 00027C10 (159 KiB): DRAM[0m
+[0;32mI (431) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (436) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (442) heap_init: At 40097F40 len 000080C0 (32 KiB): IRAM[0m
+[0;32mI (449) spi_flash: detected chip: generic[0m
+[0;32mI (451) spi_flash: flash io: dio[0m
+[0;33mW (454) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (507) wifi:wifi driver task: 3ffc0414, prio:23, stack:6656, core=0[0m
+[0;32mI (517) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (517) wifi:wifi certification version: v7.0[0m
+[0;32mI (517) wifi:config NVS flash: enabled[0m
+[0;32mI (517) wifi:config nano formatting: disabled[0m
+[0;32mI (517) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (527) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (527) wifi:Init management short buffer num: 32[0m
+[0;32mI (537) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (547) wifi:Init static rx buffer num: 10[0m
+[0;32mI (547) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (547) wifi_init: rx ba win: 6[0m
+[0;32mI (557) wifi_init: accept mbox: 6[0m
+[0;32mI (557) wifi_init: tcpip mbox: 32[0m
+[0;32mI (557) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp tx win: 5760[0m
+[0;32mI (567) wifi_init: tcp rx win: 5760[0m
+[0;32mI (567) wifi_init: tcp mss: 1440[0m
+[0;32mI (577) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (577) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (587) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (667) wifi:mode : sta (38:18:2b:8c:13:d0) + softAP (38:18:2b:8c:13:d1)[0m
+[0;32mI (667) wifi:enable tsf[0m
+[0;32mI (667) wifi:Total power save buffer number: 16[0m
+[0;32mI (667) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (667) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (677) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (677) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (677) ESP_NOW_BROADCAST: ESP-NOW broadcast mesh ready[0m
+[0;32mI (687) main_task: Returned from app_main()[0m
+[0;32mI (1157) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=553 ttl=3 rssi=-54[0m
+[0;32mI (1767) ESP_NOW_BROADCAST: RX src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=554 ttl=4 rssi=-38[0m
+[0;32mI (2367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=555 ttl=5 rssi=-53[0m
+[0;32mI (2967) ESP_NOW_BROADCAST: Message seen msg_id=554 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (2967) ESP_NOW_BROADCAST: Message seen msg_id=554 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (2977) ESP_NOW_BROADCAST: Message seen msg_id=555 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (2987) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=556 ttl=5 rssi=-54[0m
+[0;32mI (3597) ESP_NOW_BROADCAST: Message seen msg_id=555 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (3597) ESP_NOW_BROADCAST: Message seen msg_id=555 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (3607) ESP_NOW_BROADCAST: Message seen msg_id=556 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (3617) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=557 ttl=5 rssi=-54[0m
+[0;32mI (4227) ESP_NOW_BROADCAST: Message seen msg_id=556 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (4227) ESP_NOW_BROADCAST: Message seen msg_id=556 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (4257) ESP_NOW_BROADCAST: Message seen msg_id=557 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (4257) ESP_NOW_BROADCAST: Message seen msg_id=557 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (4367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=558 ttl=5 rssi=-50[0m
+[0;32mI (5127) ESP_NOW_BROADCAST: Message seen msg_id=557 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (5257) ESP_NOW_BROADCAST: Message seen msg_id=558 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (5257) ESP_NOW_BROADCAST: Message seen msg_id=558 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (5357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=559 ttl=5 rssi=-54[0m
+[0;32mI (6027) ESP_NOW_BROADCAST: Message seen msg_id=558 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (6257) ESP_NOW_BROADCAST: Message seen msg_id=559 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (6257) ESP_NOW_BROADCAST: Message seen msg_id=559 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (6367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=560 ttl=5 rssi=-54[0m
+[0;32mI (6967) ESP_NOW_BROADCAST: Message seen msg_id=559 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (7257) ESP_NOW_BROADCAST: Message seen msg_id=560 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (7257) ESP_NOW_BROADCAST: Message seen msg_id=560 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (7357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=561 ttl=5 rssi=-55[0m
+[0;32mI (7957) ESP_NOW_BROADCAST: Message seen msg_id=560 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (8257) ESP_NOW_BROADCAST: Message seen msg_id=561 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (8267) ESP_NOW_BROADCAST: Message seen msg_id=561 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (8367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=562 ttl=5 rssi=-54[0m
+[0;32mI (8967) ESP_NOW_BROADCAST: Message seen msg_id=561 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (9257) ESP_NOW_BROADCAST: Message seen msg_id=562 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (9267) ESP_NOW_BROADCAST: Message seen msg_id=562 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (9357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=563 ttl=5 rssi=-54[0m
+[0;32mI (9957) ESP_NOW_BROADCAST: Message seen msg_id=562 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (10257) ESP_NOW_BROADCAST: Message seen msg_id=563 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (10267) ESP_NOW_BROADCAST: Message seen msg_id=563 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (10357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=564 ttl=5 rssi=-54[0m
+[0;32mI (10957) ESP_NOW_BROADCAST: Message seen msg_id=563 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (11257) ESP_NOW_BROADCAST: Message seen msg_id=564 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (11257) ESP_NOW_BROADCAST: Message seen msg_id=564 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (11357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=565 ttl=5 rssi=-49[0m
+[0;32mI (11957) ESP_NOW_BROADCAST: Message seen msg_id=564 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (12257) ESP_NOW_BROADCAST: Message seen msg_id=565 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (12357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=566 ttl=5 rssi=-55[0m
+[0;32mI (12957) ESP_NOW_BROADCAST: Message seen msg_id=565 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (12957) ESP_NOW_BROADCAST: Message seen msg_id=565 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (13257) ESP_NOW_BROADCAST: Message seen msg_id=566 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (13357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=567 ttl=5 rssi=-54[0m
+[0;32mI (13957) ESP_NOW_BROADCAST: Message seen msg_id=566 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (13957) ESP_NOW_BROADCAST: Message seen msg_id=566 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (14267) ESP_NOW_BROADCAST: Message seen msg_id=567 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (14357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=568 ttl=5 rssi=-55[0m
+[0;32mI (14957) ESP_NOW_BROADCAST: Message seen msg_id=567 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (14957) ESP_NOW_BROADCAST: Message seen msg_id=567 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (15257) ESP_NOW_BROADCAST: Message seen msg_id=568 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (15357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=569 ttl=5 rssi=-54[0m
+[0;32mI (15957) ESP_NOW_BROADCAST: Message seen msg_id=568 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (15957) ESP_NOW_BROADCAST: Message seen msg_id=568 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (16257) ESP_NOW_BROADCAST: Message seen msg_id=569 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (16367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=570 ttl=5 rssi=-55[0m
+[0;32mI (16967) ESP_NOW_BROADCAST: Message seen msg_id=569 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (16967) ESP_NOW_BROADCAST: Message seen msg_id=569 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (17257) ESP_NOW_BROADCAST: Message seen msg_id=570 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (17357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=571 ttl=5 rssi=-54[0m
+[0;32mI (17957) ESP_NOW_BROADCAST: Message seen msg_id=570 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (17957) ESP_NOW_BROADCAST: Message seen msg_id=570 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (18257) ESP_NOW_BROADCAST: Message seen msg_id=571 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (18357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=572 ttl=5 rssi=-54[0m
+[0;32mI (18967) ESP_NOW_BROADCAST: Message seen msg_id=571 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (18967) ESP_NOW_BROADCAST: Message seen msg_id=571 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (19257) ESP_NOW_BROADCAST: Message seen msg_id=572 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (19357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=573 ttl=5 rssi=-55[0m
+[0;32mI (19957) ESP_NOW_BROADCAST: Message seen msg_id=572 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (19957) ESP_NOW_BROADCAST: Message seen msg_id=572 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (20257) ESP_NOW_BROADCAST: Message seen msg_id=573 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (20367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=574 ttl=5 rssi=-55[0m
+[0;32mI (20967) ESP_NOW_BROADCAST: Message seen msg_id=573 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (20967) ESP_NOW_BROADCAST: Message seen msg_id=573 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (21267) ESP_NOW_BROADCAST: Message seen msg_id=574 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (21357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=575 ttl=5 rssi=-54[0m
+[0;32mI (21957) ESP_NOW_BROADCAST: Message seen msg_id=574 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (21957) ESP_NOW_BROADCAST: Message seen msg_id=574 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (22257) ESP_NOW_BROADCAST: Message seen msg_id=575 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (22367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=576 ttl=5 rssi=-55[0m
+[0;32mI (22967) ESP_NOW_BROADCAST: Message seen msg_id=575 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (23257) ESP_NOW_BROADCAST: Message seen msg_id=576 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (23257) ESP_NOW_BROADCAST: Message seen msg_id=576 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (23857) ESP_NOW_BROADCAST: Message seen msg_id=576 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (24257) ESP_NOW_BROADCAST: RX src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=577 ttl=4 rssi=-36[0m
+[0;32mI (24857) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=578 ttl=5 rssi=-54[0m
+[0;32mI (25457) ESP_NOW_BROADCAST: Message seen msg_id=577 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (25457) ESP_NOW_BROADCAST: Message seen msg_id=577 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (25467) ESP_NOW_BROADCAST: Message seen msg_id=578 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (25477) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=579 ttl=5 rssi=-54[0m
+[0;32mI (26087) ESP_NOW_BROADCAST: Message seen msg_id=578 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (26167) ESP_NOW_BROADCAST: Message seen msg_id=578 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (26257) ESP_NOW_BROADCAST: Message seen msg_id=579 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (26367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=580 ttl=5 rssi=-55[0m
+[0;32mI (26967) ESP_NOW_BROADCAST: Message seen msg_id=579 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (27057) ESP_NOW_BROADCAST: Message seen msg_id=579 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (27257) ESP_NOW_BROADCAST: Message seen msg_id=580 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (27357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=581 ttl=5 rssi=-55[0m
+[0;32mI (27957) ESP_NOW_BROADCAST: Message seen msg_id=580 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (28267) ESP_NOW_BROADCAST: Message seen msg_id=581 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (28357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=582 ttl=5 rssi=-55[0m
+[0;32mI (28957) ESP_NOW_BROADCAST: Message seen msg_id=581 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (28957) ESP_NOW_BROADCAST: Message seen msg_id=581 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (29267) ESP_NOW_BROADCAST: Message seen msg_id=582 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (29357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=583 ttl=5 rssi=-56[0m
+[0;32mI (29957) ESP_NOW_BROADCAST: Message seen msg_id=582 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (29957) ESP_NOW_BROADCAST: Message seen msg_id=582 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (30267) ESP_NOW_BROADCAST: Message seen msg_id=583 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (30357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=584 ttl=5 rssi=-54[0m
+[0;32mI (30957) ESP_NOW_BROADCAST: Message seen msg_id=583 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (30957) ESP_NOW_BROADCAST: Message seen msg_id=583 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (31257) ESP_NOW_BROADCAST: Message seen msg_id=584 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (31357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=585 ttl=5 rssi=-55[0m
+[0;32mI (31967) ESP_NOW_BROADCAST: Message seen msg_id=584 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (31967) ESP_NOW_BROADCAST: Message seen msg_id=584 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (32257) ESP_NOW_BROADCAST: Message seen msg_id=585 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (32367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=586 ttl=5 rssi=-54[0m
+[0;32mI (32967) ESP_NOW_BROADCAST: Message seen msg_id=585 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (32967) ESP_NOW_BROADCAST: Message seen msg_id=585 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (33257) ESP_NOW_BROADCAST: Message seen msg_id=586 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (33257) ESP_NOW_BROADCAST: Message seen msg_id=586 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (33357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=587 ttl=5 rssi=-54[0m
+[0;32mI (33957) ESP_NOW_BROADCAST: Message seen msg_id=586 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (34257) ESP_NOW_BROADCAST: Message seen msg_id=587 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (34257) ESP_NOW_BROADCAST: Message seen msg_id=587 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (34367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=588 ttl=5 rssi=-54[0m
+[0;32mI (34967) ESP_NOW_BROADCAST: Message seen msg_id=587 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (35257) ESP_NOW_BROADCAST: Message seen msg_id=588 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (35257) ESP_NOW_BROADCAST: Message seen msg_id=588 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (35357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=589 ttl=5 rssi=-54[0m
+[0;32mI (35957) ESP_NOW_BROADCAST: Message seen msg_id=588 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (36257) ESP_NOW_BROADCAST: Message seen msg_id=589 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (36257) ESP_NOW_BROADCAST: Message seen msg_id=589 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (36357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=590 ttl=5 rssi=-55[0m
+[0;32mI (36957) ESP_NOW_BROADCAST: Message seen msg_id=589 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (37257) ESP_NOW_BROADCAST: Message seen msg_id=590 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (37257) ESP_NOW_BROADCAST: Message seen msg_id=590 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (37357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=591 ttl=5 rssi=-55[0m
+[0;32mI (37957) ESP_NOW_BROADCAST: Message seen msg_id=590 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (38257) ESP_NOW_BROADCAST: Message seen msg_id=591 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (38257) ESP_NOW_BROADCAST: Message seen msg_id=591 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (38357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=592 ttl=5 rssi=-54[0m
+[0;32mI (38957) ESP_NOW_BROADCAST: Message seen msg_id=591 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (39257) ESP_NOW_BROADCAST: Message seen msg_id=592 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (39367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=593 ttl=5 rssi=-54[0m
+[0;32mI (39967) ESP_NOW_BROADCAST: Message seen msg_id=592 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (39967) ESP_NOW_BROADCAST: Message seen msg_id=592 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (40267) ESP_NOW_BROADCAST: Message seen msg_id=593 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (40367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=594 ttl=5 rssi=-54[0m
+[0;32mI (40967) ESP_NOW_BROADCAST: Message seen msg_id=593 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (40967) ESP_NOW_BROADCAST: Message seen msg_id=593 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (41257) ESP_NOW_BROADCAST: Message seen msg_id=594 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (41367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=595 ttl=5 rssi=-55[0m
+[0;32mI (41967) ESP_NOW_BROADCAST: Message seen msg_id=594 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (41967) ESP_NOW_BROADCAST: Message seen msg_id=594 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (42257) ESP_NOW_BROADCAST: Message seen msg_id=595 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (42367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=596 ttl=5 rssi=-54[0m
+[0;32mI (42967) ESP_NOW_BROADCAST: Message seen msg_id=595 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (42967) ESP_NOW_BROADCAST: Message seen msg_id=595 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (43257) ESP_NOW_BROADCAST: Message seen msg_id=596 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (43367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=597 ttl=5 rssi=-54[0m
+[0;32mI (43967) ESP_NOW_BROADCAST: Message seen msg_id=596 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (43967) ESP_NOW_BROADCAST: Message seen msg_id=596 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (44267) ESP_NOW_BROADCAST: Message seen msg_id=597 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (44347) ESP_NOW_BROADCAST: Message seen msg_id=597 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (44357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=598 ttl=5 rssi=-55[0m
+[0;32mI (44967) ESP_NOW_BROADCAST: Message seen msg_id=597 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (45257) ESP_NOW_BROADCAST: Message seen msg_id=598 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (45257) ESP_NOW_BROADCAST: Message seen msg_id=598 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (45357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=599 ttl=5 rssi=-55[0m
+[0;32mI (45957) ESP_NOW_BROADCAST: Message seen msg_id=598 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (46257) ESP_NOW_BROADCAST: Message seen msg_id=599 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (46257) ESP_NOW_BROADCAST: Message seen msg_id=599 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (46357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=600 ttl=5 rssi=-54[0m
+[0;32mI (46957) ESP_NOW_BROADCAST: Message seen msg_id=599 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (47257) ESP_NOW_BROADCAST: Message seen msg_id=600 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (47257) ESP_NOW_BROADCAST: Message seen msg_id=600 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (47357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=601 ttl=5 rssi=-55[0m
+[0;32mI (47957) ESP_NOW_BROADCAST: Message seen msg_id=600 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (48257) ESP_NOW_BROADCAST: Message seen msg_id=601 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (48267) ESP_NOW_BROADCAST: Message seen msg_id=601 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (48367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=602 ttl=5 rssi=-54[0m
+[0;32mI (48967) ESP_NOW_BROADCAST: Message seen msg_id=601 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (49257) ESP_NOW_BROADCAST: Message seen msg_id=602 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (49267) ESP_NOW_BROADCAST: Message seen msg_id=602 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (49367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=603 ttl=5 rssi=-54[0m
+[0;32mI (49967) ESP_NOW_BROADCAST: Message seen msg_id=602 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (50257) ESP_NOW_BROADCAST: Message seen msg_id=603 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (50267) ESP_NOW_BROADCAST: Message seen msg_id=603 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (50357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=604 ttl=5 rssi=-55[0m
+[0;32mI (50957) ESP_NOW_BROADCAST: Message seen msg_id=603 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (51267) ESP_NOW_BROADCAST: Message seen msg_id=604 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (51267) ESP_NOW_BROADCAST: Message seen msg_id=604 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (51357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=605 ttl=5 rssi=-54[0m
+[0;32mI (51957) ESP_NOW_BROADCAST: Message seen msg_id=604 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (52257) ESP_NOW_BROADCAST: Message seen msg_id=605 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (52257) ESP_NOW_BROADCAST: Message seen msg_id=605 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (52357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=606 ttl=5 rssi=-54[0m
+[0;32mI (52957) ESP_NOW_BROADCAST: Message seen msg_id=605 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (53257) ESP_NOW_BROADCAST: Message seen msg_id=606 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (53257) ESP_NOW_BROADCAST: Message seen msg_id=606 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (53367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=607 ttl=5 rssi=-51[0m
+[0;32mI (53967) ESP_NOW_BROADCAST: Message seen msg_id=606 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (54257) ESP_NOW_BROADCAST: Message seen msg_id=607 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (54257) ESP_NOW_BROADCAST: Message seen msg_id=607 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (54357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=608 ttl=5 rssi=-51[0m
+[0;32mI (54957) ESP_NOW_BROADCAST: Message seen msg_id=607 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (55257) ESP_NOW_BROADCAST: Message seen msg_id=608 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (55257) ESP_NOW_BROADCAST: Message seen msg_id=608 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (55367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=609 ttl=5 rssi=-51[0m
+[0;32mI (55967) ESP_NOW_BROADCAST: Message seen msg_id=608 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (56257) ESP_NOW_BROADCAST: Message seen msg_id=609 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (56257) ESP_NOW_BROADCAST: Message seen msg_id=609 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (56357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=610 ttl=5 rssi=-51[0m
+[0;32mI (56957) ESP_NOW_BROADCAST: Message seen msg_id=609 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (57257) ESP_NOW_BROADCAST: Message seen msg_id=610 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (57257) ESP_NOW_BROADCAST: Message seen msg_id=610 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (57357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=611 ttl=5 rssi=-50[0m
+[0;32mI (57967) ESP_NOW_BROADCAST: Message seen msg_id=610 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (58267) ESP_NOW_BROADCAST: Message seen msg_id=611 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (58267) ESP_NOW_BROADCAST: Message seen msg_id=611 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (58357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=612 ttl=5 rssi=-51[0m
+[0;32mI (58957) ESP_NOW_BROADCAST: Message seen msg_id=611 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (59257) ESP_NOW_BROADCAST: Message seen msg_id=612 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (59257) ESP_NOW_BROADCAST: Message seen msg_id=612 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (59357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=613 ttl=5 rssi=-50[0m
+[0;32mI (59957) ESP_NOW_BROADCAST: Message seen msg_id=612 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (60257) ESP_NOW_BROADCAST: Message seen msg_id=613 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (60257) ESP_NOW_BROADCAST: Message seen msg_id=613 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (60367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=614 ttl=5 rssi=-50[0m
+[0;32mI (60967) ESP_NOW_BROADCAST: Message seen msg_id=613 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (61257) ESP_NOW_BROADCAST: Message seen msg_id=614 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (61267) ESP_NOW_BROADCAST: Message seen msg_id=614 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (61367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=615 ttl=5 rssi=-51[0m
+[0;32mI (61967) ESP_NOW_BROADCAST: Message seen msg_id=614 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (62257) ESP_NOW_BROADCAST: Message seen msg_id=615 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (62257) ESP_NOW_BROADCAST: Message seen msg_id=615 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (62357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=616 ttl=5 rssi=-50[0m
+[0;32mI (62957) ESP_NOW_BROADCAST: Message seen msg_id=615 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (63267) ESP_NOW_BROADCAST: Message seen msg_id=616 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (63267) ESP_NOW_BROADCAST: Message seen msg_id=616 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (63357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=617 ttl=5 rssi=-51[0m
+[0;32mI (63957) ESP_NOW_BROADCAST: Message seen msg_id=616 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (64257) ESP_NOW_BROADCAST: Message seen msg_id=617 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (64257) ESP_NOW_BROADCAST: Message seen msg_id=617 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (64357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=618 ttl=5 rssi=-50[0m
+[0;32mI (64957) ESP_NOW_BROADCAST: Message seen msg_id=617 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (65267) ESP_NOW_BROADCAST: Message seen msg_id=618 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (65267) ESP_NOW_BROADCAST: Message seen msg_id=618 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (65357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=619 ttl=5 rssi=-51[0m
+[0;32mI (65957) ESP_NOW_BROADCAST: Message seen msg_id=618 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (66257) ESP_NOW_BROADCAST: Message seen msg_id=619 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (66267) ESP_NOW_BROADCAST: Message seen msg_id=619 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (66357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=620 ttl=5 rssi=-51[0m
+[0;32mI (66957) ESP_NOW_BROADCAST: Message seen msg_id=619 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (67257) ESP_NOW_BROADCAST: Message seen msg_id=620 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (67257) ESP_NOW_BROADCAST: Message seen msg_id=620 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (67357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=621 ttl=5 rssi=-51[0m
+[0;32mI (67957) ESP_NOW_BROADCAST: Message seen msg_id=620 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (68257) ESP_NOW_BROADCAST: Message seen msg_id=621 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (68257) ESP_NOW_BROADCAST: Message seen msg_id=621 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (68367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=622 ttl=5 rssi=-51[0m
+[0;32mI (68967) ESP_NOW_BROADCAST: Message seen msg_id=621 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (69257) ESP_NOW_BROADCAST: Message seen msg_id=622 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (69257) ESP_NOW_BROADCAST: Message seen msg_id=622 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (69357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=623 ttl=5 rssi=-51[0m
+[0;32mI (69957) ESP_NOW_BROADCAST: Message seen msg_id=622 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (70257) ESP_NOW_BROADCAST: Message seen msg_id=623 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (70257) ESP_NOW_BROADCAST: Message seen msg_id=623 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (70357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=624 ttl=5 rssi=-51[0m
+[0;32mI (70957) ESP_NOW_BROADCAST: Message seen msg_id=623 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (71257) ESP_NOW_BROADCAST: Message seen msg_id=624 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (71257) ESP_NOW_BROADCAST: Message seen msg_id=624 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (71357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=625 ttl=5 rssi=-51[0m
+[0;32mI (71957) ESP_NOW_BROADCAST: Message seen msg_id=624 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (72257) ESP_NOW_BROADCAST: Message seen msg_id=625 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (72267) ESP_NOW_BROADCAST: Message seen msg_id=625 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (72367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=626 ttl=5 rssi=-51[0m
+[0;32mI (72967) ESP_NOW_BROADCAST: Message seen msg_id=625 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (73267) ESP_NOW_BROADCAST: Message seen msg_id=626 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (73267) ESP_NOW_BROADCAST: Message seen msg_id=626 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (73357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=627 ttl=5 rssi=-50[0m
+[0;32mI (73967) ESP_NOW_BROADCAST: Message seen msg_id=626 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (74257) ESP_NOW_BROADCAST: Message seen msg_id=627 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (74267) ESP_NOW_BROADCAST: Message seen msg_id=627 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (74357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=628 ttl=5 rssi=-51[0m
+[0;32mI (74967) ESP_NOW_BROADCAST: Message seen msg_id=627 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (75267) ESP_NOW_BROADCAST: Message seen msg_id=628 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (75267) ESP_NOW_BROADCAST: Message seen msg_id=628 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (75367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=629 ttl=5 rssi=-51[0m
+[0;32mI (75967) ESP_NOW_BROADCAST: Message seen msg_id=628 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (76257) ESP_NOW_BROADCAST: Message seen msg_id=629 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (76267) ESP_NOW_BROADCAST: Message seen msg_id=629 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (76357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=630 ttl=5 rssi=-51[0m
+[0;32mI (76967) ESP_NOW_BROADCAST: Message seen msg_id=629 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (77257) ESP_NOW_BROADCAST: Message seen msg_id=630 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (77267) ESP_NOW_BROADCAST: Message seen msg_id=630 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (77357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=631 ttl=5 rssi=-51[0m
+[0;32mI (77967) ESP_NOW_BROADCAST: Message seen msg_id=630 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (78257) ESP_NOW_BROADCAST: Message seen msg_id=631 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (78257) ESP_NOW_BROADCAST: Message seen msg_id=631 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (78367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=632 ttl=5 rssi=-50[0m
+[0;32mI (78967) ESP_NOW_BROADCAST: Message seen msg_id=631 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (79257) ESP_NOW_BROADCAST: Message seen msg_id=632 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (79257) ESP_NOW_BROADCAST: Message seen msg_id=632 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (79357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=633 ttl=5 rssi=-52[0m
+[0;32mI (79957) ESP_NOW_BROADCAST: Message seen msg_id=632 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (80257) ESP_NOW_BROADCAST: Message seen msg_id=633 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (80257) ESP_NOW_BROADCAST: Message seen msg_id=633 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (80367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=634 ttl=5 rssi=-53[0m
+[0;32mI (80967) ESP_NOW_BROADCAST: Message seen msg_id=633 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (81257) ESP_NOW_BROADCAST: Message seen msg_id=634 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (81267) ESP_NOW_BROADCAST: Message seen msg_id=634 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (81357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=635 ttl=5 rssi=-53[0m
+[0;32mI (81967) ESP_NOW_BROADCAST: Message seen msg_id=634 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (82257) ESP_NOW_BROADCAST: Message seen msg_id=635 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (82257) ESP_NOW_BROADCAST: Message seen msg_id=635 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (82367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=636 ttl=5 rssi=-53[0m
+[0;32mI (82967) ESP_NOW_BROADCAST: Message seen msg_id=635 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (83257) ESP_NOW_BROADCAST: Message seen msg_id=636 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (83257) ESP_NOW_BROADCAST: Message seen msg_id=636 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (83357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=637 ttl=5 rssi=-53[0m
+[0;32mI (83957) ESP_NOW_BROADCAST: Message seen msg_id=636 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (84257) ESP_NOW_BROADCAST: Message seen msg_id=637 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (84267) ESP_NOW_BROADCAST: Message seen msg_id=637 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (84357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=638 ttl=5 rssi=-53[0m
+[0;32mI (84957) ESP_NOW_BROADCAST: Message seen msg_id=637 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (85257) ESP_NOW_BROADCAST: Message seen msg_id=638 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (85257) ESP_NOW_BROADCAST: Message seen msg_id=638 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (85357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=639 ttl=5 rssi=-54[0m
+[0;32mI (85967) ESP_NOW_BROADCAST: Message seen msg_id=638 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (86257) ESP_NOW_BROADCAST: Message seen msg_id=639 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (86257) ESP_NOW_BROADCAST: Message seen msg_id=639 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (86367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=640 ttl=5 rssi=-53[0m
+[0;32mI (86967) ESP_NOW_BROADCAST: Message seen msg_id=639 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (87257) ESP_NOW_BROADCAST: Message seen msg_id=640 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (87257) ESP_NOW_BROADCAST: Message seen msg_id=640 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (87357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=641 ttl=5 rssi=-53[0m
+[0;32mI (87957) ESP_NOW_BROADCAST: Message seen msg_id=640 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (88267) ESP_NOW_BROADCAST: Message seen msg_id=641 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (88267) ESP_NOW_BROADCAST: Message seen msg_id=641 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (88367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=642 ttl=5 rssi=-53[0m
+[0;32mI (88967) ESP_NOW_BROADCAST: Message seen msg_id=641 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (89257) ESP_NOW_BROADCAST: Message seen msg_id=642 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (89267) ESP_NOW_BROADCAST: Message seen msg_id=642 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (89367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=643 ttl=5 rssi=-53[0m
+[0;32mI (89967) ESP_NOW_BROADCAST: Message seen msg_id=642 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (90257) ESP_NOW_BROADCAST: Message seen msg_id=643 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (90257) ESP_NOW_BROADCAST: Message seen msg_id=643 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (90367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=644 ttl=5 rssi=-53[0m
+[0;32mI (90967) ESP_NOW_BROADCAST: Message seen msg_id=643 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (91257) ESP_NOW_BROADCAST: Message seen msg_id=644 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (91257) ESP_NOW_BROADCAST: Message seen msg_id=644 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (91367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=645 ttl=5 rssi=-53[0m
+[0;32mI (91967) ESP_NOW_BROADCAST: Message seen msg_id=644 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (92257) ESP_NOW_BROADCAST: Message seen msg_id=645 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (92257) ESP_NOW_BROADCAST: Message seen msg_id=645 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (92367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=646 ttl=5 rssi=-53[0m
+[0;32mI (92967) ESP_NOW_BROADCAST: Message seen msg_id=645 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (93267) ESP_NOW_BROADCAST: Message seen msg_id=646 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (93267) ESP_NOW_BROADCAST: Message seen msg_id=646 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (93357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=647 ttl=5 rssi=-53[0m
+[0;32mI (93967) ESP_NOW_BROADCAST: Message seen msg_id=646 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (94257) ESP_NOW_BROADCAST: Message seen msg_id=647 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (94257) ESP_NOW_BROADCAST: Message seen msg_id=647 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (94357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=648 ttl=5 rssi=-53[0m
+[0;32mI (94957) ESP_NOW_BROADCAST: Message seen msg_id=647 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (95257) ESP_NOW_BROADCAST: Message seen msg_id=648 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (95257) ESP_NOW_BROADCAST: Message seen msg_id=648 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (95357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=649 ttl=5 rssi=-54[0m
+[0;32mI (95957) ESP_NOW_BROADCAST: Message seen msg_id=648 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (96267) ESP_NOW_BROADCAST: Message seen msg_id=649 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (96267) ESP_NOW_BROADCAST: Message seen msg_id=649 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (96357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=650 ttl=5 rssi=-53[0m
+[0;32mI (96957) ESP_NOW_BROADCAST: Message seen msg_id=649 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (97257) ESP_NOW_BROADCAST: Message seen msg_id=650 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (97257) ESP_NOW_BROADCAST: Message seen msg_id=650 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (97357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=651 ttl=5 rssi=-53[0m
+[0;32mI (97967) ESP_NOW_BROADCAST: Message seen msg_id=650 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (98257) ESP_NOW_BROADCAST: Message seen msg_id=651 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (98257) ESP_NOW_BROADCAST: Message seen msg_id=651 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (98367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=652 ttl=5 rssi=-54[0m
+[0;32mI (98967) ESP_NOW_BROADCAST: Message seen msg_id=651 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (99257) ESP_NOW_BROADCAST: Message seen msg_id=652 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (99267) ESP_NOW_BROADCAST: Message seen msg_id=652 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (99367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=653 ttl=5 rssi=-54[0m
+[0;32mI (99967) ESP_NOW_BROADCAST: Message seen msg_id=652 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (100257) ESP_NOW_BROADCAST: Message seen msg_id=653 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (100257) ESP_NOW_BROADCAST: Message seen msg_id=653 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (100357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=654 ttl=5 rssi=-53[0m
+[0;32mI (100957) ESP_NOW_BROADCAST: Message seen msg_id=653 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (101257) ESP_NOW_BROADCAST: Message seen msg_id=654 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (101257) ESP_NOW_BROADCAST: Message seen msg_id=654 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (101367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=655 ttl=5 rssi=-53[0m
+[0;32mI (101967) ESP_NOW_BROADCAST: Message seen msg_id=654 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (102257) ESP_NOW_BROADCAST: Message seen msg_id=655 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (102257) ESP_NOW_BROADCAST: Message seen msg_id=655 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (102357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=656 ttl=5 rssi=-53[0m
+[0;32mI (102957) ESP_NOW_BROADCAST: Message seen msg_id=655 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (103257) ESP_NOW_BROADCAST: Message seen msg_id=656 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (103257) ESP_NOW_BROADCAST: Message seen msg_id=656 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (103357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=657 ttl=5 rssi=-53[0m
+[0;32mI (103957) ESP_NOW_BROADCAST: Message seen msg_id=656 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (104257) ESP_NOW_BROADCAST: Message seen msg_id=657 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (104257) ESP_NOW_BROADCAST: Message seen msg_id=657 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (104367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=658 ttl=5 rssi=-53[0m
+[0;32mI (104967) ESP_NOW_BROADCAST: Message seen msg_id=657 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (105267) ESP_NOW_BROADCAST: Message seen msg_id=658 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (105267) ESP_NOW_BROADCAST: Message seen msg_id=658 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (105367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=659 ttl=5 rssi=-53[0m
+[0;32mI (105967) ESP_NOW_BROADCAST: Message seen msg_id=658 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (106257) ESP_NOW_BROADCAST: Message seen msg_id=659 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (106257) ESP_NOW_BROADCAST: Message seen msg_id=659 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (106367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=660 ttl=5 rssi=-54[0m
+[0;32mI (106967) ESP_NOW_BROADCAST: Message seen msg_id=659 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (107257) ESP_NOW_BROADCAST: Message seen msg_id=660 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (107257) ESP_NOW_BROADCAST: Message seen msg_id=660 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (107367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=661 ttl=5 rssi=-54[0m
+[0;32mI (107967) ESP_NOW_BROADCAST: Message seen msg_id=660 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (108257) ESP_NOW_BROADCAST: Message seen msg_id=661 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (108267) ESP_NOW_BROADCAST: Message seen msg_id=661 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (108367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=662 ttl=5 rssi=-54[0m
+[0;32mI (108967) ESP_NOW_BROADCAST: Message seen msg_id=661 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (109257) ESP_NOW_BROADCAST: Message seen msg_id=662 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (109267) ESP_NOW_BROADCAST: Message seen msg_id=662 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (109357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=663 ttl=5 rssi=-53[0m
+[0;32mI (109957) ESP_NOW_BROADCAST: Message seen msg_id=662 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (110257) ESP_NOW_BROADCAST: Message seen msg_id=663 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (110257) ESP_NOW_BROADCAST: Message seen msg_id=663 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (110367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=664 ttl=5 rssi=-53[0m
+[0;32mI (110967) ESP_NOW_BROADCAST: Message seen msg_id=663 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (111257) ESP_NOW_BROADCAST: Message seen msg_id=664 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (111257) ESP_NOW_BROADCAST: Message seen msg_id=664 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (111357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=665 ttl=5 rssi=-54[0m
+[0;32mI (111957) ESP_NOW_BROADCAST: Message seen msg_id=664 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (112257) ESP_NOW_BROADCAST: Message seen msg_id=665 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (112257) ESP_NOW_BROADCAST: Message seen msg_id=665 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (112357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=666 ttl=5 rssi=-54[0m
+[0;32mI (112957) ESP_NOW_BROADCAST: Message seen msg_id=665 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (113257) ESP_NOW_BROADCAST: Message seen msg_id=666 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (113257) ESP_NOW_BROADCAST: Message seen msg_id=666 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (113357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=667 ttl=5 rssi=-53[0m
+[0;32mI (113957) ESP_NOW_BROADCAST: Message seen msg_id=666 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (114257) ESP_NOW_BROADCAST: Message seen msg_id=667 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (114267) ESP_NOW_BROADCAST: Message seen msg_id=667 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (114357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=668 ttl=5 rssi=-52[0m
+[0;32mI (114957) ESP_NOW_BROADCAST: Message seen msg_id=667 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (115267) ESP_NOW_BROADCAST: Message seen msg_id=668 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (115267) ESP_NOW_BROADCAST: Message seen msg_id=668 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (115357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=669 ttl=5 rssi=-55[0m
+[0;32mI (115967) ESP_NOW_BROADCAST: Message seen msg_id=668 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (116257) ESP_NOW_BROADCAST: Message seen msg_id=669 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (116257) ESP_NOW_BROADCAST: Message seen msg_id=669 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (116367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=670 ttl=5 rssi=-53[0m
+[0;32mI (116967) ESP_NOW_BROADCAST: Message seen msg_id=669 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (117257) ESP_NOW_BROADCAST: Message seen msg_id=670 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (117357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=671 ttl=5 rssi=-53[0m
+[0;32mI (117957) ESP_NOW_BROADCAST: Message seen msg_id=670 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (117957) ESP_NOW_BROADCAST: Message seen msg_id=670 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (118257) ESP_NOW_BROADCAST: Message seen msg_id=671 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (118357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=672 ttl=5 rssi=-52[0m
+[0;32mI (118957) ESP_NOW_BROADCAST: Message seen msg_id=671 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (118957) ESP_NOW_BROADCAST: Message seen msg_id=671 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (119257) ESP_NOW_BROADCAST: Message seen msg_id=672 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (119367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=673 ttl=5 rssi=-53[0m
+[0;32mI (119967) ESP_NOW_BROADCAST: Message seen msg_id=672 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (119967) ESP_NOW_BROADCAST: Message seen msg_id=672 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (120257) ESP_NOW_BROADCAST: Message seen msg_id=673 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (120367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=674 ttl=5 rssi=-53[0m
+[0;32mI (120967) ESP_NOW_BROADCAST: Message seen msg_id=673 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (120967) ESP_NOW_BROADCAST: Message seen msg_id=673 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (121257) ESP_NOW_BROADCAST: Message seen msg_id=674 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (121357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=675 ttl=5 rssi=-53[0m
+[0;32mI (121957) ESP_NOW_BROADCAST: Message seen msg_id=674 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (121957) ESP_NOW_BROADCAST: Message seen msg_id=674 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (122257) ESP_NOW_BROADCAST: Message seen msg_id=675 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (122357) ESP_NOW_BROADCAST: Message seen msg_id=675 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (122367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=676 ttl=5 rssi=-53[0m
+[0;32mI (122977) ESP_NOW_BROADCAST: Message seen msg_id=675 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (123257) ESP_NOW_BROADCAST: Message seen msg_id=676 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (123257) ESP_NOW_BROADCAST: Message seen msg_id=676 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (123357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=677 ttl=5 rssi=-54[0m
+[0;32mI (123957) ESP_NOW_BROADCAST: Message seen msg_id=676 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (124257) ESP_NOW_BROADCAST: Message seen msg_id=677 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (124267) ESP_NOW_BROADCAST: Message seen msg_id=677 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (124367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=678 ttl=5 rssi=-53[0m
+[0;32mI (124967) ESP_NOW_BROADCAST: Message seen msg_id=677 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (125267) ESP_NOW_BROADCAST: Message seen msg_id=678 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (125267) ESP_NOW_BROADCAST: Message seen msg_id=678 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (125357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=679 ttl=5 rssi=-53[0m
+[0;32mI (125957) ESP_NOW_BROADCAST: Message seen msg_id=678 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (126257) ESP_NOW_BROADCAST: Message seen msg_id=679 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (126267) ESP_NOW_BROADCAST: Message seen msg_id=679 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (126357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=680 ttl=5 rssi=-52[0m
+[0;32mI (126957) ESP_NOW_BROADCAST: Message seen msg_id=679 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (127267) ESP_NOW_BROADCAST: Message seen msg_id=680 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (127267) ESP_NOW_BROADCAST: Message seen msg_id=680 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (127357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=681 ttl=5 rssi=-52[0m
+[0;32mI (127957) ESP_NOW_BROADCAST: Message seen msg_id=680 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (128257) ESP_NOW_BROADCAST: Message seen msg_id=681 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (128257) ESP_NOW_BROADCAST: Message seen msg_id=681 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (128357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=682 ttl=5 rssi=-53[0m
+[0;32mI (128957) ESP_NOW_BROADCAST: Message seen msg_id=681 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (129257) ESP_NOW_BROADCAST: Message seen msg_id=682 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (129257) ESP_NOW_BROADCAST: Message seen msg_id=682 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (129357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=683 ttl=5 rssi=-53[0m
+[0;32mI (129967) ESP_NOW_BROADCAST: Message seen msg_id=682 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (130257) ESP_NOW_BROADCAST: Message seen msg_id=683 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (130267) ESP_NOW_BROADCAST: Message seen msg_id=683 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (130367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=684 ttl=5 rssi=-53[0m
+[0;32mI (130967) ESP_NOW_BROADCAST: Message seen msg_id=683 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (131257) ESP_NOW_BROADCAST: Message seen msg_id=684 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (131257) ESP_NOW_BROADCAST: Message seen msg_id=684 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (131357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=685 ttl=5 rssi=-52[0m
+[0;32mI (131967) ESP_NOW_BROADCAST: Message seen msg_id=684 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (132257) ESP_NOW_BROADCAST: Message seen msg_id=685 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (132257) ESP_NOW_BROADCAST: Message seen msg_id=685 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (132367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=686 ttl=5 rssi=-53[0m
+[0;32mI (132967) ESP_NOW_BROADCAST: Message seen msg_id=685 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (133257) ESP_NOW_BROADCAST: Message seen msg_id=686 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (133267) ESP_NOW_BROADCAST: Message seen msg_id=686 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (133357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=687 ttl=5 rssi=-55[0m
+[0;32mI (133967) ESP_NOW_BROADCAST: Message seen msg_id=686 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (134257) ESP_NOW_BROADCAST: Message seen msg_id=687 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (134267) ESP_NOW_BROADCAST: Message seen msg_id=687 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (134357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=688 ttl=5 rssi=-53[0m
+[0;32mI (134967) ESP_NOW_BROADCAST: Message seen msg_id=687 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (135257) ESP_NOW_BROADCAST: Message seen msg_id=688 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (135267) ESP_NOW_BROADCAST: Message seen msg_id=688 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (135367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=689 ttl=5 rssi=-53[0m
+[0;32mI (135967) ESP_NOW_BROADCAST: Message seen msg_id=688 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (136257) ESP_NOW_BROADCAST: Message seen msg_id=689 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (136257) ESP_NOW_BROADCAST: Message seen msg_id=689 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (136357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=690 ttl=5 rssi=-53[0m
+[0;32mI (136967) ESP_NOW_BROADCAST: Message seen msg_id=689 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (137257) ESP_NOW_BROADCAST: Message seen msg_id=690 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (137267) ESP_NOW_BROADCAST: Message seen msg_id=690 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (137367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=691 ttl=5 rssi=-53[0m
+[0;32mI (137967) ESP_NOW_BROADCAST: Message seen msg_id=690 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (138257) ESP_NOW_BROADCAST: Message seen msg_id=691 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (138267) ESP_NOW_BROADCAST: Message seen msg_id=691 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (138357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=692 ttl=5 rssi=-53[0m
+[0;32mI (138967) ESP_NOW_BROADCAST: Message seen msg_id=691 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (139257) ESP_NOW_BROADCAST: Message seen msg_id=692 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (139267) ESP_NOW_BROADCAST: Message seen msg_id=692 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (139357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=693 ttl=5 rssi=-53[0m
+[0;32mI (139967) ESP_NOW_BROADCAST: Message seen msg_id=692 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (140257) ESP_NOW_BROADCAST: Message seen msg_id=693 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (140257) ESP_NOW_BROADCAST: Message seen msg_id=693 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (140357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=694 ttl=5 rssi=-53[0m
+[0;32mI (140967) ESP_NOW_BROADCAST: Message seen msg_id=693 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (141257) ESP_NOW_BROADCAST: Message seen msg_id=694 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (141267) ESP_NOW_BROADCAST: Message seen msg_id=694 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (141357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=695 ttl=5 rssi=-53[0m
+[0;32mI (141967) ESP_NOW_BROADCAST: Message seen msg_id=694 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (142257) ESP_NOW_BROADCAST: Message seen msg_id=695 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (142257) ESP_NOW_BROADCAST: Message seen msg_id=695 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (142367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=696 ttl=5 rssi=-54[0m
+[0;32mI (142967) ESP_NOW_BROADCAST: Message seen msg_id=695 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (143257) ESP_NOW_BROADCAST: Message seen msg_id=696 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (143257) ESP_NOW_BROADCAST: Message seen msg_id=696 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (143357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=697 ttl=5 rssi=-54[0m
+[0;32mI (143967) ESP_NOW_BROADCAST: Message seen msg_id=696 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (144257) ESP_NOW_BROADCAST: Message seen msg_id=697 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (144257) ESP_NOW_BROADCAST: Message seen msg_id=697 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (144367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=698 ttl=5 rssi=-53[0m
+[0;32mI (144967) ESP_NOW_BROADCAST: Message seen msg_id=697 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (145257) ESP_NOW_BROADCAST: Message seen msg_id=698 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (145267) ESP_NOW_BROADCAST: Message seen msg_id=698 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (145367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=699 ttl=5 rssi=-53[0m
+[0;32mI (145967) ESP_NOW_BROADCAST: Message seen msg_id=698 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (146257) ESP_NOW_BROADCAST: Message seen msg_id=699 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (146257) ESP_NOW_BROADCAST: Message seen msg_id=699 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (146367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=700 ttl=5 rssi=-53[0m
+[0;32mI (146967) ESP_NOW_BROADCAST: Message seen msg_id=699 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (147257) ESP_NOW_BROADCAST: Message seen msg_id=700 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (147267) ESP_NOW_BROADCAST: Message seen msg_id=700 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (147357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=701 ttl=5 rssi=-52[0m
+[0;32mI (147967) ESP_NOW_BROADCAST: Message seen msg_id=700 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (148267) ESP_NOW_BROADCAST: Message seen msg_id=701 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (148267) ESP_NOW_BROADCAST: Message seen msg_id=701 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (148367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=702 ttl=5 rssi=-53[0m
+[0;32mI (148967) ESP_NOW_BROADCAST: Message seen msg_id=701 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (149257) ESP_NOW_BROADCAST: Message seen msg_id=702 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (149267) ESP_NOW_BROADCAST: Message seen msg_id=702 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (149367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=703 ttl=5 rssi=-53[0m
+[0;32mI (149967) ESP_NOW_BROADCAST: Message seen msg_id=702 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (150257) ESP_NOW_BROADCAST: Message seen msg_id=703 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (150267) ESP_NOW_BROADCAST: Message seen msg_id=703 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (150367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=704 ttl=5 rssi=-52[0m
+[0;32mI (150967) ESP_NOW_BROADCAST: Message seen msg_id=703 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (151257) ESP_NOW_BROADCAST: Message seen msg_id=704 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (151257) ESP_NOW_BROADCAST: Message seen msg_id=704 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (151357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=705 ttl=5 rssi=-52[0m
+[0;32mI (151967) ESP_NOW_BROADCAST: Message seen msg_id=704 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (152257) ESP_NOW_BROADCAST: Message seen msg_id=705 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (152257) ESP_NOW_BROADCAST: Message seen msg_id=705 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (152367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=706 ttl=5 rssi=-53[0m
+[0;32mI (152967) ESP_NOW_BROADCAST: Message seen msg_id=705 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (153267) ESP_NOW_BROADCAST: Message seen msg_id=706 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (153267) ESP_NOW_BROADCAST: Message seen msg_id=706 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (153367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=707 ttl=5 rssi=-53[0m
+[0;32mI (153967) ESP_NOW_BROADCAST: Message seen msg_id=706 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (154257) ESP_NOW_BROADCAST: Message seen msg_id=707 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (154257) ESP_NOW_BROADCAST: Message seen msg_id=707 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (154367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=708 ttl=5 rssi=-54[0m
+[0;32mI (154967) ESP_NOW_BROADCAST: Message seen msg_id=707 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (155257) ESP_NOW_BROADCAST: Message seen msg_id=708 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (155257) ESP_NOW_BROADCAST: Message seen msg_id=708 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (155357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=709 ttl=5 rssi=-53[0m
+[0;32mI (155967) ESP_NOW_BROADCAST: Message seen msg_id=708 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (156257) ESP_NOW_BROADCAST: Message seen msg_id=709 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (156257) ESP_NOW_BROADCAST: Message seen msg_id=709 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (156367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=710 ttl=5 rssi=-53[0m
+[0;32mI (156967) ESP_NOW_BROADCAST: Message seen msg_id=709 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (157267) ESP_NOW_BROADCAST: Message seen msg_id=710 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (157267) ESP_NOW_BROADCAST: Message seen msg_id=710 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (157357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=711 ttl=5 rssi=-53[0m
+[0;32mI (157967) ESP_NOW_BROADCAST: Message seen msg_id=710 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (158257) ESP_NOW_BROADCAST: Message seen msg_id=711 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (158257) ESP_NOW_BROADCAST: Message seen msg_id=711 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (158367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=712 ttl=5 rssi=-54[0m
+[0;32mI (158967) ESP_NOW_BROADCAST: Message seen msg_id=711 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (159257) ESP_NOW_BROADCAST: Message seen msg_id=712 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (159257) ESP_NOW_BROADCAST: Message seen msg_id=712 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (159357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=713 ttl=5 rssi=-54[0m
+[0;32mI (159967) ESP_NOW_BROADCAST: Message seen msg_id=712 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (160267) ESP_NOW_BROADCAST: Message seen msg_id=713 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (160267) ESP_NOW_BROADCAST: Message seen msg_id=713 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (160357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=714 ttl=5 rssi=-54[0m
+[0;32mI (160967) ESP_NOW_BROADCAST: Message seen msg_id=713 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (161257) ESP_NOW_BROADCAST: Message seen msg_id=714 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (161257) ESP_NOW_BROADCAST: Message seen msg_id=714 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (161357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=715 ttl=5 rssi=-54[0m
+[0;32mI (161967) ESP_NOW_BROADCAST: Message seen msg_id=714 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (162257) ESP_NOW_BROADCAST: Message seen msg_id=715 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (162257) ESP_NOW_BROADCAST: Message seen msg_id=715 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (162367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=716 ttl=5 rssi=-54[0m
+[0;32mI (162967) ESP_NOW_BROADCAST: Message seen msg_id=715 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (163267) ESP_NOW_BROADCAST: Message seen msg_id=716 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (163267) ESP_NOW_BROADCAST: Message seen msg_id=716 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (163367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=717 ttl=5 rssi=-53[0m
+[0;32mI (163967) ESP_NOW_BROADCAST: Message seen msg_id=716 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (164257) ESP_NOW_BROADCAST: Message seen msg_id=717 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (164257) ESP_NOW_BROADCAST: Message seen msg_id=717 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (164357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=718 ttl=5 rssi=-53[0m
+[0;32mI (164967) ESP_NOW_BROADCAST: Message seen msg_id=717 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (165257) ESP_NOW_BROADCAST: Message seen msg_id=718 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (165257) ESP_NOW_BROADCAST: Message seen msg_id=718 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (165367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=719 ttl=5 rssi=-53[0m
+[0;32mI (165967) ESP_NOW_BROADCAST: Message seen msg_id=718 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (166257) ESP_NOW_BROADCAST: Message seen msg_id=719 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (166257) ESP_NOW_BROADCAST: Message seen msg_id=719 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (166357) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=720 ttl=5 rssi=-53[0m
+[0;32mI (166967) ESP_NOW_BROADCAST: Message seen msg_id=719 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (167257) ESP_NOW_BROADCAST: Message seen msg_id=720 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (167257) ESP_NOW_BROADCAST: Message seen msg_id=720 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (167367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=721 ttl=5 rssi=-52[0m
+[0;32mI (167967) ESP_NOW_BROADCAST: Message seen msg_id=720 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (168257) ESP_NOW_BROADCAST: Message seen msg_id=721 -> src=40:22:D8:7B:98:04 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (168257) ESP_NOW_BROADCAST: Message seen msg_id=721 -> src=00:4B:12:2D:F7:8C dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m
+[0;32mI (168367) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=722 ttl=5 rssi=-55[0m
+[0;32mI (168967) ESP_NOW_BROADCAST: Message seen msg_id=721 -> src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 [0m

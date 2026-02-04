@@ -1,0 +1,90 @@
+Command: /Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3 /Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-0289714A -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/broadcast-prototype.elf /Users/tallesrocha/Desktop/sempreiot-new/broadcast-prototype/build/bootloader/bootloader.elf -m '/Users/tallesrocha/.espressif/tools/python/v5.5.2/venv/bin/python3' '/Users/tallesrocha/.espressif/v5.5.2/esp-idf/tools/idf.py'
+[0;32mI (13) boot: ESP-IDF v5.5.2-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Feb  1 2026 17:26:11[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (14) boot: chip revision: v3.0[0m
+[0;32mI (17) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (21) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (24) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (32) boot: Partition Table:[0m
+[0;32mI (35) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (41) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (48) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (54) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (61) boot: End of partition table[0m
+[0;32mI (64) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=189b8h (100792) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=000289e0 vaddr=3ffb0000 size=03f24h ( 16164) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=0002c90c vaddr=40080000 size=0370ch ( 14092) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7ee6ch (519788) map[0m
+[0;32mI (296) esp_image: segment 4: paddr=000aee94 vaddr=4008370c size=14834h ( 84020) load[0m
+[0;32mI (329) esp_image: segment 5: paddr=000c36d0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (341) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (341) boot: Disabling RNG early entropy source...[0m
+[0;32mI (351) cpu_start: Multicore app[0m
+[0;32mI (360) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (360) cpu_start: Pro cpu start user code[0m
+[0;32mI (360) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (362) app_init: Application information:[0m
+[0;32mI (365) app_init: Project name:     broadcast-prototype[0m
+[0;32mI (370) app_init: App version:      1[0m
+[0;32mI (374) app_init: Compile time:     Feb  1 2026 17:26:06[0m
+[0;32mI (379) app_init: ELF file SHA256:  119fe2abd...[0m
+[0;32mI (383) app_init: ESP-IDF:          v5.5.2-dirty[0m
+[0;32mI (388) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (391) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (395) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (399) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (406) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (411) heap_init: At 3FFB83F0 len 00027C10 (159 KiB): DRAM[0m
+[0;32mI (416) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (421) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (427) heap_init: At 40097F40 len 000080C0 (32 KiB): IRAM[0m
+[0;32mI (434) spi_flash: detected chip: generic[0m
+[0;32mI (436) spi_flash: flash io: dio[0m
+[0;33mW (439) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (452) main_task: Started on CPU0[0m
+[0;32mI (462) main_task: Calling app_main()[0m
+[0;32mI (492) wifi:wifi driver task: 3ffc030c, prio:23, stack:6656, core=0[0m
+[0;32mI (502) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (502) wifi:wifi certification version: v7.0[0m
+[0;32mI (502) wifi:config NVS flash: enabled[0m
+[0;32mI (502) wifi:config nano formatting: disabled[0m
+[0;32mI (512) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (512) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (522) wifi:Init management short buffer num: 32[0m
+[0;32mI (522) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (522) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (532) wifi:Init static rx buffer num: 10[0m
+[0;32mI (532) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (542) wifi_init: rx ba win: 6[0m
+[0;32mI (542) wifi_init: accept mbox: 6[0m
+[0;32mI (542) wifi_init: tcpip mbox: 32[0m
+[0;32mI (552) wifi_init: udp mbox: 6[0m
+[0;32mI (552) wifi_init: tcp mbox: 6[0m
+[0;32mI (552) wifi_init: tcp tx win: 5760[0m
+[0;32mI (552) wifi_init: tcp rx win: 5760[0m
+[0;32mI (562) wifi_init: tcp mss: 1440[0m
+[0;32mI (562) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (562) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (572) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (652) wifi:mode : sta (40:22:d8:7b:98:04) + softAP (40:22:d8:7b:98:05)[0m
+[0;32mI (652) wifi:enable tsf[0m
+[0;32mI (652) wifi:Total power save buffer number: 16[0m
+[0;32mI (652) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (652) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (662) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (662) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (672) ESP_NOW_BROADCAST: ESP-NOW broadcast mesh ready[0m
+[0;32mI (672) main_task: Returned from app_main()[0m
+[0;32mI (1052) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=613 ttl=3 rssi=-91[0m
+[0;32mI (1952) ESP_NOW_BROADCAST: RX src=38:18:2B:8C:13:D0 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=614 ttl=4 rssi=-91[0m
+[0;32mI (2852) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=615 ttl=5 rssi=-90[0m
+[0;32mI (3752) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=616 ttl=5 rssi=-93[0m
+[0;32mI (4652) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=617 ttl=5 rssi=-92[0m
+[0;32mI (5552) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=618 ttl=5 rssi=-92[0m
+[0;32mI (6452) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=619 ttl=5 rssi=-92[0m
+[0;32mI (7352) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=620 ttl=5 rssi=-91[0m
+[0;32mI (8252) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=621 ttl=5 rssi=-89[0m
+[0;32mI (9152) ESP_NOW_BROADCAST: RX src=B4:E6:2D:96:A2:85 dst=FF:FF:FF:FF:FF:FF origin=B4:E6:2D:96:A2:85 msg_id=622 ttl=5 rssi=-92[0m
