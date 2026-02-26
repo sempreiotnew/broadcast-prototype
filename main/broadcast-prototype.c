@@ -17,9 +17,9 @@
 
 /* ===================== CONFIG ===================== */
 
-#define TAG "ESP_NOW_MESH"
+#define TAG "main.c"
 
-#define LED_GPIO 13
+#define LED_GPIO GPIO_NUM_2
 #define BUTTON_GPIO GPIO_NUM_0
 
 #define ESPNOW_CHANNEL 6
@@ -43,21 +43,23 @@ static uint32_t local_msg_counter = 1;
 /* ===================== PROTOCOL ===================== */
 
 typedef enum {
-  MSG_TYPE_DISCOVERY = 1,
-  MSG_TYPE_DATA = 2,
-  MSG_TYPE_ACK = 3,
+  MSG_TYPE_DISCOVERY = 0x01,
+  MSG_TYPE_DATA = 0x02,
+  MSG_TYPE_ACK = 0x03,
+  MSG_TYPE_INFO = 0x04,
 } msg_type_t;
 
 /* ===================== MESSAGE ===================== */
 
 typedef struct {
-  uint8_t src_mac[6];    // immediate sender
+  uint8_t src_mac[6]; // immediate sender
+  uint8_t dest_mac[6];
   uint8_t origin_mac[6]; // original creator
-  uint8_t rssi;
-
+  int8_t rssi;
   uint32_t msg_id;
   uint8_t ttl;
   uint8_t type;
+  char data[10];
 } __attribute__((packed)) espnow_msg_t;
 
 /* ===================== PEERS ===================== */
@@ -72,9 +74,12 @@ static peer_t peers[MAX_PEERS];
 /* ===================== DEDUP ===================== */
 
 typedef struct {
+  uint8_t src_mac[6];
+  uint8_t dest_mac[6];
   uint8_t origin_mac[6];
   uint32_t msg_id;
   uint8_t type;
+  char data[10];
 } cache_entry_t;
 
 static cache_entry_t cache[CACHE_SIZE];
@@ -82,8 +87,41 @@ static uint8_t cache_idx = 0;
 
 /* ===================== UTILS ===================== */
 
+const char *msg_type_to_str(uint8_t type) {
+  switch ((msg_type_t)type) {
+  case MSG_TYPE_DISCOVERY:
+    return "MSG_TYPE_DISCOVERY";
+
+  case MSG_TYPE_DATA:
+    return "MSG_TYPE_DATA";
+
+  case MSG_TYPE_ACK:
+    return "MSG_TYPE_ACK";
+
+  case MSG_TYPE_INFO:
+    return "MSG_TYPE_INFO";
+
+  default:
+    return "MSG_UNKNOWN";
+  }
+}
+
 static bool mac_equal(const uint8_t *a, const uint8_t *b) {
   return memcmp(a, b, 6) == 0;
+}
+
+static inline void mac_to_str_buf(const uint8_t *mac, char *out) {
+  snprintf(out, 18, "%02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2],
+           mac[3], mac[4], mac[5]);
+}
+
+static inline const char *mac_to_str(const uint8_t *mac) {
+  static char buf[4][18];
+  static uint8_t idx = 0;
+
+  idx = (idx + 1) % 4;
+  mac_to_str_buf(mac, buf[idx]);
+  return buf[idx];
 }
 
 static void blink_led(int n, int d) {
@@ -97,12 +135,19 @@ static void blink_led(int n, int d) {
 
 static void log_msg(const char *prefix, const espnow_msg_t *m) {
   ESP_LOGI(TAG,
-           "%s type=%u id=%lu ttl=%u rssi=%d "
+           "%s type=%s id=%u ttl=%u rssi=%d "
            "src=%02X:%02X:%02X:%02X:%02X:%02X "
+           "dest=%02X:%02X:%02X:%02X:%02X:%02X "
            "origin=%02X:%02X:%02X:%02X:%02X:%02X",
-           prefix, m->type, m->msg_id, m->ttl, m->rssi, m->src_mac[0],
-           m->src_mac[1], m->src_mac[2], m->src_mac[3], m->src_mac[4],
-           m->src_mac[5], m->origin_mac[0], m->origin_mac[1], m->origin_mac[2],
+           prefix, msg_type_to_str(m->type), m->msg_id, m->ttl, m->rssi,
+
+           m->src_mac[0], m->src_mac[1], m->src_mac[2], m->src_mac[3],
+           m->src_mac[4], m->src_mac[5],
+
+           m->dest_mac[0], m->dest_mac[1], m->dest_mac[2], m->dest_mac[3],
+           m->dest_mac[4], m->dest_mac[5],
+
+           m->origin_mac[0], m->origin_mac[1], m->origin_mac[2],
            m->origin_mac[3], m->origin_mac[4], m->origin_mac[5]);
 }
 
@@ -141,9 +186,12 @@ static void add_peer(const uint8_t *mac) {
       p.encrypt = false;
 
       if (esp_now_add_peer(&p) == ESP_OK) {
-        ESP_LOGI(TAG, "PEER ADD %02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1],
-                 mac[2], mac[3], mac[4], mac[5]);
+        ESP_LOGI(TAG, "PEER ADDED %02X:%02X:%02X:%02X:%02X:%02X", mac[0],
+                 mac[1], mac[2], mac[3], mac[4], mac[5]);
         blink_led(2, 60);
+      } else {
+        ESP_LOGE(TAG, "PEER FAILED %02X:%02X:%02X:%02X:%02X:%02X", mac[0],
+                 mac[1], mac[2], mac[3], mac[4], mac[5]);
       }
       return;
     }
@@ -160,6 +208,7 @@ static void espnow_recv_cb(const esp_now_recv_info_t *info, const uint8_t *data,
   espnow_msg_t msg;
   memcpy(&msg, data, sizeof(msg));
   memcpy(msg.src_mac, info->src_addr, 6);
+  memcpy(msg.dest_mac, info->des_addr, 6);
   msg.rssi = info->rx_ctrl->rssi;
 
   xQueueSendFromISR(rx_queue, &msg, NULL);
@@ -177,20 +226,31 @@ static void espnow_rx_task(void *arg) {
     if (msg.type == MSG_TYPE_DATA && !mac_equal(msg.src_mac, my_mac) &&
         mac_equal(msg.origin_mac, my_mac)) {
 
-      ESP_LOGI(TAG, "IGNORED SELF msg_id=%lu type=%u", msg.msg_id, msg.type);
+      ESP_LOGI(TAG, "IGNORED SELF msg_id=%lu type=%s", msg.msg_id,
+               msg_type_to_str(msg.type));
       continue;
     }
+
     if (msg.type == MSG_TYPE_DISCOVERY) {
       add_peer(msg.src_mac);
     } else {
       log_msg("RX", &msg);
     }
 
-    if (msg_seen(&msg))
-      continue;
+    if (msg.type != MSG_TYPE_ACK) {
+      if (msg_seen(&msg))
+        continue;
+    }
 
-    /* ---- DATA ---- */
-    if (msg.type == MSG_TYPE_DATA) {
+    switch (msg.type) {
+    case MSG_TYPE_ACK: {
+      //   ESP_LOGI(TAG, "CONFIRMED msg_id=%lu by
+      //   %02X:%02X:%02X:%02X:%02X:%02X",
+      //            msg.msg_id, msg.src_mac[0], msg.src_mac[1], msg.src_mac[2],
+      //            msg.src_mac[3], msg.src_mac[4], msg.src_mac[5]);
+      break;
+    }
+    case MSG_TYPE_DATA: {
 
       blink_led(1, 40);
 
@@ -198,6 +258,7 @@ static void espnow_rx_task(void *arg) {
       espnow_msg_t ack = {0};
       memcpy(ack.origin_mac, msg.origin_mac, 6);
       memcpy(ack.src_mac, my_mac, 6);
+      memcpy(ack.data, msg.data, sizeof(msg.data));
       ack.msg_id = msg.msg_id;
       ack.type = MSG_TYPE_ACK;
 
@@ -216,15 +277,31 @@ static void espnow_rx_task(void *arg) {
         }
       }
       continue;
+      break;
     }
 
-    /* ---- ACK ---- */
-    if (msg.type == MSG_TYPE_ACK) {
-      ESP_LOGI(TAG, "CONFIRMED msg_id=%lu by %02X:%02X:%02X:%02X:%02X:%02X",
-               msg.msg_id, msg.src_mac[0], msg.src_mac[1], msg.src_mac[2],
-               msg.src_mac[3], msg.src_mac[4], msg.src_mac[5]);
+    default:
+      break;
     }
   }
+}
+
+static esp_err_t espnow_send_checked(const uint8_t *dest_mac,
+                                     espnow_msg_t *msg) {
+  esp_err_t err = esp_now_send(dest_mac, (uint8_t *)msg, sizeof(espnow_msg_t));
+
+  if (err == ESP_OK) {
+    if (msg->type != MSG_TYPE_DISCOVERY) {
+      memcpy(msg->dest_mac, dest_mac, 6);
+      log_msg("TX", msg);
+    }
+
+  } else {
+    ESP_LOGE(TAG, "TX FAIL (%s) type=%s id=%lu → %s", esp_err_to_name(err),
+             msg_type_to_str(msg->type), msg->msg_id, mac_to_str(dest_mac));
+  }
+
+  return err;
 }
 
 /* ===================== TX TASK ===================== */
@@ -234,18 +311,25 @@ static void espnow_tx_task(void *arg) {
 
   while (1) {
     if (xQueueReceive(tx_queue, &msg, portMAX_DELAY)) {
-      if (msg.type == MSG_TYPE_ACK) {
-        // ACK goes directly to origin
-        esp_now_send(msg.origin_mac, (uint8_t *)&msg, sizeof(msg));
-      } else {
-        // DATA or DISCOVERY → send to all peers except src
+
+      switch (msg.type) {
+      case MSG_TYPE_DATA:
         for (int i = 0; i < MAX_PEERS; i++) {
-          if (!peers[i].active)
-            continue;
-          if (mac_equal(peers[i].mac, msg.src_mac))
-            continue;
-          esp_now_send(peers[i].mac, (uint8_t *)&msg, sizeof(msg));
+          if (peers[i].active) {
+            espnow_send_checked(peers[i].mac, &msg);
+          }
         }
+        break;
+      case MSG_TYPE_ACK:
+        espnow_send_checked(msg.origin_mac, &msg);
+        break;
+      case MSG_TYPE_DISCOVERY:
+        espnow_send_checked(ESPNOW_BROADCAST_MAC, &msg);
+        break;
+
+      default:
+        ESP_LOGI(TAG, "Unidentified TYPE: %u", msg.type);
+        break;
       }
     }
   }
@@ -258,9 +342,11 @@ static void discovery_task(void *arg) {
     espnow_msg_t msg = {0};
     memcpy(msg.origin_mac, my_mac, 6);
     memcpy(msg.src_mac, my_mac, 6);
+    memcpy(msg.dest_mac, ESPNOW_BROADCAST_MAC, 6);
     msg.msg_id = local_msg_counter++;
     msg.ttl = DEFAULT_TTL;
     msg.type = MSG_TYPE_DISCOVERY;
+    memcpy(msg.data, "teste", 10);
 
     xQueueSend(tx_queue, &msg, 0);
 
