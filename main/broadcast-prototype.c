@@ -264,19 +264,19 @@ static void espnow_rx_task(void *arg) {
 
       xQueueSend(tx_queue, &ack, 0);
 
-      /* forward via TX queue */
-      if (msg.ttl > 0) {
-        msg.ttl--;
-        for (int i = 0; i < MAX_PEERS; i++) {
-          if (!peers[i].active)
-            continue;
-          if (mac_equal(peers[i].mac, msg.src_mac))
-            continue;
-          xQueueSend(tx_queue, &msg, 0);
-          log_msg("FWD", &msg);
-        }
-      }
-      continue;
+      //   /* forward via TX queue */
+      //   if (msg.ttl > 0) {
+      //     msg.ttl--;
+      //     for (int i = 0; i < MAX_PEERS; i++) {
+      //       if (!peers[i].active)
+      //         continue;
+      //       if (mac_equal(peers[i].mac, msg.src_mac))
+      //         continue;
+      //       xQueueSend(tx_queue, &msg, 0);
+      //       log_msg("FWD", &msg);
+      //     }
+      //   }
+      //   continue;
       break;
     }
 
@@ -319,11 +319,15 @@ static void espnow_tx_task(void *arg) {
             espnow_send_checked(peers[i].mac, &msg);
           }
         }
+
+        // esp_now_send(msg.origin_mac, (uint8_t *)&msg, sizeof(msg));
         break;
       case MSG_TYPE_ACK:
+        // esp_now_send(msg.origin_mac, (uint8_t *)&msg, sizeof(msg));
         espnow_send_checked(msg.origin_mac, &msg);
         break;
       case MSG_TYPE_DISCOVERY:
+        // esp_now_send(ESPNOW_BROADCAST_MAC, (uint8_t *)&msg, sizeof(msg));
         espnow_send_checked(ESPNOW_BROADCAST_MAC, &msg);
         break;
 
